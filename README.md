@@ -1,5 +1,7 @@
 # Innaya Nutri Foods — innayanutrifoods.com
 
+> Production: <https://innayanutrifoods.com>
+
 Marketing website for **Innaya Nutri Foods Private Limited**, an AI-first food
 technology company headquartered in Kakkanad, Kerala. Home of the consumer
 brand **PAN8 — A Nutri Co.**
