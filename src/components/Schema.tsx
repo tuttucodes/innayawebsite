@@ -181,28 +181,16 @@ export default function Schema() {
     ],
   };
 
+  const graph = {
+    "@context": "https://schema.org",
+    "@graph": [organization, place, website, faq],
+  };
+
   return (
-    <>
-      <script
-        type="application/ld+json"
-        // JSON-LD: payload is fully controlled & escaped
-        dangerouslySetInnerHTML={{ __html: jsonLd(organization) }}
-      />
-      <script
-        type="application/ld+json"
-        // JSON-LD: payload is fully controlled & escaped
-        dangerouslySetInnerHTML={{ __html: jsonLd(place) }}
-      />
-      <script
-        type="application/ld+json"
-        // JSON-LD: payload is fully controlled & escaped
-        dangerouslySetInnerHTML={{ __html: jsonLd(website) }}
-      />
-      <script
-        type="application/ld+json"
-        // JSON-LD: payload is fully controlled & escaped
-        dangerouslySetInnerHTML={{ __html: jsonLd(faq) }}
-      />
-    </>
+    <script
+      type="application/ld+json"
+      // JSON-LD: payload is fully controlled & escaped
+      dangerouslySetInnerHTML={{ __html: jsonLd(graph) }}
+    />
   );
 }
