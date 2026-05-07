@@ -1,36 +1,53 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Innaya Nutri Foods — innayanutrifoods.com
 
-## Getting Started
+Marketing website for **Innaya Nutri Foods Private Limited**, an AI-first food
+technology company headquartered in Kakkanad, Kerala. Home of the consumer
+brand **PAN8 — A Nutri Co.**
 
-First, run the development server:
+Built with Next.js 16 (App Router), TypeScript, Tailwind v4, and Motion.
+
+## Stack
+
+- **Framework:** Next.js 16, React 19, Turbopack
+- **Styling:** Tailwind CSS v4 + design tokens
+- **Motion:** `motion` (Framer Motion successor)
+- **SEO:** Per-route metadata, robots, sitemap, JSON-LD Organization + WebSite
+- **Hosting:** Vercel
+
+## Local development
 
 ```bash
-npm run dev
-# or
-yarn dev
-# or
+pnpm install
 pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Open <http://localhost:3000>.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Production build
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+```bash
+pnpm build
+pnpm start
+```
 
-## Learn More
+## Deployment
 
-To learn more about Next.js, take a look at the following resources:
+Auto-deploys to Vercel on push to `main`. DNS for
+`innayanutrifoods.com` is wired through Vercel.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## Sections
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+1. Hero — AI-first nutrition pitch
+2. Marquee — trust ticker
+3. Company — three macro tailwinds
+4. AI layer — sourcing, recipe, demand, distribution
+5. Brands — PAN8 hero card + future brands
+6. Products — 13 SKUs across 4 categories with category filter
+7. Sustainability — water + nutrition footprint
+8. Compliance — FSSAI, DPIIT, Udyam, GST stack
+9. Team — co-founders + 13-person operating team
+10. Contact — drafts an email to `ceo@innayanutrifoods.com`
 
-## Deploy on Vercel
+## License
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+© Innaya Nutri Foods Private Limited. All rights reserved.
