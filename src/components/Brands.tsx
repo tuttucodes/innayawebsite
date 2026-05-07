@@ -25,7 +25,7 @@ export default function Brands() {
             <span className="italic">Brands on top.</span>
           </>
         }
-        blurb="Innaya operates as a parent food-tech house. Every brand we build inherits our sourcing, manufacturing, distribution and AI infrastructure. Today, one brand is live — more are in the lab."
+        blurb="Innaya operates as the parent company. Every brand we build inherits our sourcing, manufacturing, distribution and AI infrastructure. Today, one brand is live — more are in the lab."
       />
 
       <article

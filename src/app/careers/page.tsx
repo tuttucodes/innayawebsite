@@ -69,7 +69,7 @@ export default function CareersPage() {
             />
             <Why
               k="In Kerala"
-              v="Kakkanad headquarters. Hybrid for some, remote-friendly for tech."
+              v="Kerala headquarters. Hybrid for some, remote-friendly for tech."
             />
           </div>
         </section>

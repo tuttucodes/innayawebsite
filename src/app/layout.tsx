@@ -41,7 +41,7 @@ export const metadata: Metadata = {
     template: "%s · Innaya Nutri Foods",
   },
   description:
-    "Innaya Nutri Foods Pvt Ltd (INFPL) is an AI-first food technology house from Kakkanad, Kerala. Parent company of PAN8 — India's millet-based plant-protein nutrition brand. End-to-end FMCG: sourcing, formulation, manufacturing, distribution.",
+    "Innaya Nutri Foods Pvt Ltd (INFPL) is an AI-first food technology company from Kerala, India. Parent company of PAN8 — India's millet-based plant-protein nutrition brand. End-to-end FMCG: sourcing, formulation, manufacturing, distribution.",
   keywords: [
     "Innaya Nutri Foods",
     "Innaya Nutri Foods Pvt Ltd",
@@ -53,7 +53,7 @@ export const metadata: Metadata = {
     "millet protein India",
     "plant protein India",
     "food technology Kerala",
-    "Kakkanad food startup",
+    "Kerala food technology company",
     "millet pancake mix",
     "millet dosa mix",
     "millet protein bar",
@@ -74,14 +74,14 @@ export const metadata: Metadata = {
     siteName: "Innaya Nutri Foods",
     title: "Innaya Nutri Foods — AI-Powered Food Technology Company",
     description:
-      "AI-first food tech house from Kerala. Parent of PAN8. End-to-end FMCG, powered by A.I. — sourcing to shelf.",
+      "AI-first food technology company from Kerala. Parent company of PAN8. End-to-end FMCG, powered by A.I. — sourcing to shelf.",
     locale: "en_IN",
   },
   twitter: {
     card: "summary_large_image",
     title: "Innaya Nutri Foods — AI-Powered Food Technology Company",
     description:
-      "AI-first food tech house from Kerala. Parent of PAN8. End-to-end FMCG, powered by A.I.",
+      "AI-first food technology company from Kerala. Parent company of PAN8. End-to-end FMCG, powered by A.I.",
   },
   robots: {
     index: true,

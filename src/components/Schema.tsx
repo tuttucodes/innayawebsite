@@ -143,7 +143,7 @@ export default function Schema() {
         name: "What is Innaya Nutri Foods?",
         acceptedAnswer: {
           "@type": "Answer",
-          text: "Innaya Nutri Foods Pvt Ltd (INFPL) is an AI-first food technology company based in Kakkanad, Kerala, India. It is the parent house of PAN8 and operates an end-to-end FMCG stack — sourcing, formulation, manufacturing, brand, distribution and demand — powered by artificial intelligence.",
+          text: "Innaya Nutri Foods Pvt Ltd (INFPL) is an AI-first food technology company based in Kerala, India. It is the parent company of PAN8 and operates an end-to-end FMCG stack — sourcing, formulation, manufacturing, brand, distribution and demand — powered by artificial intelligence.",
         },
       },
       {

@@ -55,7 +55,7 @@ export default function Hero() {
         className="absolute inset-x-0 top-24 z-10 mx-auto hidden max-w-[1400px] grid-cols-3 gap-8 px-5 font-mono text-[10px] uppercase tracking-[0.22em] text-mute md:grid md:px-10"
       >
         <span>Est. 22 / 07 / 2024</span>
-        <span className="text-center">Kakkanad · Kerala · India</span>
+        <span className="text-center">Kerala · India</span>
         <span className="text-right">DPIIT recognised · FSSAI central</span>
       </motion.div>
 
@@ -74,9 +74,8 @@ export default function Hero() {
             <span className="absolute inset-0 animate-ping rounded-full bg-leaf opacity-75" />
           </span>
           <span className="font-mono text-[10px] uppercase tracking-[0.22em] text-ink-soft">
-            Parent food-tech house · India
+            Parent company · India
           </span>
-          <span className="font-mono text-[10px] text-mute">v.01</span>
         </motion.div>
 
         {/* Headline */}
@@ -147,7 +146,7 @@ export default function Hero() {
           <Stat k="Founded" v="2024" />
           <Stat k="Stack" v="Sourcing → Distribution" />
           <Stat k="Brands Live" v="01 · PAN8" />
-          <Stat k="HQ" v="Kakkanad, IN" />
+          <Stat k="HQ" v="Kerala, IN" />
         </div>
       </motion.div>
 

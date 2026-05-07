@@ -81,7 +81,7 @@ export default function Footer() {
           <span>
             © {year} INFPL — {SITE.legal}. All rights reserved.
           </span>
-          <span>Made in India · Kakkanad, Kerala</span>
+          <span>Made in India</span>
         </div>
       </div>
 
