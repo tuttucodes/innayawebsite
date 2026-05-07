@@ -1,9 +1,9 @@
 import Hero from "@/components/Hero";
 import Marquee from "@/components/Marquee";
 import About from "@/components/About";
+import Capabilities from "@/components/Capabilities";
 import AILayer from "@/components/AILayer";
 import Brands from "@/components/Brands";
-import Products from "@/components/Products";
 import Sustainability from "@/components/Sustainability";
 import Compliance from "@/components/Compliance";
 import Team from "@/components/Team";
@@ -21,9 +21,9 @@ export default function Home() {
         <Hero />
         <Marquee />
         <About />
+        <Capabilities />
         <AILayer />
         <Brands />
-        <Products />
         <Sustainability />
         <Compliance />
         <Team />

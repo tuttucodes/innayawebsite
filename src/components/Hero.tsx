@@ -74,22 +74,22 @@ export default function Hero() {
             <span className="absolute inset-0 animate-ping rounded-full bg-leaf opacity-75" />
           </span>
           <span className="font-mono text-[10px] uppercase tracking-[0.22em] text-ink-soft">
-            AI · Food Tech · India
+            Parent food-tech house · India
           </span>
           <span className="font-mono text-[10px] text-mute">v.01</span>
         </motion.div>
 
         {/* Headline */}
-        <h1 className="font-serif text-[clamp(3rem,1rem+9vw,12rem)] leading-[0.92] tracking-[-0.03em]">
+        <h1 className="font-serif text-[clamp(2.8rem,1rem+8vw,11rem)] leading-[0.92] tracking-[-0.03em]">
           <Reveal delay={0.05}>
-            <span className="block">Nutrition,</span>
+            <span className="block">FMCG, end-to-end —</span>
           </Reveal>
           <Reveal delay={0.18}>
-            <span className="block italic text-leaf-deep">re-engineered</span>
+            <span className="block italic text-leaf-deep">sourcing to shelf,</span>
           </Reveal>
           <Reveal delay={0.32}>
             <span className="flex items-baseline gap-4 sm:gap-6">
-              <span>by</span>
+              <span>powered by</span>
               <span className="relative">
                 <span className="gradient-text">A.I.</span>
                 <span className="absolute -right-3 -top-2 h-2 w-2 rounded-full bg-amber sm:-right-5 sm:-top-3" />
@@ -107,10 +107,13 @@ export default function Hero() {
               transition={{ duration: 0.9, delay: 0.55, ease: [0.16, 1, 0.3, 1] }}
               className="max-w-md text-[17px] leading-[1.55] text-ink-soft"
             >
-              Innaya Nutri Foods is an{" "}
-              <span className="text-ink">AI-first food technology company</span>{" "}
-              re-formulating millet, plant-protein, and on-the-go nutrition for the
-              modern Indian household. Home of{" "}
+              Innaya Nutri Foods is a parent food-tech company. We run the full
+              FMCG stack —{" "}
+              <span className="text-ink">
+                sourcing, formulation, manufacturing, brand, and distribution
+              </span>{" "}
+              — with AI threaded through every layer. Brands launch on top of our
+              operating system. First brand:{" "}
               <span className="font-serif italic text-ink">PAN8 — A Nutri Co.</span>
             </motion.p>
           </div>
@@ -122,15 +125,15 @@ export default function Hero() {
               className="flex flex-wrap items-center gap-3"
             >
               <a
-                href="#brands"
+                href="#capabilities"
                 className="group relative inline-flex items-center gap-2 overflow-hidden rounded-full bg-ink px-6 py-3.5 text-sm font-medium text-bone transition-colors"
               >
-                <span className="relative z-10">See our brands</span>
+                <span className="relative z-10">What we do</span>
                 <span className="relative z-10 transition-transform group-hover:translate-x-1">→</span>
                 <span className="absolute inset-0 -translate-x-full bg-gradient-to-r from-leaf-deep to-leaf transition-transform duration-500 group-hover:translate-x-0" />
               </a>
               <a
-                href="#contact"
+                href="/contact"
                 className="inline-flex items-center gap-2 rounded-full border border-ink/30 px-6 py-3.5 text-sm font-medium text-ink transition-all hover:border-ink hover:bg-ink hover:text-bone"
               >
                 Talk to us
@@ -142,9 +145,9 @@ export default function Hero() {
         {/* Bottom marker row */}
         <div className="mt-16 grid grid-cols-2 gap-x-6 gap-y-6 border-t border-line/70 pt-6 font-mono text-[11px] uppercase tracking-[0.18em] text-mute md:mt-24 md:grid-cols-4">
           <Stat k="Founded" v="2024" />
-          <Stat k="Brands" v="01 · PAN8" />
-          <Stat k="SKUs Live" v="13" />
-          <Stat k="Manufacturing" v="Pune, IN" />
+          <Stat k="Stack" v="Sourcing → Distribution" />
+          <Stat k="Brands Live" v="01 · PAN8" />
+          <Stat k="HQ" v="Kakkanad, IN" />
         </div>
       </motion.div>
 

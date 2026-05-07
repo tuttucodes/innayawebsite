@@ -13,7 +13,7 @@ export default function AILayer() {
       <SectionShell className="relative">
         <div className="border-t border-bone/15 pt-8">
           <div className="flex items-center justify-between font-mono text-[10px] uppercase tracking-[0.22em] text-bone/50">
-            <span>02</span>
+            <span>03</span>
             <span>The AI layer</span>
           </div>
 
