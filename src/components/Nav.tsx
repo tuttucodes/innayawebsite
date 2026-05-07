@@ -57,11 +57,12 @@ export default function Nav() {
         <div className="mx-auto flex max-w-[1400px] items-center justify-between px-5 py-4 md:px-10">
           <Link
             href="/"
-            aria-label="Innaya Nutri Foods — home"
+            title="Innaya Nutri Foods — home"
             onClick={() => setOpen(false)}
             className="group flex items-center"
           >
             <LogoLockup />
+            <span className="sr-only">— home</span>
           </Link>
 
           <nav className="hidden items-center gap-1 lg:flex">

@@ -15,7 +15,7 @@ export default function Footer() {
               </span>
               <div className="flex flex-col leading-none">
                 <span className="font-serif text-xl tracking-tight">Innaya</span>
-                <span className="mt-1 font-mono text-[10px] uppercase tracking-[0.22em] text-bone/55">
+                <span className="mt-1 font-mono text-[10px] uppercase tracking-[0.22em] text-bone/70">
                   Nutri Foods · INFPL
                 </span>
               </div>
@@ -44,7 +44,7 @@ export default function Footer() {
                 href={SITE.social.pan8}
                 target="_blank"
                 rel="noopener noreferrer"
-                aria-label="PAN8 — A Nutri Co."
+                title="PAN8 — A Nutri Co."
                 className="group inline-flex items-center gap-2 rounded-full border border-bone/20 bg-bone/[0.05] px-4 py-2 text-[13px] tracking-tight text-bone/85 transition-all hover:border-amber hover:bg-bone/[0.1] hover:text-amber"
               >
                 <span className="font-serif italic">pan8.in</span>
@@ -66,18 +66,18 @@ export default function Footer() {
               <a href={SITE.social.pan8} target="_blank" rel="noopener noreferrer">
                 pan8.in ↗
               </a>
-              <span className="text-bone/55">More — soon</span>
+              <span className="text-bone/70">More — soon</span>
             </Col>
             <Col title="Reach us">
               <a href={`mailto:${SITE.contactEmail}`}>{SITE.contactEmail}</a>
               <a href={`mailto:${SITE.hrEmail}`}>{SITE.hrEmail}</a>
               <a href={`mailto:${SITE.brandEmail}`}>{SITE.brandEmail}</a>
-              <span className="text-bone/55">{SITE.hq}</span>
+              <span className="text-bone/70">{SITE.hq}</span>
             </Col>
           </div>
         </div>
 
-        <div className="mt-20 flex flex-col gap-4 border-t border-bone/15 pt-6 font-mono text-[10px] uppercase tracking-[0.22em] text-bone/55 md:flex-row md:items-center md:justify-between">
+        <div className="mt-20 flex flex-col gap-4 border-t border-bone/15 pt-6 font-mono text-[10px] uppercase tracking-[0.22em] text-bone/70 md:flex-row md:items-center md:justify-between">
           <span>
             © {year} INFPL — {SITE.legal}. All rights reserved.
           </span>
@@ -100,7 +100,7 @@ export default function Footer() {
 function Col({ title, children }: { title: string; children: React.ReactNode }) {
   return (
     <div>
-      <span className="block font-mono text-[10px] uppercase tracking-[0.22em] text-bone/55">
+      <span className="block font-mono text-[10px] uppercase tracking-[0.22em] text-bone/70">
         {title}
       </span>
       <div className="mt-4 flex flex-col gap-2 text-[14px] text-bone/85 [&_a]:transition-colors [&_a:hover]:text-amber">
