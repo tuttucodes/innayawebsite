@@ -1,0 +1,294 @@
+- generic [active] [ref=e1]:
+  - banner [ref=e2]:
+    - generic [ref=e3]:
+      - link "Innaya Nutri Foods — home" [ref=e4] [cursor=pointer]:
+        - /url: /
+        - generic [ref=e5]:
+          - img "Innaya Nutri Foods" [ref=e7]
+          - generic [ref=e8]:
+            - generic [ref=e9]: Innaya
+            - generic [ref=e10]: Nutri Foods
+      - button "Toggle menu" [ref=e12]
+  - generic:
+    - navigation:
+      - link "Company 01":
+        - /url: /about
+        - generic: Company
+        - generic: "01"
+      - link "Brands 02":
+        - /url: /brands/pan8
+        - generic: Brands
+        - generic: "02"
+      - link "Products 03":
+        - /url: /products
+        - generic: Products
+        - generic: "03"
+      - link "Sustainability 04":
+        - /url: /sustainability
+        - generic: Sustainability
+        - generic: "04"
+      - link "Careers 05":
+        - /url: /careers
+        - generic: Careers
+        - generic: "05"
+      - link "Contact 06":
+        - /url: /contact
+        - generic: Contact
+        - generic: "06"
+  - main [ref=e15]:
+    - generic [ref=e17]:
+      - generic [ref=e18]:
+        - generic [ref=e19]: Careers
+        - generic [ref=e21]: Innaya Nutri Foods
+      - heading "Build the company India will eat tomorrow." [level=1] [ref=e22]:
+        - text: Build the company
+        - text: India will
+        - emphasis [ref=e23]: eat tomorrow.
+      - paragraph [ref=e24]: We're a 15-person team in Kerala building an AI-first food technology company. Tech, brand, ops, design, and growth — all under one roof. Apply directly. Every email lands in the founders' inbox.
+    - generic [ref=e26]:
+      - generic [ref=e27]:
+        - generic [ref=e28]: Ground floor
+        - paragraph [ref=e29]: Year-one of a venture-track FMCG company. Decisions you make this quarter live in next year's strategy.
+      - generic [ref=e30]:
+        - generic [ref=e31]: ESOP track
+        - paragraph [ref=e32]: Eligible roles get equity. Real upside, real downside.
+      - generic [ref=e33]:
+        - generic [ref=e34]: AI-native
+        - paragraph [ref=e35]: Tools, ops, and decisions are powered by AI. You'll work alongside it, not against it.
+      - generic [ref=e36]:
+        - generic [ref=e37]: In Kerala
+        - paragraph [ref=e38]: Kakkanad headquarters. Hybrid for some, remote-friendly for tech.
+    - generic [ref=e39]:
+      - generic [ref=e40]:
+        - heading "Open roles · 8" [level=2] [ref=e41]
+        - paragraph [ref=e42]:
+          - text: Don't see a fit? Email
+          - link "innayanutrifoods@gmail.com" [ref=e43] [cursor=pointer]:
+            - /url: mailto:innayanutrifoods@gmail.com
+          - text: with what you'd like to build.
+      - generic [ref=e44]:
+        - article [ref=e45]:
+          - generic [ref=e47]: "01"
+          - generic [ref=e48]:
+            - link "Founder's Office Associate" [ref=e49] [cursor=pointer]:
+              - /url: /careers/founders-office-associate
+            - paragraph [ref=e50]: Sit shoulder-to-shoulder with the CEO. Touch every part of the business — fundraising, strategy, ops, hiring, brand. The fastest way to learn how a venture-backed FMCG company is built from zero.
+            - list [ref=e51]:
+              - listitem [ref=e52]: Founder's Office
+              - listitem [ref=e53]: Hybrid · Kerala
+              - listitem [ref=e54]: Full-time
+              - listitem [ref=e55]: 0–2 yrs
+          - generic [ref=e56]:
+            - link "Read role →" [ref=e57] [cursor=pointer]:
+              - /url: /careers/founders-office-associate
+            - button "Apply →" [ref=e58]:
+              - text: Apply
+              - generic [ref=e59]: →
+        - article [ref=e60]:
+          - generic [ref=e62]: "02"
+          - generic [ref=e63]:
+            - link "Growth & Performance Marketing Lead" [ref=e64] [cursor=pointer]:
+              - /url: /careers/growth-marketing-lead
+            - paragraph [ref=e65]: Own paid acquisition, retention loops, and the D2C P&L for pan8.in. Partner with content and brand to compound CAC down and LTV up.
+            - list [ref=e66]:
+              - listitem [ref=e67]: Sales & Marketing
+              - listitem [ref=e68]: Kakkanad, Kerala
+              - listitem [ref=e69]: Full-time
+              - listitem [ref=e70]: 3–6 yrs
+          - generic [ref=e71]:
+            - link "Read role →" [ref=e72] [cursor=pointer]:
+              - /url: /careers/growth-marketing-lead
+            - button "Apply →" [ref=e73]:
+              - text: Apply
+              - generic [ref=e74]: →
+        - article [ref=e75]:
+          - generic [ref=e77]: "03"
+          - generic [ref=e78]:
+            - link "Full-Stack Engineer (Next.js · TypeScript)" [ref=e79] [cursor=pointer]:
+              - /url: /careers/fullstack-engineer
+            - paragraph [ref=e80]: Build the operating system underneath Innaya — internal tools for sourcing, formulation, demand forecasting, and the consumer e-commerce stack at pan8.in.
+            - list [ref=e81]:
+              - listitem [ref=e82]: Tech & Product
+              - listitem [ref=e83]: Remote, India
+              - listitem [ref=e84]: Full-time
+              - listitem [ref=e85]: 2–5 yrs
+          - generic [ref=e86]:
+            - link "Read role →" [ref=e87] [cursor=pointer]:
+              - /url: /careers/fullstack-engineer
+            - button "Apply →" [ref=e88]:
+              - text: Apply
+              - generic [ref=e89]: →
+        - article [ref=e90]:
+          - generic [ref=e92]: "04"
+          - generic [ref=e93]:
+            - link "AI / ML Engineer — Sourcing & Demand" [ref=e94] [cursor=pointer]:
+              - /url: /careers/ai-ml-engineer
+            - paragraph [ref=e95]: Build the models underneath sourcing intelligence and demand forecasting. Less Kaggle, more deployed ML driving real P&L decisions.
+            - list [ref=e96]:
+              - listitem [ref=e97]: Tech & Product
+              - listitem [ref=e98]: Remote, India
+              - listitem [ref=e99]: Full-time
+              - listitem [ref=e100]: 2–4 yrs
+          - generic [ref=e101]:
+            - link "Read role →" [ref=e102] [cursor=pointer]:
+              - /url: /careers/ai-ml-engineer
+            - button "Apply →" [ref=e103]:
+              - text: Apply
+              - generic [ref=e104]: →
+        - article [ref=e105]:
+          - generic [ref=e107]: "05"
+          - generic [ref=e108]:
+            - link "Brand & Packaging Designer" [ref=e109] [cursor=pointer]:
+              - /url: /careers/brand-designer
+            - paragraph [ref=e110]: Own how PAN8 looks and feels — packaging, ads, social, print. Work directly with the co-founder leading design.
+            - list [ref=e111]:
+              - listitem [ref=e112]: Design & Social
+              - listitem [ref=e113]: Hybrid · Kerala
+              - listitem [ref=e114]: Full-time
+              - listitem [ref=e115]: 2–4 yrs
+          - generic [ref=e116]:
+            - link "Read role →" [ref=e117] [cursor=pointer]:
+              - /url: /careers/brand-designer
+            - button "Apply →" [ref=e118]:
+              - text: Apply
+              - generic [ref=e119]: →
+        - article [ref=e120]:
+          - generic [ref=e122]: "06"
+          - generic [ref=e123]:
+            - link "Supply Chain & Manufacturing Manager" [ref=e124] [cursor=pointer]:
+              - /url: /careers/supply-chain-manager
+            - paragraph [ref=e125]: Run the relationship with our Pune contract-manufacturing partner. Own production planning, QC, dispatch, and inventory.
+            - list [ref=e126]:
+              - listitem [ref=e127]: Operations & Logistics
+              - listitem [ref=e128]: Pune, Maharashtra
+              - listitem [ref=e129]: Full-time
+              - listitem [ref=e130]: 3–6 yrs
+          - generic [ref=e131]:
+            - link "Read role →" [ref=e132] [cursor=pointer]:
+              - /url: /careers/supply-chain-manager
+            - button "Apply →" [ref=e133]:
+              - text: Apply
+              - generic [ref=e134]: →
+        - article [ref=e135]:
+          - generic [ref=e137]: "07"
+          - generic [ref=e138]:
+            - link "Social & Content Lead" [ref=e139] [cursor=pointer]:
+              - /url: /careers/social-content-lead
+            - paragraph [ref=e140]: Build PAN8's voice on Instagram, YouTube Shorts, and emerging platforms. Make millet feel like the most exciting thing in the kitchen.
+            - list [ref=e141]:
+              - listitem [ref=e142]: Design & Social
+              - listitem [ref=e143]: Hybrid · Kerala
+              - listitem [ref=e144]: Full-time
+              - listitem [ref=e145]: 2–4 yrs
+          - generic [ref=e146]:
+            - link "Read role →" [ref=e147] [cursor=pointer]:
+              - /url: /careers/social-content-lead
+            - button "Apply →" [ref=e148]:
+              - text: Apply
+              - generic [ref=e149]: →
+        - article [ref=e150]:
+          - generic [ref=e152]: "08"
+          - generic [ref=e153]:
+            - link "Marketing & Growth Intern" [ref=e154] [cursor=pointer]:
+              - /url: /careers/marketing-intern
+            - paragraph [ref=e155]: Join the operating team. Run experiments across organic, content, and outbound — and own outcomes by week two.
+            - list [ref=e156]:
+              - listitem [ref=e157]: Sales & Marketing
+              - listitem [ref=e158]: Hybrid · Kerala
+              - listitem [ref=e159]: Internship
+              - listitem [ref=e160]: Student / fresher
+          - generic [ref=e161]:
+            - link "Read role →" [ref=e162] [cursor=pointer]:
+              - /url: /careers/marketing-intern
+            - button "Apply →" [ref=e163]:
+              - text: Apply
+              - generic [ref=e164]: →
+    - generic [ref=e166]:
+      - generic [ref=e167]:
+        - generic [ref=e168]: Founder's Office
+        - generic [ref=e169]: 1 role
+      - generic [ref=e170]:
+        - generic [ref=e171]: Tech & Product
+        - generic [ref=e172]: 2 roles
+      - generic [ref=e173]:
+        - generic [ref=e174]: Sales & Marketing
+        - generic [ref=e175]: 2 roles
+      - generic [ref=e176]:
+        - generic [ref=e177]: Design & Social
+        - generic [ref=e178]: 2 roles
+      - generic [ref=e179]:
+        - generic [ref=e180]: Operations & Logistics
+        - generic [ref=e181]: 1 role
+    - generic [ref=e183]:
+      - generic [ref=e184]:
+        - text: A note from the founders
+        - heading "Send us your work, not your CV." [level=2] [ref=e185]
+      - generic [ref=e186]:
+        - paragraph [ref=e187]: Show us the thing you shipped, the post you wrote, the deck you owned, the campaign you ran. We read every email.
+        - paragraph [ref=e188]:
+          - text: Send to
+          - link "innayanutrifoods@gmail.com" [ref=e189] [cursor=pointer]:
+            - /url: mailto:innayanutrifoods@gmail.com?subject=I'd%20like%20to%20work%20at%20Innaya
+          - text: with the role title in your subject line.
+  - contentinfo [ref=e190]:
+    - generic [ref=e191]:
+      - generic [ref=e192]:
+        - generic [ref=e193]:
+          - generic [ref=e194]:
+            - img "Innaya Nutri Foods" [ref=e196]
+            - generic [ref=e197]:
+              - generic [ref=e198]: Innaya
+              - generic [ref=e199]: Nutri Foods · INFPL
+          - heading "Nutrition, at scale." [level=2] [ref=e200]:
+            - text: Nutrition,
+            - emphasis [ref=e201]: at scale.
+          - paragraph [ref=e202]: An AI-first food technology company, headquartered in Kerala. Building the brands India will eat tomorrow.
+          - generic [ref=e203]:
+            - link "Innaya Nutri Foods on LinkedIn" [ref=e204] [cursor=pointer]:
+              - /url: https://www.linkedin.com/company/innaya-nutri-foods
+              - img [ref=e205]
+              - text: LinkedIn
+              - generic [ref=e207]: ↗
+            - link "PAN8 — A Nutri Co." [ref=e208] [cursor=pointer]:
+              - /url: https://www.pan8.in
+              - generic [ref=e209]: pan8.in
+              - generic [ref=e210]: ↗
+        - generic [ref=e211]:
+          - generic [ref=e212]:
+            - generic [ref=e213]: Sitemap
+            - generic [ref=e214]:
+              - link "Company" [ref=e215] [cursor=pointer]:
+                - /url: /about
+              - link "Brands" [ref=e216] [cursor=pointer]:
+                - /url: /brands/pan8
+              - link "Products" [ref=e217] [cursor=pointer]:
+                - /url: /products
+              - link "Sustainability" [ref=e218] [cursor=pointer]:
+                - /url: /sustainability
+              - link "Careers" [ref=e219] [cursor=pointer]:
+                - /url: /careers
+              - link "Contact" [ref=e220] [cursor=pointer]:
+                - /url: /contact
+          - generic [ref=e221]:
+            - generic [ref=e222]: Brands
+            - generic [ref=e223]:
+              - link "pan8.in ↗" [ref=e224] [cursor=pointer]:
+                - /url: https://www.pan8.in
+              - generic [ref=e225]: More — soon
+          - generic [ref=e226]:
+            - generic [ref=e227]: Reach us
+            - generic [ref=e228]:
+              - link "ceo@innayanutrifoods.com" [ref=e229] [cursor=pointer]:
+                - /url: mailto:ceo@innayanutrifoods.com
+              - link "innayanutrifoods@gmail.com" [ref=e230] [cursor=pointer]:
+                - /url: mailto:innayanutrifoods@gmail.com
+              - link "sales@pan8.in" [ref=e231] [cursor=pointer]:
+                - /url: mailto:sales@pan8.in
+              - generic [ref=e232]: Kakkanad, Ernakulam, Kerala, India
+      - generic [ref=e233]:
+        - generic [ref=e234]: © 2026 INFPL — Innaya Nutri Foods Private Limited. All rights reserved.
+        - generic [ref=e235]: Made in India · Kakkanad, Kerala
+    - generic:
+      - generic: INNAYA
+  - button "Open Next.js Dev Tools" [ref=e241] [cursor=pointer]:
+    - img [ref=e242]

@@ -1,0 +1,153 @@
+- generic [active] [ref=e1]:
+  - banner [ref=e2]:
+    - generic [ref=e3]:
+      - link "Innaya Nutri Foods — home" [ref=e4] [cursor=pointer]:
+        - /url: /
+        - generic [ref=e5]:
+          - img "Innaya Nutri Foods" [ref=e7]
+          - generic [ref=e8]:
+            - generic [ref=e9]: Innaya
+            - generic [ref=e10]: Nutri Foods
+      - button "Toggle menu" [ref=e12]
+  - generic:
+    - navigation:
+      - link "Company 01":
+        - /url: /about
+        - generic: Company
+        - generic: "01"
+      - link "Brands 02":
+        - /url: /brands/pan8
+        - generic: Brands
+        - generic: "02"
+      - link "Products 03":
+        - /url: /products
+        - generic: Products
+        - generic: "03"
+      - link "Sustainability 04":
+        - /url: /sustainability
+        - generic: Sustainability
+        - generic: "04"
+      - link "Careers 05":
+        - /url: /careers
+        - generic: Careers
+        - generic: "05"
+      - link "Contact 06":
+        - /url: /contact
+        - generic: Contact
+        - generic: "06"
+  - main [ref=e15]:
+    - generic [ref=e17]:
+      - link "← All roles" [ref=e18] [cursor=pointer]:
+        - /url: /careers
+        - generic [ref=e19]: ← All roles
+      - generic [ref=e20]:
+        - generic [ref=e21]: Tech & Product
+        - generic [ref=e22]: ·
+        - generic [ref=e23]: Remote, India
+        - generic [ref=e24]: ·
+        - generic [ref=e25]: Full-time
+        - generic [ref=e26]: ·
+        - generic [ref=e27]: 2–5 yrs
+      - heading "Full-Stack Engineer (Next.js · TypeScript)" [level=1] [ref=e28]
+      - paragraph [ref=e29]: Build the operating system underneath Innaya — internal tools for sourcing, formulation, demand forecasting, and the consumer e-commerce stack at pan8.in.
+      - generic [ref=e30]:
+        - button "Apply →" [ref=e31]:
+          - text: Apply
+          - generic [ref=e32]: →
+        - generic [ref=e33]: Compensation · Competitive · ESOP
+    - generic [ref=e34]:
+      - generic [ref=e35]:
+        - generic [ref=e36]:
+          - heading "What you'll do" [level=2] [ref=e37]
+          - list [ref=e38]:
+            - listitem [ref=e39]: Ship features end-to-end across Next.js + Postgres + edge runtime
+            - listitem [ref=e41]: Own e-commerce, checkout, and the order-to-fulfilment pipeline
+            - listitem [ref=e43]: Integrate AI models (LLMs, classical ML) into ops workflows
+        - generic [ref=e45]:
+          - heading "What we're looking for" [level=2] [ref=e46]
+          - list [ref=e47]:
+            - listitem [ref=e48]: Strong TypeScript, React, and Node.js fundamentals
+            - listitem [ref=e50]: Comfort with SQL, Postgres, and at least one cloud (AWS/GCP/Vercel)
+            - listitem [ref=e52]: Has shipped production code that real users touch
+        - generic [ref=e54]:
+          - heading "Nice to have" [level=2] [ref=e55]
+          - list [ref=e56]:
+            - listitem [ref=e57]: AI/ML exposure
+            - listitem [ref=e59]: Open-source contributions
+      - complementary [ref=e61]:
+        - generic [ref=e62]:
+          - text: Apply
+          - paragraph [ref=e63]: Hit apply, and your email client will draft a message to our HR inbox with this role pre-filled. Attach your CV/portfolio.
+          - button "Apply →" [ref=e65]:
+            - text: Apply
+            - generic [ref=e66]: →
+          - separator [ref=e67]
+          - text: Or email directly
+          - link "innayanutrifoods@gmail.com" [ref=e68] [cursor=pointer]:
+            - /url: mailto:innayanutrifoods@gmail.com?subject=Application%20%E2%80%94%20Full-Stack%20Engineer%20(Next.js%20%C2%B7%20TypeScript)
+          - separator [ref=e69]
+          - text: Hiring team
+          - paragraph [ref=e70]: Founders read every email. First reply within 5 business days.
+  - contentinfo [ref=e71]:
+    - generic [ref=e72]:
+      - generic [ref=e73]:
+        - generic [ref=e74]:
+          - generic [ref=e75]:
+            - img "Innaya Nutri Foods" [ref=e77]
+            - generic [ref=e78]:
+              - generic [ref=e79]: Innaya
+              - generic [ref=e80]: Nutri Foods · INFPL
+          - heading "Nutrition, at scale." [level=2] [ref=e81]:
+            - text: Nutrition,
+            - emphasis [ref=e82]: at scale.
+          - paragraph [ref=e83]: An AI-first food technology company, headquartered in Kerala. Building the brands India will eat tomorrow.
+          - generic [ref=e84]:
+            - link "Innaya Nutri Foods on LinkedIn" [ref=e85] [cursor=pointer]:
+              - /url: https://www.linkedin.com/company/innaya-nutri-foods
+              - img [ref=e86]
+              - text: LinkedIn
+              - generic [ref=e88]: ↗
+            - link "PAN8 — A Nutri Co." [ref=e89] [cursor=pointer]:
+              - /url: https://www.pan8.in
+              - generic [ref=e90]: pan8.in
+              - generic [ref=e91]: ↗
+        - generic [ref=e92]:
+          - generic [ref=e93]:
+            - generic [ref=e94]: Sitemap
+            - generic [ref=e95]:
+              - link "Company" [ref=e96] [cursor=pointer]:
+                - /url: /about
+              - link "Brands" [ref=e97] [cursor=pointer]:
+                - /url: /brands/pan8
+              - link "Products" [ref=e98] [cursor=pointer]:
+                - /url: /products
+              - link "Sustainability" [ref=e99] [cursor=pointer]:
+                - /url: /sustainability
+              - link "Careers" [ref=e100] [cursor=pointer]:
+                - /url: /careers
+              - link "Contact" [ref=e101] [cursor=pointer]:
+                - /url: /contact
+          - generic [ref=e102]:
+            - generic [ref=e103]: Brands
+            - generic [ref=e104]:
+              - link "pan8.in ↗" [ref=e105] [cursor=pointer]:
+                - /url: https://www.pan8.in
+              - generic [ref=e106]: More — soon
+          - generic [ref=e107]:
+            - generic [ref=e108]: Reach us
+            - generic [ref=e109]:
+              - link "ceo@innayanutrifoods.com" [ref=e110] [cursor=pointer]:
+                - /url: mailto:ceo@innayanutrifoods.com
+              - link "innayanutrifoods@gmail.com" [ref=e111] [cursor=pointer]:
+                - /url: mailto:innayanutrifoods@gmail.com
+              - link "sales@pan8.in" [ref=e112] [cursor=pointer]:
+                - /url: mailto:sales@pan8.in
+              - generic [ref=e113]: Kakkanad, Ernakulam, Kerala, India
+      - generic [ref=e114]:
+        - generic [ref=e115]: © 2026 INFPL — Innaya Nutri Foods Private Limited. All rights reserved.
+        - generic [ref=e116]: Made in India · Kakkanad, Kerala
+    - generic:
+      - generic: INNAYA
+  - button "Open Next.js Dev Tools" [ref=e122] [cursor=pointer]:
+    - img [ref=e123]
+  - alert [ref=e126]

@@ -34,7 +34,7 @@ export default function Hero() {
       id="top"
       ref={ref}
       onMouseMove={onMove}
-      className="grain relative isolate flex min-h-[100svh] items-end overflow-hidden bg-bone pb-16 pt-32 sm:pt-40"
+      className="grain relative isolate flex min-h-[100svh] items-end overflow-hidden bg-bone pb-12 pt-28 sm:pb-16 sm:pt-40"
     >
       {/* Background orbs */}
       <motion.div
@@ -148,10 +148,10 @@ export default function Hero() {
         </div>
       </motion.div>
 
-      {/* Scroll affordance */}
+      {/* Scroll affordance — desktop only */}
       <motion.div
         style={{ opacity }}
-        className="absolute bottom-6 left-1/2 z-10 -translate-x-1/2 flex flex-col items-center gap-2 font-mono text-[10px] uppercase tracking-[0.2em] text-mute"
+        className="absolute bottom-6 left-1/2 z-10 hidden -translate-x-1/2 flex-col items-center gap-2 font-mono text-[10px] uppercase tracking-[0.2em] text-mute md:flex"
       >
         <span>Scroll</span>
         <span className="block h-8 w-px bg-line">
