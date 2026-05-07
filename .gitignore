@@ -40,6 +40,7 @@ yarn-error.log*
 .playwright-mcp/
 *.png
 !public/**/*.png
+!src/app/**/*.png
 hero.png
 desktop-*.png
 mobile-*.png
@@ -48,3 +49,8 @@ careers-*.png
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+
+# AI agent instruction files (local-only)
+CLAUDE.md
+AGENTS.md
+.claude/
