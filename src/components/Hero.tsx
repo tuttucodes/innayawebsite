@@ -106,7 +106,7 @@ export default function Hero() {
               transition={{ duration: 0.9, delay: 0.55, ease: [0.16, 1, 0.3, 1] }}
               className="max-w-md text-[17px] leading-[1.55] text-ink-soft"
             >
-              Innaya Nutri Foods is a parent food-tech company. We run the full
+              Innaya Nutri Foods Pvt Ltd (INFPL) is a parent food-tech company. We run the full
               FMCG stack —{" "}
               <span className="text-ink">
                 sourcing, formulation, manufacturing, brand, and distribution

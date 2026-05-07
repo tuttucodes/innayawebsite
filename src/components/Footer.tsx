@@ -89,8 +89,8 @@ export default function Footer() {
         aria-hidden="true"
         className="pointer-events-none select-none px-5 pb-6 md:px-10"
       >
-        <span className="block font-serif text-[clamp(5rem,1rem+22vw,22rem)] leading-[0.85] tracking-[-0.04em] text-bone/[0.06]">
-          INNAYA
+        <span className="block font-serif text-[clamp(5rem,1rem+22vw,22rem)] leading-[0.85] tracking-[-0.04em] text-bone/[0.16]">
+          INFPL
         </span>
       </div>
     </footer>

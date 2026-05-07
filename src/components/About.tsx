@@ -16,7 +16,7 @@ export default function About() {
             <span className="italic text-leaf-deep">software gets built.</span>
           </>
         }
-        blurb="Innaya Nutri Foods is a Kerala-headquartered food technology company. We treat formulation, sourcing, and distribution as engineering problems — and ship millet-first, plant-protein nutrition under our consumer brand PAN8."
+        blurb="Innaya Nutri Foods Pvt Ltd — INFPL — is a Kerala-headquartered food technology company. We treat formulation, sourcing, and distribution as engineering problems, and ship millet-first plant-protein nutrition under our consumer brand PAN8."
       />
 
       <div className="mt-20 grid gap-x-10 gap-y-16 md:mt-28 md:grid-cols-12">

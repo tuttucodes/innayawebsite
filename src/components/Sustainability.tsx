@@ -87,7 +87,7 @@ function Tile({ big, small }: { big: string; small: string }) {
 function Pill({ k, v }: { k: string; v: string }) {
   return (
     <div className="rounded-2xl border border-bone/15 bg-bone/[0.05] p-5">
-      <span className="font-mono text-[10px] uppercase tracking-[0.22em] text-bone/55">
+      <span className="font-mono text-[10px] uppercase tracking-[0.22em] text-bone/80">
         {k}
       </span>
       <p className="mt-2 text-[15px] text-bone/95">{v}</p>
