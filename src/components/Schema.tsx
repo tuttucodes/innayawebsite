@@ -33,7 +33,7 @@ export default function Schema() {
     },
     legalName: SITE.legal,
     sameAs: [SITE.social.pan8, SITE.social.linkedin],
-    logo: `${SITE.url}/innaya-logo.svg`,
+    logo: `${SITE.url}/innaya-logo.png`,
     contactPoint: [
       {
         "@type": "ContactPoint",
