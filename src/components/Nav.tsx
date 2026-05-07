@@ -1,16 +1,18 @@
 "use client";
 
 import { useEffect, useState } from "react";
+import Link from "next/link";
 import { motion, useScroll, useMotionValueEvent } from "motion/react";
 import { cn } from "@/lib/cn";
+import { LogoLockup } from "./Logo";
 
 const links = [
-  { href: "#about", label: "Company" },
-  { href: "#ai", label: "AI Layer" },
-  { href: "#brands", label: "Brands" },
-  { href: "#products", label: "Products" },
-  { href: "#team", label: "Team" },
-  { href: "#contact", label: "Contact" },
+  { href: "/about", label: "Company" },
+  { href: "/brands/pan8", label: "Brands" },
+  { href: "/products", label: "Products" },
+  { href: "/sustainability", label: "Sustainability" },
+  { href: "/careers", label: "Careers" },
+  { href: "/contact", label: "Contact" },
 ];
 
 export default function Nav() {
@@ -40,32 +42,30 @@ export default function Nav() {
         )}
       >
         <div className="mx-auto flex max-w-[1400px] items-center justify-between px-5 py-4 md:px-10">
-          <a href="#top" className="group flex items-center gap-3">
-            <Logo />
-            <span className="hidden flex-col leading-none sm:flex">
-              <span className="font-serif text-[18px] tracking-tight">Innaya</span>
-              <span className="text-[10px] font-mono uppercase tracking-[0.18em] text-mute">
-                Nutri Foods
-              </span>
-            </span>
-          </a>
+          <Link
+            href="/"
+            aria-label="Innaya Nutri Foods — home"
+            className="group flex items-center"
+          >
+            <LogoLockup />
+          </Link>
 
           <nav className="hidden items-center gap-1 lg:flex">
             {links.map((l) => (
-              <a
+              <Link
                 key={l.href}
                 href={l.href}
                 className="group relative rounded-full px-4 py-2 text-[13px] tracking-tight text-ink-soft transition-colors hover:text-ink"
               >
                 <span className="relative z-10">{l.label}</span>
                 <span className="absolute inset-0 -z-0 rounded-full bg-ink/0 transition-colors duration-300 group-hover:bg-ink/[0.05]" />
-              </a>
+              </Link>
             ))}
           </nav>
 
           <div className="flex items-center gap-2">
-            <a
-              href="#contact"
+            <Link
+              href="/contact"
               className="hidden md:inline-flex group items-center gap-2 rounded-full border border-ink/20 bg-ink px-5 py-2.5 text-[13px] font-medium text-bone transition-all hover:border-ink hover:bg-ink-soft"
             >
               <span className="relative h-1.5 w-1.5 rounded-full bg-leaf">
@@ -73,7 +73,7 @@ export default function Nav() {
               </span>
               Get in touch
               <ArrowIcon />
-            </a>
+            </Link>
             <button
               type="button"
               aria-label="Toggle menu"
@@ -125,16 +125,6 @@ export default function Nav() {
         </nav>
       </motion.div>
     </>
-  );
-}
-
-function Logo() {
-  return (
-    <span className="relative grid h-9 w-9 place-items-center overflow-hidden rounded-full bg-ink text-bone">
-      <span className="font-serif text-[17px] leading-none">i</span>
-      <span className="absolute inset-0 rounded-full ring-1 ring-ink/10" />
-      <span className="absolute -inset-px rounded-full bg-gradient-to-tr from-leaf/0 via-leaf/40 to-amber/40 opacity-60 mix-blend-overlay" />
-    </span>
   );
 }
 

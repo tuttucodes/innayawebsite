@@ -31,7 +31,23 @@ export default function Schema() {
       postalCode: "682037",
       addressCountry: "IN",
     },
-    sameAs: ["https://www.pan8.in"],
+    legalName: SITE.legal,
+    sameAs: [SITE.social.pan8, SITE.social.linkedin],
+    logo: `${SITE.url}/innaya-logo.svg`,
+    contactPoint: [
+      {
+        "@type": "ContactPoint",
+        contactType: "customer support",
+        email: SITE.contactEmail,
+        areaServed: "IN",
+      },
+      {
+        "@type": "ContactPoint",
+        contactType: "human resources",
+        email: SITE.hrEmail,
+        areaServed: "IN",
+      },
+    ],
     description:
       "Innaya Nutri Foods Pvt Ltd is an AI-first food technology company headquartered in Kerala, India, building millet-based plant-protein nutrition under the PAN8 brand.",
     industry: "Food & Beverages",

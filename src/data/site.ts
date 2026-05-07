@@ -1,13 +1,19 @@
 export const SITE = {
   name: "Innaya Nutri Foods",
   legal: "Innaya Nutri Foods Private Limited",
+  short: "INFPL",
   tagline: "Food technology, powered by AI.",
   domain: "innayanutrifoods.com",
   url: "https://innayanutrifoods.com",
   contactEmail: "ceo@innayanutrifoods.com",
+  hrEmail: "innayanutrifoods@gmail.com",
   brandEmail: "sales@pan8.in",
   hq: "Kakkanad, Ernakulam, Kerala, India",
   incorporated: "22 July 2024",
+  social: {
+    linkedin: "https://www.linkedin.com/company/innaya-nutri-foods",
+    pan8: "https://www.pan8.in",
+  },
 } as const;
 
 export interface Product {

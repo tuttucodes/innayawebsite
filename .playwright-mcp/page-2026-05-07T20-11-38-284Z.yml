@@ -1,0 +1,720 @@
+- generic [active] [ref=e1]:
+  - banner [ref=e2]:
+    - generic [ref=e3]:
+      - link "i Innaya Nutri Foods" [ref=e4] [cursor=pointer]:
+        - /url: "#top"
+        - generic [ref=e6]: i
+        - generic [ref=e9]:
+          - generic [ref=e10]: Innaya
+          - generic [ref=e11]: Nutri Foods
+      - navigation [ref=e12]:
+        - link "Company" [ref=e13] [cursor=pointer]:
+          - /url: "#about"
+          - text: Company
+        - link "AI Layer" [ref=e15] [cursor=pointer]:
+          - /url: "#ai"
+          - text: AI Layer
+        - link "Brands" [ref=e17] [cursor=pointer]:
+          - /url: "#brands"
+          - text: Brands
+        - link "Products" [ref=e19] [cursor=pointer]:
+          - /url: "#products"
+          - text: Products
+        - link "Team" [ref=e21] [cursor=pointer]:
+          - /url: "#team"
+          - text: Team
+        - link "Contact" [ref=e23] [cursor=pointer]:
+          - /url: "#contact"
+          - text: Contact
+      - link "Get in touch" [ref=e26] [cursor=pointer]:
+        - /url: "#contact"
+        - text: Get in touch
+        - img [ref=e29]
+  - main [ref=e31]:
+    - generic [ref=e32]:
+      - generic [ref=e33]:
+        - generic [ref=e34]: Est. 22 / 07 / 2024
+        - generic [ref=e35]: Kakkanad · Kerala · India
+        - generic [ref=e36]: DPIIT recognised · FSSAI central
+      - generic [ref=e37]:
+        - generic [ref=e38]:
+          - generic [ref=e41]: AI · Food Tech · India
+          - generic [ref=e42]: v.01
+        - heading "Nutrition, re-engineered by A.I." [level=1] [ref=e43]:
+          - generic [ref=e46]: Nutrition,
+          - generic [ref=e49]: re-engineered
+          - generic [ref=e52]:
+            - generic [ref=e53]: by
+            - generic [ref=e54]: A.I.
+        - generic [ref=e56]:
+          - paragraph [ref=e58]: Innaya Nutri Foods is an AI-first food technology company re-formulating millet, plant-protein, and on-the-go nutrition for the modern Indian household. Home of PAN8 — A Nutri Co.
+          - generic [ref=e60]:
+            - link "See our brands →" [ref=e61] [cursor=pointer]:
+              - /url: "#brands"
+              - generic [ref=e62]: See our brands
+              - generic [ref=e63]: →
+            - link "Talk to us" [ref=e65] [cursor=pointer]:
+              - /url: "#contact"
+        - generic [ref=e66]:
+          - generic [ref=e67]:
+            - generic [ref=e68]: Founded
+            - generic [ref=e69]: "2024"
+          - generic [ref=e70]:
+            - generic [ref=e71]: Brands
+            - generic [ref=e72]: 01 · PAN8
+          - generic [ref=e73]:
+            - generic [ref=e74]: SKUs Live
+            - generic [ref=e75]: "13"
+          - generic [ref=e76]:
+            - generic [ref=e77]: Manufacturing
+            - generic [ref=e78]: Pune, IN
+      - generic [ref=e80]: Scroll
+    - generic [ref=e84]:
+      - generic [ref=e85]:
+        - text: MILLET-FIRST
+        - img [ref=e86]
+      - generic [ref=e88]:
+        - text: PLANT PROTEIN 15–24g / 100g
+        - img [ref=e89]
+      - generic [ref=e91]:
+        - text: GLUTEN-FREE
+        - img [ref=e92]
+      - generic [ref=e94]:
+        - text: VEGAN
+        - img [ref=e95]
+      - generic [ref=e97]:
+        - text: FSSAI CENTRAL
+        - img [ref=e98]
+      - generic [ref=e100]:
+        - text: DPIIT RECOGNISED
+        - img [ref=e101]
+      - generic [ref=e103]:
+        - text: MADE IN INDIA
+        - img [ref=e104]
+      - generic [ref=e106]:
+        - text: AI-DRIVEN SOURCING
+        - img [ref=e107]
+      - generic [ref=e109]:
+        - text: NO PRESERVATIVES
+        - img [ref=e110]
+      - generic [ref=e112]:
+        - text: NO ADDED SUGAR*
+        - img [ref=e113]
+      - generic [ref=e115]:
+        - text: ECO-FRIENDLY PACK
+        - img [ref=e116]
+      - generic [ref=e118]:
+        - text: MILLET-FIRST
+        - img [ref=e119]
+      - generic [ref=e121]:
+        - text: PLANT PROTEIN 15–24g / 100g
+        - img [ref=e122]
+      - generic [ref=e124]:
+        - text: GLUTEN-FREE
+        - img [ref=e125]
+      - generic [ref=e127]:
+        - text: VEGAN
+        - img [ref=e128]
+      - generic [ref=e130]:
+        - text: FSSAI CENTRAL
+        - img [ref=e131]
+      - generic [ref=e133]:
+        - text: DPIIT RECOGNISED
+        - img [ref=e134]
+      - generic [ref=e136]:
+        - text: MADE IN INDIA
+        - img [ref=e137]
+      - generic [ref=e139]:
+        - text: AI-DRIVEN SOURCING
+        - img [ref=e140]
+      - generic [ref=e142]:
+        - text: NO PRESERVATIVES
+        - img [ref=e143]
+      - generic [ref=e145]:
+        - text: NO ADDED SUGAR*
+        - img [ref=e146]
+      - generic [ref=e148]:
+        - text: ECO-FRIENDLY PACK
+        - img [ref=e149]
+    - generic [ref=e151]:
+      - generic [ref=e152]:
+        - generic [ref=e153]:
+          - generic [ref=e154]: "01"
+          - generic [ref=e155]: The company
+        - heading "We build food, the way software gets built." [level=2] [ref=e156]:
+          - text: We build food, the way
+          - text: software gets built.
+        - paragraph [ref=e157]: Innaya Nutri Foods is a Kerala-headquartered food technology company. We treat formulation, sourcing, and distribution as engineering problems — and ship millet-first, plant-protein nutrition under our consumer brand PAN8.
+      - generic [ref=e158]:
+        - generic [ref=e159]:
+          - paragraph [ref=e160]:
+            - text: India eats
+            - emphasis [ref=e161]: 5,000-year-old grains
+            - text: in
+            - emphasis [ref=e162]: 21st-century formats
+            - text: . Pancakes, dosas, upma, bars — but engineered with millet, pulses, and modern nutrition science instead of refined wheat and sugar.
+          - paragraph [ref=e163]: "We sit at the intersection of three real tailwinds: India's millet revival, plant-protein consumption compounding 25–30% YoY, and the fastest growing FMCG segment — convenient breakfast and on-the-go nutrition. We don't ask households to change behaviour. We meet them in the formats they already eat."
+        - generic [ref=e164]:
+          - article [ref=e165]:
+            - generic [ref=e166]:
+              - generic [ref=e167]: Tailwind 01
+              - generic [ref=e168]: ↗
+            - heading "Millet revival" [level=3] [ref=e169]
+            - paragraph [ref=e170]: Government of India's National Year of Millets and ICAR-IIMR's leadership are reframing millet from rural to mainstream.
+          - article [ref=e172]:
+            - generic [ref=e173]:
+              - generic [ref=e174]: Tailwind 02
+              - generic [ref=e175]: ↗
+            - heading "Plant protein, on-fire" [level=3] [ref=e176]
+            - paragraph [ref=e177]: India's plant-protein consumption is compounding 25–30% YoY across urban households.
+          - article [ref=e179]:
+            - generic [ref=e180]:
+              - generic [ref=e181]: Tailwind 03
+              - generic [ref=e182]: ↗
+            - heading "Convenient breakfast" [level=3] [ref=e183]
+            - paragraph [ref=e184]: On-the-go nutrition is the fastest-growing FMCG segment — and we don't ask consumers to change behaviour.
+    - generic [ref=e189]:
+      - generic [ref=e190]:
+        - generic [ref=e191]:
+          - generic [ref=e192]: "02"
+          - generic [ref=e193]: The AI layer
+        - heading "From mandi to morning plate — intelligently routed." [level=2] [ref=e194]
+        - paragraph [ref=e195]: Most FMCG brands treat AI as a marketing tagline. We treat it as the operating layer underneath sourcing, formulation, demand, and distribution. Every kilogram of millet that becomes a PAN8 pack passes through it.
+      - list [ref=e196]:
+        - listitem [ref=e197]:
+          - generic [ref=e198]:
+            - generic [ref=e199]: "01"
+            - generic [ref=e200]: →
+          - heading "Sourcing intelligence" [level=3] [ref=e201]
+          - paragraph [ref=e202]: Models that price-discover millet lots across mandis, score quality signals, and time procurement to harvest cycles.
+          - generic [ref=e203]: Lower COGS per pack
+        - listitem [ref=e205]:
+          - generic [ref=e206]:
+            - generic [ref=e207]: "02"
+            - generic [ref=e208]: →
+          - heading "Recipe & nutrition engine" [level=3] [ref=e209]
+          - paragraph [ref=e210]: Formulation systems that hold protein, fibre, and glycaemic targets while honouring Indian palate constraints.
+          - generic [ref=e211]: 15–24g plant protein / 100g
+        - listitem [ref=e213]:
+          - generic [ref=e214]:
+            - generic [ref=e215]: "03"
+            - generic [ref=e216]: →
+          - heading "Demand forecasting" [level=3] [ref=e217]
+          - paragraph [ref=e218]: Time-series models on D2C, retail seeding, and search trends — feeding production runs and dispatch lanes.
+          - generic [ref=e219]: Tighter inventory turns
+        - listitem [ref=e221]:
+          - generic [ref=e222]:
+            - generic [ref=e223]: "04"
+            - generic [ref=e224]: →
+          - heading "Distribution graph" [level=3] [ref=e225]
+          - paragraph [ref=e226]: Routing intelligence across modern trade, kirana, and quick-commerce — picking the right lane per SKU per pin.
+          - generic [ref=e227]: Pan-India in months, not years
+      - generic [ref=e229]:
+        - generic [ref=e230]:
+          - text: Why this matters
+          - paragraph [ref=e231]: FMCG margin is won 1% at a time across sourcing, manufacturing, demand, and distribution. Software gives us all four levers.
+        - generic [ref=e232]:
+          - text: Where we are
+          - paragraph [ref=e233]: First commercial batches produced under FSSAI Central. D2C live on pan8.in. Retail seeded in Kerala and Haryana.
+        - generic [ref=e234]:
+          - text: What's next
+          - paragraph [ref=e235]: Modern trade, marketplaces (Amazon, Flipkart, BigBasket), and quick-commerce — sequenced by demand-graph signals.
+    - generic [ref=e236]:
+      - generic [ref=e237]:
+        - generic [ref=e238]:
+          - generic [ref=e239]: "03"
+          - generic [ref=e240]: Brand house
+        - heading "One company. Many shelves." [level=2] [ref=e241]
+        - paragraph [ref=e242]: Innaya is the parent. Each brand is a focused promise to a specific consumer. We launched with PAN8. More are in the lab.
+      - article [ref=e243]:
+        - generic: P8
+        - generic [ref=e244]:
+          - generic [ref=e245]:
+            - generic [ref=e246]:
+              - generic [ref=e247]: Consumer brand · 01
+              - generic [ref=e249]: Live
+            - heading "PAN 8 — A Nutri Co." [level=3] [ref=e250]:
+              - generic [ref=e251]: PAN
+              - generic [ref=e252]:
+                - generic [ref=e253]: "8"
+                - text: — A Nutri Co.
+            - paragraph [ref=e255]: “Nutrition that works with you.” 13 SKUs across pancake, dosa, upma and bar formats — every one millet-first, plant-protein dense, and zero-preservative.
+            - generic [ref=e256]:
+              - generic [ref=e257]:
+                - generic [ref=e258]: SKUs
+                - generic [ref=e259]: "13"
+              - generic [ref=e260]:
+                - generic [ref=e261]: Plant Protein
+                - generic [ref=e262]: 15–24g / 100g
+              - generic [ref=e263]:
+                - generic [ref=e264]: Format
+                - generic [ref=e265]: Everyday Indian
+            - generic [ref=e266]:
+              - link "Visit pan8.in ↗" [ref=e267] [cursor=pointer]:
+                - /url: https://www.pan8.in
+                - text: Visit pan8.in
+                - generic [ref=e268]: ↗
+              - link "See product range" [ref=e269] [cursor=pointer]:
+                - /url: "#products"
+          - generic [ref=e270]:
+            - generic [ref=e272]:
+              - generic [ref=e273]:
+                - generic [ref=e274]: Pack · 250g
+                - generic [ref=e275]: Plant protein 22g
+              - generic [ref=e276]:
+                - text: PAN8 · Multi-Millet
+                - heading "Multi Millet Dosa Mix." [level=4] [ref=e277]:
+                  - text: Multi
+                  - text: Millet
+                  - emphasis [ref=e278]: Dosa Mix.
+                - generic [ref=e279]:
+                  - generic [ref=e280]: Sorghum
+                  - generic [ref=e281]: Ragi
+                  - generic [ref=e282]: Foxtail
+                  - generic [ref=e283]: Pearl Millet
+            - generic [ref=e284]: D2C · live
+      - generic [ref=e285]:
+        - article [ref=e286]:
+          - generic [ref=e287]:
+            - generic [ref=e288]: Brand · 02
+            - generic [ref=e289]: Soon
+          - heading "In incubation" [level=3] [ref=e290]
+          - paragraph [ref=e291]: A protein-forward sub-brand for athletes and fitness-led households. Quietly being formulated.
+        - article [ref=e293]:
+          - generic [ref=e294]:
+            - generic [ref=e295]: Brand · 03
+            - generic [ref=e296]: Soon
+          - heading "On the roadmap" [level=3] [ref=e297]
+          - paragraph [ref=e298]: An export-first millet line built for international shelves and the diaspora.
+    - generic [ref=e300]:
+      - generic [ref=e301]:
+        - generic [ref=e302]:
+          - generic [ref=e303]: "04"
+          - generic [ref=e304]: The shelf
+        - heading "13 SKUs. One philosophy." [level=2] [ref=e305]
+        - paragraph [ref=e306]: Every PAN8 pack is millet-first and plant-protein dense. Pancake mixes, dosa mixes, upma mixes, and on-the-go bars — engineered for the breakfast and snack moments Indians already live.
+      - generic [ref=e307]:
+        - button "All13" [ref=e308]
+        - button "Pancake3" [ref=e309]
+        - button "Dosa5" [ref=e310]
+        - button "Upma2" [ref=e311]
+        - button "Bar3" [ref=e312]
+      - list [ref=e313]:
+        - listitem [ref=e314]:
+          - article [ref=e315]:
+            - generic [ref=e316]:
+              - generic [ref=e318]:
+                - generic [ref=e319]:
+                  - generic [ref=e320]: Pancake
+                  - generic [ref=e321]: 250g
+                - generic [ref=e322]:
+                  - text: PAN8
+                  - heading "Choco-Chip Vanilla Pancake" [level=3] [ref=e323]
+              - generic [ref=e324]: ↗
+            - generic [ref=e325]:
+              - generic [ref=e326]: Cocoa + sorghum
+              - generic [ref=e327]: Plant protein
+        - listitem [ref=e329]:
+          - article [ref=e330]:
+            - generic [ref=e331]:
+              - generic [ref=e333]:
+                - generic [ref=e334]:
+                  - generic [ref=e335]: Pancake
+                  - generic [ref=e336]: 250g
+                - generic [ref=e337]:
+                  - text: PAN8
+                  - heading "Banana & Dates Pancake" [level=3] [ref=e338]
+              - generic [ref=e339]: ↗
+            - generic [ref=e340]:
+              - generic [ref=e341]: Naturally sweet
+              - generic [ref=e342]: Plant protein
+        - listitem [ref=e344]:
+          - article [ref=e345]:
+            - generic [ref=e346]:
+              - generic [ref=e348]:
+                - generic [ref=e349]:
+                  - generic [ref=e350]: Pancake
+                  - generic [ref=e351]: 250g
+                - generic [ref=e352]:
+                  - text: PAN8
+                  - heading "Blueberry Pancake" [level=3] [ref=e353]
+              - generic [ref=e354]: ↗
+            - generic [ref=e355]:
+              - generic [ref=e356]: Antioxidant-rich
+              - generic [ref=e357]: Plant protein
+        - listitem [ref=e359]:
+          - article [ref=e360]:
+            - generic [ref=e361]:
+              - generic [ref=e363]:
+                - generic [ref=e364]:
+                  - generic [ref=e365]: Dosa
+                  - generic [ref=e366]: 250g
+                - generic [ref=e367]:
+                  - text: PAN8
+                  - heading "Multi-Millet Dosa" [level=3] [ref=e368]
+              - generic [ref=e369]: ↗
+            - generic [ref=e370]:
+              - generic [ref=e371]: 5 millets blend
+              - generic [ref=e372]: Plant protein
+        - listitem [ref=e374]:
+          - article [ref=e375]:
+            - generic [ref=e376]:
+              - generic [ref=e378]:
+                - generic [ref=e379]:
+                  - generic [ref=e380]: Dosa
+                  - generic [ref=e381]: 250g
+                - generic [ref=e382]:
+                  - text: PAN8
+                  - heading "Ragi Dosa" [level=3] [ref=e383]
+              - generic [ref=e384]: ↗
+            - generic [ref=e385]:
+              - generic [ref=e386]: Iron + calcium
+              - generic [ref=e387]: Plant protein
+        - listitem [ref=e389]:
+          - article [ref=e390]:
+            - generic [ref=e391]:
+              - generic [ref=e393]:
+                - generic [ref=e394]:
+                  - generic [ref=e395]: Dosa
+                  - generic [ref=e396]: 250g
+                - generic [ref=e397]:
+                  - text: PAN8
+                  - heading "Millet-Spinach Dosa" [level=3] [ref=e398]
+              - generic [ref=e399]: ↗
+            - generic [ref=e400]:
+              - generic [ref=e401]: Greens, baked-in
+              - generic [ref=e402]: Plant protein
+        - listitem [ref=e404]:
+          - article [ref=e405]:
+            - generic [ref=e406]:
+              - generic [ref=e408]:
+                - generic [ref=e409]:
+                  - generic [ref=e410]: Dosa
+                  - generic [ref=e411]: 250g
+                - generic [ref=e412]:
+                  - text: PAN8
+                  - heading "Millet-Moong Dosa" [level=3] [ref=e413]
+              - generic [ref=e414]: ↗
+            - generic [ref=e415]:
+              - generic [ref=e416]: Protein-stacked
+              - generic [ref=e417]: Plant protein
+        - listitem [ref=e419]:
+          - article [ref=e420]:
+            - generic [ref=e421]:
+              - generic [ref=e423]:
+                - generic [ref=e424]:
+                  - generic [ref=e425]: Dosa
+                  - generic [ref=e426]: 250g
+                - generic [ref=e427]:
+                  - text: PAN8
+                  - heading "Millet-Moringa Dosa" [level=3] [ref=e428]
+              - generic [ref=e429]: ↗
+            - generic [ref=e430]:
+              - generic [ref=e431]: Superfood greens
+              - generic [ref=e432]: Plant protein
+        - listitem [ref=e434]:
+          - article [ref=e435]:
+            - generic [ref=e436]:
+              - generic [ref=e438]:
+                - generic [ref=e439]:
+                  - generic [ref=e440]: Upma
+                  - generic [ref=e441]: 250g
+                - generic [ref=e442]:
+                  - text: PAN8
+                  - heading "Millet Upma" [level=3] [ref=e443]
+              - generic [ref=e444]: ↗
+            - generic [ref=e445]:
+              - generic [ref=e446]: Classic, reformulated
+              - generic [ref=e447]: Plant protein
+        - listitem [ref=e449]:
+          - article [ref=e450]:
+            - generic [ref=e451]:
+              - generic [ref=e453]:
+                - generic [ref=e454]:
+                  - generic [ref=e455]: Upma
+                  - generic [ref=e456]: 250g
+                - generic [ref=e457]:
+                  - text: PAN8
+                  - heading "Vermicelli Upma" [level=3] [ref=e458]
+              - generic [ref=e459]: ↗
+            - generic [ref=e460]:
+              - generic [ref=e461]: Quick-cook breakfast
+              - generic [ref=e462]: Plant protein
+        - listitem [ref=e464]:
+          - article [ref=e465]:
+            - generic [ref=e466]:
+              - generic [ref=e468]:
+                - generic [ref=e469]:
+                  - generic [ref=e470]: Bar
+                  - generic [ref=e471]: 50g
+                - generic [ref=e472]:
+                  - text: PAN8
+                  - heading "Coffee Almond Bar" [level=3] [ref=e473]
+              - generic [ref=e474]: ↗
+            - generic [ref=e475]:
+              - generic [ref=e476]: Caffeine + protein
+              - generic [ref=e477]: Plant protein
+        - listitem [ref=e479]:
+          - article [ref=e480]:
+            - generic [ref=e481]:
+              - generic [ref=e483]:
+                - generic [ref=e484]:
+                  - generic [ref=e485]: Bar
+                  - generic [ref=e486]: 50g
+                - generic [ref=e487]:
+                  - text: PAN8
+                  - heading "Blueberry Bar" [level=3] [ref=e488]
+              - generic [ref=e489]: ↗
+            - generic [ref=e490]:
+              - generic [ref=e491]: Antioxidant on-the-go
+              - generic [ref=e492]: Plant protein
+        - listitem [ref=e494]:
+          - article [ref=e495]:
+            - generic [ref=e496]:
+              - generic [ref=e498]:
+                - generic [ref=e499]:
+                  - generic [ref=e500]: Bar
+                  - generic [ref=e501]: 50g
+                - generic [ref=e502]:
+                  - text: PAN8
+                  - heading "Dry Fruits Bar" [level=3] [ref=e503]
+              - generic [ref=e504]: ↗
+            - generic [ref=e505]:
+              - generic [ref=e506]: Whole-food snack
+              - generic [ref=e507]: Plant protein
+      - generic [ref=e509]:
+        - paragraph [ref=e510]: Looking for distribution, modern trade, or export pricing?
+        - link "Partner with us →" [ref=e511] [cursor=pointer]:
+          - /url: "#contact"
+    - generic [ref=e515]:
+      - generic [ref=e516]:
+        - generic [ref=e517]:
+          - generic [ref=e518]: "05"
+          - generic [ref=e519]: Climate · Water · Soil
+        - heading "Less water. More nutrition." [level=2] [ref=e520]:
+          - text: Less water.
+          - text: More
+          - emphasis [ref=e521]: nutrition.
+        - paragraph [ref=e522]: Millets need ~70% less water than rice and ~40% less than wheat. Every PAN8 pack reduces a household's water footprint while improving its nutrition footprint — directly aligned with India's millet-mission and climate goals.
+      - generic [ref=e523]:
+        - list [ref=e524]:
+          - listitem [ref=e525]:
+            - generic [ref=e526]: "-70%"
+            - generic [ref=e527]: Water vs rice
+          - listitem [ref=e529]:
+            - generic [ref=e530]: "-40%"
+            - generic [ref=e531]: Water vs wheat
+          - listitem [ref=e533]:
+            - generic [ref=e534]: 0g
+            - generic [ref=e535]: Preservatives
+          - listitem [ref=e537]:
+            - generic [ref=e538]: 100%
+            - generic [ref=e539]: Plant-based
+          - listitem [ref=e541]:
+            - generic [ref=e542]: ECO
+            - generic [ref=e543]: Retail-ready pack
+          - listitem [ref=e545]:
+            - generic [ref=e546]: LOW
+            - generic [ref=e547]: Glycaemic load
+        - generic [ref=e549]:
+          - generic [ref=e550]:
+            - text: Sourced from
+            - paragraph [ref=e551]: Indian smallholder millet farmers
+          - generic [ref=e552]:
+            - text: Made in
+            - paragraph [ref=e553]: FSSAI-licensed facility, Pune
+    - generic [ref=e554]:
+      - generic [ref=e555]:
+        - generic [ref=e556]:
+          - generic [ref=e557]: "06"
+          - generic [ref=e558]: Trust stack
+        - heading "Top-decile compliance for an early-stage food startup." [level=2] [ref=e559]
+        - paragraph [ref=e560]: FSSAI Central, GST, Udyam (MSME), DPIIT — all in place. We're export-ready, modern-trade-ready, and government-tender eligible from day one.
+      - list [ref=e561]:
+        - listitem [ref=e562]:
+          - generic [ref=e563]:
+            - generic [ref=e564]: "01"
+            - img [ref=e566]
+          - heading "FSSAI Central License" [level=3] [ref=e568]
+          - paragraph [ref=e569]: Type 1 — export ready
+        - listitem [ref=e570]:
+          - generic [ref=e571]:
+            - generic [ref=e572]: "02"
+            - img [ref=e574]
+          - heading "DPIIT / Startup India" [level=3] [ref=e576]
+          - paragraph [ref=e577]: Recognised, valid till 2034
+        - listitem [ref=e578]:
+          - generic [ref=e579]:
+            - generic [ref=e580]: "03"
+            - img [ref=e582]
+          - heading "Udyam (MSME)" [level=3] [ref=e584]
+          - paragraph [ref=e585]: Micro · Manufacturing
+        - listitem [ref=e586]:
+          - generic [ref=e587]:
+            - generic [ref=e588]: "04"
+            - img [ref=e590]
+          - heading "GSTIN" [level=3] [ref=e592]
+          - paragraph [ref=e593]: Kerala — state code 32
+        - listitem [ref=e594]:
+          - generic [ref=e595]:
+            - generic [ref=e596]: "05"
+            - img [ref=e598]
+          - heading "Incorporation" [level=3] [ref=e600]
+          - paragraph [ref=e601]: 22 July 2024
+        - listitem [ref=e602]:
+          - generic [ref=e603]:
+            - generic [ref=e604]: "06"
+            - img [ref=e606]
+          - heading "Sector" [level=3] [ref=e608]
+          - paragraph [ref=e609]: Food & Beverages / Processing
+    - generic [ref=e610]:
+      - generic [ref=e611]:
+        - generic [ref=e612]:
+          - generic [ref=e613]: "07"
+          - generic [ref=e614]: Founders & team
+        - heading "Built by 2 founders + 13 operators." [level=2] [ref=e615]
+        - paragraph [ref=e616]: A young, technical team running tech, brand, growth, design, manufacturing and ops. Lean by design — every hire is a multiplier.
+      - generic [ref=e617]:
+        - article [ref=e618]:
+          - generic [ref=e619]:
+            - generic [ref=e620]: Co-founder · 01
+            - generic [ref=e621]: 50% equity
+          - generic [ref=e622]:
+            - generic [ref=e624]: RB
+            - generic [ref=e625]:
+              - heading "Rahul Babu" [level=3] [ref=e626]
+              - paragraph [ref=e627]: Managing Director & CEO
+          - paragraph [ref=e628]: Builds the technology stack and runs day-to-day operations. B.Tech CS @ VIT Chennai.
+          - generic [ref=e629]: Tech · Brand · Growth · Supply chain
+        - article [ref=e630]:
+          - generic [ref=e631]:
+            - generic [ref=e632]: Co-founder · 02
+            - generic [ref=e633]: 50% equity
+          - generic [ref=e634]:
+            - generic [ref=e636]: IH
+            - generic [ref=e637]:
+              - heading "Irfan Habeeb" [level=3] [ref=e638]
+              - paragraph [ref=e639]: Co-founder & Director
+          - paragraph [ref=e640]: Leads product design and manufacturing-partner relationships. Bachelors in Transportation Design.
+          - generic [ref=e641]: Design · Manufacturing · Operations
+      - generic [ref=e642]:
+        - generic [ref=e643]:
+          - text: Operating team
+          - heading "13 operators across 4 functions." [level=3] [ref=e644]
+        - generic [ref=e645]:
+          - text: Sales & Marketing
+          - paragraph [ref=e646]: Outbound · Distribution · Retail seeding
+        - generic [ref=e647]:
+          - text: Tech & Product
+          - paragraph [ref=e648]: pan8.in · E-commerce · Internal tools
+        - generic [ref=e649]:
+          - text: Design & Social
+          - paragraph [ref=e650]: Packaging · Content · Social presence
+        - generic [ref=e651]:
+          - text: Operations & Logistics
+          - paragraph [ref=e652]: Manufacturing · Dispatch · Inventory
+    - generic [ref=e653]:
+      - generic [ref=e654]:
+        - generic [ref=e655]:
+          - generic [ref=e656]: "08"
+          - generic [ref=e657]: Contact
+        - heading "Investors, retailers, distributors — say hi." [level=2] [ref=e658]:
+          - text: Investors, retailers,
+          - text: distributors — say hi.
+        - paragraph [ref=e659]: Drop us a note. The form drafts an email straight to the CEO.
+      - generic [ref=e660]:
+        - complementary [ref=e661]:
+          - generic [ref=e662]:
+            - text: Direct line
+            - link "ceo@innayanutrifoods.com" [ref=e663] [cursor=pointer]:
+              - /url: mailto:ceo@innayanutrifoods.com
+            - separator [ref=e664]
+            - text: Headquarters
+            - paragraph [ref=e665]:
+              - text: F223, DLF New Town Heights
+              - text: Seaport Airport Road, Kakkanad
+              - text: Ernakulam, Kerala — 682037
+              - text: India
+            - separator [ref=e666]
+            - text: Brand · Sales
+            - link "pan8.in ↗" [ref=e667] [cursor=pointer]:
+              - /url: https://www.pan8.in
+            - link "sales@pan8.in" [ref=e668] [cursor=pointer]:
+              - /url: mailto:sales@pan8.in
+        - generic [ref=e669]:
+          - generic [ref=e670]:
+            - generic [ref=e671]:
+              - generic [ref=e672]:
+                - generic [ref=e673]: Your name
+                - textbox "Your name" [ref=e674]:
+                  - /placeholder: ""
+              - generic [ref=e675]:
+                - generic [ref=e676]: Work email
+                - textbox "Work email" [ref=e677]:
+                  - /placeholder: you@company.com
+            - generic [ref=e679]:
+              - generic [ref=e680]: Company / Organisation (optional)
+              - textbox "Company / Organisation (optional)" [ref=e681]:
+                - /placeholder: ""
+            - generic [ref=e682]:
+              - generic [ref=e683]: Why are you reaching out
+              - generic [ref=e684]:
+                - button "Investment" [ref=e685]
+                - button "Distribution / Retail" [ref=e686]
+                - button "Modern Trade" [ref=e687]
+                - button "Export" [ref=e688]
+                - button "Partnership" [ref=e689]
+                - button "Press" [ref=e690]
+                - button "Careers" [ref=e691]
+                - button "Other" [ref=e692]
+            - generic [ref=e693]:
+              - generic [ref=e694]: Your message
+              - textbox "Your message" [ref=e695]:
+                - /placeholder: Tell us what you'd like to talk about…
+          - generic [ref=e696]:
+            - paragraph [ref=e697]: By sending, you'll be redirected to your email client to draft a message to ceo@innayanutrifoods.com. No data is stored on this site.
+            - button "Send to CEO →" [ref=e698]:
+              - text: Send to CEO
+              - generic [ref=e699]: →
+  - contentinfo [ref=e700]:
+    - generic [ref=e701]:
+      - generic [ref=e702]:
+        - generic [ref=e703]:
+          - text: Innaya Nutri Foods Private Limited
+          - heading "Nutrition, at scale." [level=2] [ref=e704]:
+            - text: Nutrition,
+            - emphasis [ref=e705]: at scale.
+          - paragraph [ref=e706]: An AI-first food technology company, headquartered in Kerala. Building the brands India will eat tomorrow.
+        - generic [ref=e707]:
+          - generic [ref=e708]:
+            - generic [ref=e709]: Sitemap
+            - generic [ref=e710]:
+              - link "Company" [ref=e711] [cursor=pointer]:
+                - /url: "#about"
+              - link "AI Layer" [ref=e712] [cursor=pointer]:
+                - /url: "#ai"
+              - link "Brands" [ref=e713] [cursor=pointer]:
+                - /url: "#brands"
+              - link "Products" [ref=e714] [cursor=pointer]:
+                - /url: "#products"
+              - link "Team" [ref=e715] [cursor=pointer]:
+                - /url: "#team"
+              - link "Contact" [ref=e716] [cursor=pointer]:
+                - /url: "#contact"
+          - generic [ref=e717]:
+            - generic [ref=e718]: Brands
+            - link "pan8.in ↗" [ref=e720] [cursor=pointer]:
+              - /url: https://www.pan8.in
+          - generic [ref=e721]:
+            - generic [ref=e722]: Reach us
+            - generic [ref=e723]:
+              - link "ceo@innayanutrifoods.com" [ref=e724] [cursor=pointer]:
+                - /url: mailto:ceo@innayanutrifoods.com
+              - link "sales@pan8.in" [ref=e725] [cursor=pointer]:
+                - /url: mailto:sales@pan8.in
+              - generic [ref=e726]: Kakkanad, Ernakulam, Kerala, India
+      - generic [ref=e727]:
+        - generic [ref=e728]: © 2026 Innaya Nutri Foods Private Limited. All rights reserved.
+        - generic [ref=e729]: Made in India · Kakkanad, Kerala
+    - generic:
+      - generic: INNAYA
