@@ -172,9 +172,9 @@ export default function Contact({
                       type="button"
                       onClick={() => setReason(r)}
                       className={cn(
-                        "rounded-full px-3 py-1 font-mono text-[10px] uppercase tracking-[0.14em] transition-all",
+                        "cursor-pointer rounded-full px-3.5 py-1.5 font-mono text-[10px] uppercase tracking-[0.14em] transition-all active:scale-[0.98]",
                         isActive
-                          ? "bg-ink text-bone font-medium"
+                          ? "bg-ink text-bone font-medium shadow-xs"
                           : "border border-line bg-bone text-ink-soft hover:border-ink/40 hover:text-ink",
                       )}
                     >
@@ -248,7 +248,7 @@ export default function Contact({
             <button
               type="submit"
               disabled={loading}
-              className="group inline-flex w-full sm:w-auto items-center justify-center gap-2 rounded-full bg-ink px-8 py-3.5 text-[14px] font-medium text-bone transition-colors hover:bg-leaf-deep disabled:opacity-50 whitespace-nowrap"
+              className="group inline-flex w-full sm:w-auto cursor-pointer items-center justify-center gap-2 rounded-full bg-ink px-8 py-3.5 text-[14px] font-semibold text-bone transition-all duration-200 hover:bg-leaf-deep active:scale-[0.98] active:translate-y-[1px] disabled:opacity-50 whitespace-nowrap shadow-xs"
             >
               <span>{loading ? "Sending..." : "Send to CEO"}</span>
               <span className="transition-transform group-hover:translate-x-1">→</span>

@@ -344,7 +344,7 @@ export default function ThesisPage() {
               </div>
               <Link
                 href="/contact"
-                className="inline-flex items-center gap-2 rounded-full bg-bone px-6 py-3.5 text-xs font-semibold uppercase tracking-[0.14em] text-ink hover:bg-amber transition-colors"
+                className="inline-flex items-center gap-2 rounded-full bg-bone px-6 py-3.5 text-xs font-semibold uppercase tracking-[0.14em] text-ink transition-all duration-200 hover:bg-amber active:scale-[0.98] active:translate-y-[1px]"
               >
                 Request Strategic Briefing →
               </Link>

@@ -87,7 +87,7 @@ export default function PlatformsPage() {
                 <div className="mt-8">
                   <Link
                     href="/contact"
-                    className="inline-flex items-center gap-2 rounded-full bg-ink px-6 py-3.5 text-sm font-medium text-bone hover:bg-leaf-deep transition-colors"
+                    className="inline-flex items-center gap-2 rounded-full bg-ink px-6 py-3.5 text-sm font-semibold text-bone transition-all duration-200 hover:bg-leaf-deep active:scale-[0.98] active:translate-y-[1px]"
                   >
                     Request Enterprise Pilot →
                   </Link>

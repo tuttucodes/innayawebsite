@@ -80,8 +80,8 @@ export default function Footer() {
             <Col title="Consumer Brands">
               <Link href="/brands/pan8">PAN8 Brand Overview</Link>
               <Link href="/products">All 13 Millet SKUs</Link>
-              <Link href="/brands/pan8#pan8-catalog">Pancakes &amp; Dosas</Link>
-              <Link href="/brands/pan8#pan8-catalog">Upma &amp; Protein Bars</Link>
+              <Link href="/brands/pan8#products">Pancakes &amp; Dosas</Link>
+              <Link href="/brands/pan8#products">Upma &amp; Protein Bars</Link>
               <a href={SITE.social.pan8} target="_blank" rel="noopener noreferrer">
                 Storefront (Beta) ↗
               </a>

@@ -31,7 +31,7 @@ export default function Products() {
         title={
           <>
             13 SKUs.{" "}
-            <span className="italic text-leaf-deep">One philosophy.</span>
+            <span className="font-serif italic font-normal text-leaf-deep">One philosophy.</span>
           </>
         }
         blurb="Every PAN8 pack is millet-first and plant-protein dense. Pancake mixes, dosa mixes, upma mixes, and on-the-go bars — engineered for the breakfast and snack moments Indians already live."
@@ -46,9 +46,9 @@ export default function Products() {
               type="button"
               onClick={() => setActive(c)}
               className={cn(
-                "group relative rounded-full border px-5 py-2.5 text-[13px] tracking-tight transition-all",
+                "group relative cursor-pointer rounded-full border px-5 py-2.5 text-[13px] tracking-tight transition-all active:scale-[0.98] active:translate-y-[1px]",
                 isActive
-                  ? "border-ink bg-ink text-bone"
+                  ? "border-ink bg-ink text-bone shadow-xs"
                   : "border-line bg-bone-deep/40 text-ink-soft hover:border-ink/40 hover:text-ink",
               )}
             >

@@ -94,7 +94,7 @@ export default function Divisions() {
               <div className="p-6 sm:p-7 pt-0">
                 <Link
                   href={d.href}
-                  className="flex w-full items-center justify-between rounded-full border border-line bg-bone-deep/50 px-5 py-3 text-xs font-semibold uppercase tracking-[0.14em] text-ink transition-colors group-hover:border-ink group-hover:bg-ink group-hover:text-bone"
+                  className="flex w-full items-center justify-between rounded-full border border-line bg-bone-deep/50 px-5 py-3 text-xs font-semibold uppercase tracking-[0.14em] text-ink transition-all duration-200 group-hover:border-ink group-hover:bg-ink group-hover:text-bone active:scale-[0.98] active:translate-y-[1px]"
                 >
                   <span>{d.cta}</span>
                   <span className="transition-transform group-hover:translate-x-1">→</span>

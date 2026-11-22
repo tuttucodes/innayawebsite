@@ -87,17 +87,6 @@ em, .font-serif-italic {
   height: 1px;
 }
 
-.gradient-text {
-  background: linear-gradient(
-    90deg,
-    var(--color-ink) 0%,
-    var(--color-leaf-deep) 60%,
-    var(--color-amber) 100%
-  );
-  -webkit-background-clip: text;
-  background-clip: text;
-  color: transparent;
-}
 
 .shimmer {
   background: linear-gradient(

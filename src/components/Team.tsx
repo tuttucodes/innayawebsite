@@ -121,14 +121,14 @@ function PortraitFrame({ name }: { name: string }) {
 
   if (imgError) {
     return (
-      <div className="relative grid h-16 w-16 shrink-0 place-items-center rounded-xl border border-line bg-bone-deep text-ink font-serif text-lg font-normal">
+      <div className="relative grid h-16 w-16 shrink-0 place-items-center rounded-2xl border border-line bg-bone-deep text-ink font-serif text-xl font-normal shadow-xs">
         {initials}
       </div>
     );
   }
 
   return (
-    <div className="relative h-16 w-16 shrink-0 overflow-hidden rounded-xl border border-line bg-bone-deep">
+    <div className="relative h-16 w-16 shrink-0 overflow-hidden rounded-2xl border border-line bg-bone-deep shadow-xs">
       <Image
         src={imgPath}
         alt={name}
@@ -136,9 +136,6 @@ function PortraitFrame({ name }: { name: string }) {
         className="object-cover grayscale contrast-125"
         onError={() => setImgError(true)}
       />
-      <div className="absolute inset-0 grid place-items-center bg-bone-deep text-ink font-serif text-lg font-normal">
-        {initials}
-      </div>
     </div>
   );
 }
