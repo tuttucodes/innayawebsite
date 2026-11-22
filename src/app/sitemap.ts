@@ -7,6 +7,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
 
   const staticPages: MetadataRoute.Sitemap = [
     { url: base, lastModified, changeFrequency: "weekly", priority: 1 },
+    { url: `${base}/thesis`, lastModified, changeFrequency: "weekly", priority: 0.95 },
     { url: `${base}/platforms`, lastModified, changeFrequency: "weekly", priority: 0.95 },
     { url: `${base}/brands/pan8`, lastModified, changeFrequency: "weekly", priority: 0.95 },
     { url: `${base}/operations`, lastModified, changeFrequency: "monthly", priority: 0.9 },
@@ -15,6 +16,8 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: `${base}/sustainability`, lastModified, changeFrequency: "monthly", priority: 0.7 },
     { url: `${base}/careers`, lastModified, changeFrequency: "weekly", priority: 0.8 },
     { url: `${base}/contact`, lastModified, changeFrequency: "monthly", priority: 0.8 },
+    { url: `${base}/privacy`, lastModified, changeFrequency: "yearly", priority: 0.5 },
+    { url: `${base}/terms`, lastModified, changeFrequency: "yearly", priority: 0.5 },
   ];
 
   const jobPages: MetadataRoute.Sitemap = JOBS.map((j) => ({

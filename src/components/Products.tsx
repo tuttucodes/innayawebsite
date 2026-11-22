@@ -86,6 +86,38 @@ export default function Products() {
               <ProductCard product={p} />
             </motion.li>
           ))}
+          {active === "All" && (
+            <motion.li
+              layout
+              initial={{ opacity: 0, y: 30 }}
+              animate={{ opacity: 1, y: 0 }}
+              className="flex flex-col justify-between rounded-3xl border border-leaf-deep/30 bg-gradient-to-br from-[oklch(22%_0.05_180)] to-[oklch(18%_0.04_195)] p-8 text-bone sm:col-span-2 lg:col-span-2 xl:col-span-3"
+            >
+              <div>
+                <div className="flex items-center justify-between font-mono text-[10px] uppercase tracking-[0.2em] text-bone/60">
+                  <span>Modern Trade · Quick-Commerce · Export</span>
+                  <span className="rounded-full bg-leaf px-2.5 py-0.5 text-bone font-mono text-[9px]">Commercial Offtake</span>
+                </div>
+                <h4 className="mt-4 font-sans text-2xl font-bold tracking-tight text-bone">
+                  Distribute PAN8 High-Protein Nutrition Across India &amp; Export Lanes
+                </h4>
+                <p className="mt-2.5 text-sm leading-[1.6] text-bone/75 max-w-2xl">
+                  PAN8 supplies retail-ready master cartons with verified barcoding, 9–12 month shelf stability, and volume wholesale pricing for retail supermarkets, institutional food services, and export partners.
+                </p>
+              </div>
+              <div className="mt-8 flex flex-wrap items-center gap-4">
+                <a
+                  href="/contact"
+                  className="inline-flex items-center gap-2 rounded-full bg-bone px-6 py-3 text-xs font-semibold uppercase tracking-[0.14em] text-ink transition-colors hover:bg-amber"
+                >
+                  Request B2B Wholesale Pricing →
+                </a>
+                <span className="font-mono text-[10px] text-bone/60">
+                  FSSAI Central Type 1 Certified · Dispatch from Kerala
+                </span>
+              </div>
+            </motion.li>
+          )}
         </AnimatePresence>
       </ul>
 

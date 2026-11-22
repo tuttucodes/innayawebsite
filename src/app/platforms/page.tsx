@@ -31,7 +31,7 @@ export default function PlatformsPage() {
           title={
             <>
               An operating system for<br />
-              <em className="text-leaf-deep">agricultural supply chains.</em>
+              <em className="font-serif italic font-normal text-leaf-deep">agricultural supply chains.</em>
             </>
           }
           blurb={

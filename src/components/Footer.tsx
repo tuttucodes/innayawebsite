@@ -63,36 +63,52 @@ export default function Footer() {
           <div className="grid grid-cols-2 gap-8 sm:grid-cols-3 lg:col-span-7">
             <Col title="The Group">
               <Link href="/">Overview</Link>
-              <Link href="/#divisions">Divisions</Link>
-              <Link href="/operations">Operations</Link>
-              <Link href="/about">Corporate Info</Link>
-              <Link href="/contact">Contact</Link>
+              <Link href="/thesis">Assured Buyer Thesis</Link>
+              <Link href="/operations">Supply Operations</Link>
+              <Link href="/about">Corporate Profile</Link>
+              <Link href="/sustainability">Sustainability &amp; Water</Link>
+              <Link href="/careers">Careers (Hiring)</Link>
+              <Link href="/contact">Executive Contact</Link>
             </Col>
             <Col title="Platforms & Software">
-              <Link href="/platforms">Innaya Intelligence</Link>
+              <Link href="/platforms">Innaya Intelligence Suite</Link>
               <Link href="/platforms">Innaya Voice &amp; Source</Link>
               <Link href="/platforms">Innaya FirstMile</Link>
               <Link href="/platforms">Cold-Chain Telemetry</Link>
-              <Link href="/platforms">AWS Cloud Stack</Link>
+              <Link href="/platforms">AWS Cloud Architecture</Link>
             </Col>
             <Col title="Consumer Brands">
-              <a href={SITE.social.pan8} target="_blank" rel="noopener noreferrer">
-                PAN8 Store (pan8.in) ↗
-              </a>
               <Link href="/brands/pan8">PAN8 Brand Overview</Link>
               <Link href="/products">All 13 Millet SKUs</Link>
-              <Link href="/brands/pan8">Pancakes &amp; Dosas</Link>
-              <Link href="/brands/pan8">Upma &amp; Protein Bars</Link>
+              <Link href="/brands/pan8#pan8-catalog">Pancakes &amp; Dosas</Link>
+              <Link href="/brands/pan8#pan8-catalog">Upma &amp; Protein Bars</Link>
+              <a href={SITE.social.pan8} target="_blank" rel="noopener noreferrer">
+                Storefront (Beta) ↗
+              </a>
             </Col>
           </div>
         </div>
 
-        {/* Corporate bottom row */}
-        <div className="mt-16 flex flex-col gap-4 border-t border-bone/15 pt-6 font-mono text-[10px] uppercase tracking-[0.2em] text-bone/60 sm:flex-row sm:items-center sm:justify-between">
-          <span>
-            © {year} {SITE.legal} · All Rights Reserved
-          </span>
-          <span>{SITE.hq}</span>
+        {/* Corporate bottom row with CIN, licenses & legal routes */}
+        <div className="mt-16 flex flex-col gap-4 border-t border-bone/15 pt-6 font-mono text-[10px] uppercase tracking-[0.16em] text-bone/60 sm:flex-row sm:items-center sm:justify-between">
+          <div className="flex flex-wrap items-center gap-x-3 gap-y-1">
+            <span>© {year} {SITE.legal}</span>
+            <span>·</span>
+            <span>CIN: {SITE.cin}</span>
+            <span>·</span>
+            <span>DPIIT Recognized · FSSAI Central Licensed</span>
+          </div>
+          <div className="flex flex-wrap items-center gap-3 text-bone/50">
+            <Link href="/privacy" className="hover:text-bone transition-colors">
+              Privacy
+            </Link>
+            <span>·</span>
+            <Link href="/terms" className="hover:text-bone transition-colors">
+              Terms
+            </Link>
+            <span>·</span>
+            <span>{SITE.hq}</span>
+          </div>
         </div>
       </div>
 

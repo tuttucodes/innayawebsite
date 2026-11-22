@@ -52,7 +52,7 @@ export default function OperationsPage() {
           title={
             <>
               Origin to processing.<br />
-              <em className="text-leaf-deep">The physical execution layer.</em>
+              <em className="font-serif italic font-normal text-leaf-deep">The physical execution layer.</em>
             </>
           }
           blurb={

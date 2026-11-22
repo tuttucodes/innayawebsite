@@ -30,7 +30,7 @@ export default function AboutPage() {
           title={
             <>
               Operating the physical<br />
-              <em className="text-leaf-deep">and digital layers of food.</em>
+              <em className="font-serif italic font-normal text-leaf-deep">and digital layers of food.</em>
             </>
           }
           blurb={
@@ -43,7 +43,7 @@ export default function AboutPage() {
           }
         />
         <About />
-        <Team />
+        <Team showSectionNumber={false} showOperatingTeam={true} />
       </main>
       <Footer />
     </>

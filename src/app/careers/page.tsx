@@ -41,7 +41,7 @@ export default function CareersPage() {
           title={
             <>
               Build the company<br />
-              India will <em className="text-leaf-deep">eat tomorrow.</em>
+              India will <em className="font-serif italic font-normal text-leaf-deep">eat tomorrow.</em>
             </>
           }
           blurb={

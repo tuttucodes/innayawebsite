@@ -22,7 +22,7 @@ export default function SustainabilityPage() {
           title={
             <>
               Less water.<br />
-              <em className="text-leaf-deep">More nutrition.</em>
+              <em className="font-serif italic font-normal text-leaf-deep">More nutrition.</em>
             </>
           }
           blurb={

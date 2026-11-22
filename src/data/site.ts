@@ -2,11 +2,12 @@ export const SITE = {
   name: "Innaya Nutri Foods",
   legal: "Innaya Nutri Foods Private Limited",
   short: "INFPL",
+  cin: "U47219KL2024PTC088769",
   tagline: "Operating the infrastructure of food — from origin to shelf.",
   domain: "innayanutrifoods.com",
   url: "https://innayanutrifoods.com",
   contactEmail: "ceo@innayanutrifoods.com",
-  hrEmail: "innayanutrifoods@gmail.com",
+  hrEmail: "careers@innayanutrifoods.com",
   brandEmail: "sales@pan8.in",
   hq: "Kakkanad, Ernakulam, Kerala, India",
   incorporated: "22 July 2024",
@@ -15,6 +16,13 @@ export const SITE = {
     pan8: "https://www.pan8.in",
   },
 } as const;
+
+export const TRACTION = [
+  { value: "50+ Panels", label: "Blind Taste Trials (Chennai & Kochi)" },
+  { value: "85%+", label: "Repeat-Purchase Intent" },
+  { value: "3 Flagship SKUs", label: "R&D Formulation Finalized" },
+  { value: "FSSAI + DPIIT", label: "Central Licensed · Valid till 2034" },
+] as const;
 
 /* =========================================================================
    DIVISIONS OF INNAYA

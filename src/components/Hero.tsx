@@ -1,7 +1,7 @@
 "use client";
 
 import Link from "next/link";
-import { motion } from "motion/react";
+import { TRACTION } from "@/data/site";
 
 export default function Hero() {
   return (
@@ -46,19 +46,14 @@ export default function Hero() {
                 href="/brands/pan8"
                 className="inline-flex items-center justify-center gap-2 rounded-full border border-line bg-bone-deep/50 px-6 py-3.5 text-sm font-medium text-ink transition-colors hover:border-ink/40 hover:bg-bone-deep"
               >
-                Consumer Brand (PAN8) ↗
+                Explore PAN8 →
               </Link>
             </div>
           </div>
 
-          {/* Right Column: High-end architectural overview card */}
+          {/* Right Column: High-end architectural overview card - Renders immediately with zero opacity delay */}
           <div className="lg:col-span-5">
-            <motion.div
-              initial={{ opacity: 0, y: 24 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8, delay: 0.2, ease: [0.16, 1, 0.3, 1] }}
-              className="rounded-2xl border border-line bg-bone-deep/40 p-5 sm:p-6 md:p-8"
-            >
+            <div className="rounded-2xl border border-line bg-bone-deep/40 p-5 sm:p-6 md:p-8">
               <div className="flex items-center justify-between border-b border-line/60 pb-3.5 sm:pb-4">
                 <span className="font-mono text-[10px] uppercase tracking-[0.2em] text-mute">
                   The Innaya Portfolio
@@ -112,13 +107,27 @@ export default function Hero() {
                   <p className="text-xs text-ink-soft">Tamil Nadu &amp; Kerala Agricultural Corridors</p>
                 </Link>
               </div>
-            </motion.div>
+            </div>
           </div>
+        </div>
+
+        {/* Institutional Traction & Validation Strip */}
+        <div className="mt-14 sm:mt-16 grid grid-cols-2 gap-3 sm:grid-cols-4 sm:gap-4 border-t border-line/60 pt-8">
+          {TRACTION.map((t) => (
+            <div key={t.label} className="rounded-xl border border-line/70 bg-bone-deep/30 p-3.5 sm:p-4">
+              <span className="font-sans text-lg sm:text-xl font-bold tracking-tight text-ink">
+                {t.value}
+              </span>
+              <p className="mt-1 font-mono text-[10px] uppercase tracking-[0.14em] text-mute leading-tight">
+                {t.label}
+              </p>
+            </div>
+          ))}
         </div>
       </div>
 
       {/* Bottom anchor ticker */}
-      <div className="mx-auto mt-12 sm:mt-16 flex w-full max-w-[1360px] flex-col gap-2 border-t border-line/60 pt-5 font-mono text-[10px] sm:text-[11px] uppercase tracking-[0.18em] text-mute sm:flex-row sm:items-center sm:justify-between">
+      <div className="mx-auto mt-10 sm:mt-12 flex w-full max-w-[1360px] flex-col gap-2 border-t border-line/60 pt-5 font-mono text-[10px] sm:text-[11px] uppercase tracking-[0.18em] text-mute sm:flex-row sm:items-center sm:justify-between">
         <span>Innaya Nutrifoods Private Limited · Food Systems &amp; Technology</span>
         <span>Kerala &amp; Tamil Nadu, India</span>
       </div>

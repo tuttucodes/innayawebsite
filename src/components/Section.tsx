@@ -5,6 +5,7 @@ import { cn } from "@/lib/cn";
 
 interface SectionHeadProps {
   index?: string;
+  showSectionNumber?: boolean;
   eyebrow?: string;
   title: React.ReactNode;
   blurb?: string;
@@ -14,6 +15,7 @@ interface SectionHeadProps {
 
 export function SectionHead({
   index,
+  showSectionNumber = true,
   eyebrow,
   title,
   blurb,
@@ -30,7 +32,7 @@ export function SectionHead({
     >
       <div className="flex items-center justify-between font-mono text-[11px] uppercase tracking-[0.24em] text-mute">
         {eyebrow && <span>{eyebrow}</span>}
-        {index && <span>/{index}</span>}
+        {index && showSectionNumber && <span>/{index}</span>}
       </div>
       <motion.h2
         initial={{ opacity: 0, y: 16 }}

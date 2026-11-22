@@ -85,30 +85,31 @@ export default function Brands() {
 
               <div className="mt-8 flex flex-wrap items-center gap-3">
                 <a
+                  href="#pan8-catalog"
+                  className="inline-flex items-center gap-2 rounded-full bg-bone px-6 py-3.5 text-sm font-semibold text-ink transition-colors hover:bg-amber"
+                >
+                  Browse PAN8 SKUs ↓
+                </a>
+                <a
                   href="https://www.pan8.in"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="inline-flex items-center gap-2 rounded-full bg-bone px-6 py-3.5 text-sm font-semibold text-ink transition-colors hover:bg-amber"
+                  className="inline-flex items-center gap-2 rounded-full border border-bone/30 bg-bone/10 px-5 py-3 text-xs font-semibold text-bone transition-colors hover:bg-bone/20"
                 >
-                  Visit Brand Store (pan8.in) ↗
-                </a>
-                <a
-                  href="#pan8-catalog"
-                  className="inline-flex items-center gap-2 rounded-full border border-bone/30 px-6 py-3.5 text-sm font-medium text-bone transition-colors hover:bg-bone/10"
-                >
-                  Browse PAN8 SKUs ↓
+                  <span>D2C Storefront (Beta)</span>
+                  <span className="font-mono text-[10px] text-amber">pan8.in ↗</span>
                 </a>
               </div>
             </div>
 
-            <div className="flex justify-center lg:col-span-4">
-              <div className="relative aspect-[3/2] w-full max-w-[340px] overflow-hidden rounded-2xl border border-bone/15 bg-[oklch(22%_0.05_195)] p-6 shadow-2xl">
+            <div className="flex items-center justify-center lg:col-span-4">
+              <div className="relative aspect-[3/2] w-full max-w-[320px]">
                 <Image
                   src="/pan8-logo.png"
-                  alt="PAN8 — A Nutri Co."
+                  alt="PAN8 — Just Pan It!"
                   fill
-                  sizes="340px"
-                  className="object-contain p-4"
+                  sizes="320px"
+                  className="object-contain filter drop-shadow-[0_8px_16px_rgba(0,0,0,0.35)]"
                   priority={false}
                 />
               </div>
@@ -151,11 +152,40 @@ export default function Brands() {
             </div>
           </div>
 
-          {/* Product Cards Grid */}
+          {/* Product Cards Grid with Balanced Slots */}
           <div className="mt-8 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
             {filteredProducts.map((p) => (
               <ProductItem key={p.name} product={p} />
             ))}
+
+            {/* Fills the remaining 3 columns on row 4 when All Products is selected to eliminate orphan cards */}
+            {activeCategory === "All Products" && (
+              <div className="flex flex-col justify-between rounded-2xl border border-leaf-deep/30 bg-gradient-to-br from-[oklch(22%_0.05_180)] to-[oklch(18%_0.04_195)] p-6 text-bone sm:col-span-2 lg:col-span-3">
+                <div>
+                  <div className="flex items-center justify-between font-mono text-[10px] uppercase tracking-[0.18em] text-bone/60">
+                    <span>Modern Trade · Quick-Commerce · Export</span>
+                    <span className="rounded-full bg-leaf px-2.5 py-0.5 text-bone font-mono text-[9px]">Commercial Placement</span>
+                  </div>
+                  <h4 className="mt-3 font-sans text-xl font-bold tracking-tight text-bone">
+                    Partner with PAN8 for Retail &amp; Institutional Offtake
+                  </h4>
+                  <p className="mt-2 text-sm text-bone/75 max-w-xl">
+                    Standardized master cartons, barcode verified shelf-life compliance, and wholesale tier pricing for modern trade supermarkets, quick-commerce dark stores, and overseas distributors.
+                  </p>
+                </div>
+                <div className="mt-6 flex flex-wrap items-center gap-3">
+                  <a
+                    href="/contact"
+                    className="inline-flex items-center gap-2 rounded-full bg-bone px-5 py-2.5 text-xs font-semibold uppercase tracking-[0.14em] text-ink transition-colors hover:bg-amber"
+                  >
+                    Request B2B Wholesale Catalog →
+                  </a>
+                  <span className="font-mono text-[10px] text-bone/60">
+                    Direct dispatch from certified Kerala facility
+                  </span>
+                </div>
+              </div>
+            )}
           </div>
         </div>
       </div>

@@ -71,6 +71,46 @@ export default function Pan8BrandPage() {
           </div>
         </section>
 
+        {/* 3 Flagship Commercial SKUs Showcase */}
+        <section className="mx-auto w-full max-w-[1400px] px-5 pb-16 md:px-10">
+          <div className="border-t border-line/60 pt-10">
+            <div className="flex items-center justify-between font-mono text-[10px] uppercase tracking-[0.2em] text-mute">
+              <span>Flagship Formulations</span>
+              <span>Commercial Shelf Anchors</span>
+            </div>
+            <h3 className="mt-3 font-sans text-2xl sm:text-3xl font-bold tracking-tight text-ink">
+              Three Hero Formulations.{" "}
+              <span className="font-serif italic font-normal text-leaf-deep">
+                Engineered for daily Indian routines.
+              </span>
+            </h3>
+
+            <div className="mt-8 grid gap-6 md:grid-cols-3">
+              <FlagshipCard
+                title="Multi-Millet Protein Dosa Mix"
+                category="Dosa Mix · 250g"
+                protein="18g Protein / 100g"
+                highlights={["5 Heritage Millets", "Zero Rice Filler", "Low Glycemic Index", "Zero Gluten"]}
+                desc="A crisp, golden South Indian staple re-engineered from ragi, foxtail, kodo, and yellow pea isolate. Zero artificial binders."
+              />
+              <FlagshipCard
+                title="Choco-Chip Vanilla Pancake Mix"
+                category="Pancake Mix · 250g"
+                protein="15g Protein / 100g"
+                highlights={["Sorghum & Foxtail Base", "Zero Maida", "Refined-Sugar-Free", "Naturally Sweetened"]}
+                desc="Light, fluffy breakfast pancakes packed with dietary fiber and naturally sweetened with dried dates and cocoa nibs."
+              />
+              <FlagshipCard
+                title="Coffee Almond Plant Protein Bar"
+                category="Protein Bar · 50g"
+                protein="20g Protein / 100g"
+                highlights={["Clean Arabica Caffeine", "Roasted Almonds", "Zero Preservatives", "Cold-Pressed"]}
+                desc="Clean sustained morning fuel built with roasted California almonds, plant protein crisps, and whole South Indian filter coffee extract."
+              />
+            </div>
+          </div>
+        </section>
+
         <Products />
 
         <section className="border-y border-line bg-bone-deep/40">
@@ -79,9 +119,9 @@ export default function Pan8BrandPage() {
               <span className="font-mono text-[10px] uppercase tracking-[0.22em] text-mute">
                 The brand promise
               </span>
-              <h2 className="mt-4 font-serif text-[clamp(2rem,1rem+3vw,3.6rem)] leading-[0.98] tracking-[-0.02em]">
+              <h2 className="mt-4 font-sans text-[clamp(2rem,1rem+3vw,3.6rem)] font-bold leading-[0.98] tracking-[-0.02em] text-ink">
                 Indian formats.<br />
-                <em className="text-leaf-deep">Engineered nutrition.</em>
+                <em className="font-serif italic font-normal text-leaf-deep">Engineered nutrition.</em>
               </h2>
             </div>
             <div className="space-y-4 text-[15px] leading-[1.65] text-ink-soft">
@@ -118,6 +158,50 @@ function Stat({ k, v }: { k: string; v: string }) {
         {k}
       </span>
       <span className="mt-3 block font-serif text-3xl tracking-tight">{v}</span>
+    </div>
+  );
+}
+
+function FlagshipCard({
+  title,
+  category,
+  protein,
+  highlights,
+  desc,
+}: {
+  title: string;
+  category: string;
+  protein: string;
+  highlights: string[];
+  desc: string;
+}) {
+  return (
+    <div className="flex flex-col justify-between rounded-2xl border border-line bg-bone-deep/50 p-7 transition-all hover:border-ink/30 hover:bg-bone">
+      <div>
+        <div className="flex items-center justify-between font-mono text-[10px] uppercase tracking-[0.16em] text-mute">
+          <span>{category}</span>
+          <span className="rounded-full bg-leaf px-2.5 py-0.5 text-bone font-semibold">
+            {protein}
+          </span>
+        </div>
+        <h4 className="mt-4 font-sans text-xl font-bold tracking-tight text-ink">
+          {title}
+        </h4>
+        <p className="mt-2 text-sm leading-[1.6] text-ink-soft">{desc}</p>
+      </div>
+
+      <div className="mt-6 border-t border-line/60 pt-4">
+        <ul className="flex flex-wrap gap-1.5">
+          {highlights.map((h) => (
+            <li
+              key={h}
+              className="rounded-full border border-line bg-bone px-2.5 py-0.5 font-mono text-[9px] uppercase tracking-[0.12em] text-ink-soft"
+            >
+              {h}
+            </li>
+          ))}
+        </ul>
+      </div>
     </div>
   );
 }

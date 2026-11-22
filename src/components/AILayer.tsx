@@ -41,11 +41,49 @@ export default function AILayer() {
           </p>
         </div>
 
-        {/* Enterprise Directory Matrix */}
+        {/* Enterprise Directory Matrix - 6 balanced modules + 1 full-width flagship bridge */}
         <div className="mt-14 grid gap-px overflow-hidden rounded-2xl border border-bone/15 bg-bone/15 md:mt-20 md:grid-cols-2 lg:grid-cols-3">
-          {INTEL_MODULES.map((m, i) => (
+          {INTEL_MODULES.slice(0, 6).map((m, i) => (
             <ModuleCard key={m.id} module={m} index={i} />
           ))}
+          {INTEL_MODULES[6] && (
+            <div className="md:col-span-2 lg:col-span-3 bg-ink p-6 sm:p-8 transition-colors hover:bg-ink-soft/90">
+              <div className="flex flex-col md:flex-row md:items-center justify-between gap-6">
+                <div className="max-w-2xl">
+                  <div className="flex items-center gap-3">
+                    <span className="font-mono text-[11px] font-semibold uppercase tracking-[0.2em] text-bone/50">
+                      07
+                    </span>
+                    <span className="inline-flex items-center gap-1.5 font-mono text-[9px] sm:text-[10px] uppercase tracking-[0.16em] text-bone/70">
+                      <span className="h-1.5 w-1.5 rounded-full bg-leaf" />
+                      Flagship Formulation Engine · Deployed in PAN8
+                    </span>
+                  </div>
+                  <h3 className="mt-3 font-sans text-2xl font-bold tracking-tight text-bone">
+                    {INTEL_MODULES[6].name}
+                    <span className="ml-3 font-serif italic text-base font-normal text-amber">
+                      — {INTEL_MODULES[6].tagline}
+                    </span>
+                  </h3>
+                  <p className="mt-2 text-[14px] leading-[1.6] text-bone/70">
+                    {INTEL_MODULES[6].body}
+                  </p>
+                </div>
+                <div className="shrink-0">
+                  <ul className="flex flex-wrap md:flex-col gap-2">
+                    {INTEL_MODULES[6].capabilities.map((cap) => (
+                      <li
+                        key={cap}
+                        className="rounded-full border border-bone/15 bg-bone/[0.04] px-3 py-1 font-mono text-[10px] uppercase tracking-[0.14em] text-bone/80 text-center"
+                      >
+                        {cap}
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+              </div>
+            </div>
+          )}
         </div>
 
         {/* Technical Architecture Guarantees */}
@@ -93,11 +131,7 @@ function ModuleCard({ module: m, index: i }: { module: IntelModule; index: numbe
   const badge = badgeMap[m.status];
 
   return (
-    <motion.div
-      initial={{ opacity: 0, y: 16 }}
-      whileInView={{ opacity: 1, y: 0 }}
-      viewport={{ once: true, margin: "-60px" }}
-      transition={{ duration: 0.5, delay: (i % 3) * 0.05, ease: [0.16, 1, 0.3, 1] }}
+    <div
       className="group relative flex flex-col justify-between bg-ink p-6 sm:p-7 md:p-8 transition-colors hover:bg-ink-soft/90"
     >
       <div>
@@ -131,6 +165,6 @@ function ModuleCard({ module: m, index: i }: { module: IntelModule; index: numbe
           ))}
         </ul>
       </div>
-    </motion.div>
+    </div>
   );
 }

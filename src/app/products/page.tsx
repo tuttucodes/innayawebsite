@@ -37,7 +37,7 @@ export default function ProductsPage() {
           title={
             <>
               13 SKUs.<br />
-              <em className="text-leaf-deep">One philosophy.</em>
+              <em className="font-serif italic font-normal text-leaf-deep">One philosophy.</em>
             </>
           }
           blurb={

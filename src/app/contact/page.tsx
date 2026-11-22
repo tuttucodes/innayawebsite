@@ -25,21 +25,21 @@ export default function ContactPage() {
       <Nav />
       <main className="overflow-x-clip">
         <PageHero
-          eyebrow="Contact"
+          eyebrow="Executive Office"
           title={
             <>
-              Investors, retailers,<br />
-              <em className="text-leaf-deep">distributors</em> — say hi.
+              Direct inquiries for<br />
+              <em className="font-serif italic font-normal text-leaf-deep">partnerships, distribution &amp; pilots.</em>
             </>
           }
           blurb={
             <>
-              Drop a note and our form drafts an email straight to the CEO. We reply
-              to every relevant message within 48 hours.
+              Connect directly with the executive leadership of Innaya Nutrifoods.
+              We respond to institutional, distribution, and procurement inquiries within 48 hours.
             </>
           }
         />
-        <Contact />
+        <Contact hideHeader={true} showSectionNumber={false} />
       </main>
       <Footer />
     </>

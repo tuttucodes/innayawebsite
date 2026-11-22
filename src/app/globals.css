@@ -51,6 +51,12 @@ body {
   font-feature-settings: "liga", "dlig";
 }
 
+em, .font-serif-italic {
+  font-family: var(--font-serif), ui-serif, Georgia, serif;
+  font-style: italic;
+  font-weight: 400;
+}
+
 .font-mono {
   font-family: var(--font-mono), ui-monospace, monospace;
 }
