@@ -206,12 +206,19 @@ export interface Product {
 }
 
 /* Backward compatibility alias if needed */
-export const PRODUCTS: Product[] = PAN8_PRODUCTS.map((p) => ({
-  name: p.name,
-  category: p.category.split(" ")[0] as "Pancake" | "Dosa" | "Upma" | "Bar",
-  size: p.weight,
-  highlight: p.keyBenefit,
-}));
+export const PRODUCTS: Product[] = PAN8_PRODUCTS.map((p) => {
+  let cat: "Pancake" | "Dosa" | "Upma" | "Bar" = "Pancake";
+  if (p.category.includes("Pancake")) cat = "Pancake";
+  else if (p.category.includes("Dosa")) cat = "Dosa";
+  else if (p.category.includes("Upma")) cat = "Upma";
+  else if (p.category.includes("Bar")) cat = "Bar";
+  return {
+    name: p.name,
+    category: cat,
+    size: p.weight,
+    highlight: p.keyBenefit,
+  };
+});
 
 /* =========================================================================
    LEADERSHIP

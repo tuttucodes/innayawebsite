@@ -26,16 +26,11 @@ export default function ContactPage() {
       <main className="overflow-x-clip">
         <PageHero
           eyebrow="Executive Office"
-          title={
-            <>
-              Direct inquiries for<br />
-              <em className="font-serif italic font-normal text-leaf-deep">partnerships, distribution &amp; pilots.</em>
-            </>
-          }
+          title="Direct Inquiries: Distribution, Retail & Partnerships"
           blurb={
             <>
-              Connect directly with the executive leadership of Innaya Nutrifoods.
-              We respond to institutional, distribution, and procurement inquiries within 48 hours.
+              Connect directly with the executive office of Innaya Nutri Foods and the PAN8 commercial team.
+              We respond to retail placement, institutional distribution, and supply inquiries within 48 hours.
             </>
           }
         />

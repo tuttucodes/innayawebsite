@@ -27,18 +27,12 @@ export default function AboutPage() {
       <main className="overflow-x-clip">
         <PageHero
           eyebrow="Company Overview"
-          title={
-            <>
-              Operating the physical<br />
-              <em className="font-serif italic font-normal text-leaf-deep">and digital layers of food.</em>
-            </>
-          }
+          title="Building Modern Food Systems from South India"
           blurb={
             <>
-              Innaya Nutri Foods Private Limited operates at the intersection of agricultural
-              supply chains and consumer nutrition. We build autonomous voice and telemetry
-              software for food logistics while formulating everyday millet staples under our
-              brand PAN8.
+              Innaya Nutri Foods was founded in Kakkanad, Kerala, to solve two critical challenges:
+              chronic post-harvest spoilage at rural farmgates, and the absence of clean, high-protein
+              staples in daily Indian pantries.
             </>
           }
         />

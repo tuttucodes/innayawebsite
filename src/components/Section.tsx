@@ -30,7 +30,7 @@ export function SectionHead({
         className,
       )}
     >
-      <div className="flex items-center justify-between font-mono text-[11px] uppercase tracking-[0.24em] text-mute">
+      <div className="flex items-center justify-between font-mono text-xs uppercase tracking-[0.16em] text-mute">
         {eyebrow && <span>{eyebrow}</span>}
         {index && showSectionNumber && <span>/{index}</span>}
       </div>
@@ -39,7 +39,7 @@ export function SectionHead({
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true, margin: "-60px" }}
         transition={{ duration: 0.7, ease: [0.16, 1, 0.3, 1] }}
-        className="font-sans text-[clamp(2.1rem,1rem+3.6vw,4rem)] font-bold leading-[1.04] tracking-[-0.03em] text-ink"
+        className="font-serif text-3xl sm:text-4xl md:text-[2.6rem] font-normal leading-[1.15] tracking-tight text-ink"
       >
         {title}
       </motion.h2>

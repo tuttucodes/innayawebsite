@@ -8,12 +8,6 @@ import { cn } from "@/lib/cn";
 export default function AILayer() {
   return (
     <div id="platforms" className="relative bg-ink text-bone">
-      {/* Architectural grid background */}
-      <div
-        className="pointer-events-none absolute inset-0 opacity-[0.035] [background-image:linear-gradient(to_right,white_1px,transparent_1px),linear-gradient(to_bottom,white_1px,transparent_1px)] [background-size:80px_80px]"
-        aria-hidden="true"
-      />
-
       <SectionShell className="relative">
         <div className="border-t border-bone/15 pt-10 md:pt-14">
           <div className="flex items-center justify-between font-mono text-[11px] uppercase tracking-[0.24em] text-bone/50">
@@ -26,12 +20,9 @@ export default function AILayer() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true, margin: "-60px" }}
             transition={{ duration: 0.7, ease: [0.16, 1, 0.3, 1] }}
-            className="mt-6 font-sans text-[clamp(2.1rem,1.2rem+3.6vw,4rem)] font-bold leading-[1.04] tracking-[-0.03em] text-bone"
+            className="mt-6 font-serif text-3xl sm:text-4xl lg:text-5xl font-normal leading-[1.12] text-bone"
           >
-            Innaya Intelligence.{" "}
-            <span className="font-serif italic font-normal text-amber">
-              An operating system for food supply chains.
-            </span>
+            Innaya Intelligence — Software for Physical Food Logistics
           </motion.h2>
 
           <p className="mt-6 max-w-2xl text-[16px] leading-[1.65] text-bone/70">

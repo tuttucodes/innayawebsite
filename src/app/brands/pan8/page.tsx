@@ -10,12 +10,12 @@ import { SITE } from "@/data/site";
 export const metadata: Metadata = {
   title: "PAN8 — A Nutri Co. by Innaya Nutri Foods",
   description:
-    "PAN8 — A Nutri Co. is the consumer brand of Innaya Nutri Foods. 13 millet-first SKUs across pancake, dosa, upma and bar formats. Plant-protein dense, gluten-free, vegan.",
+    "PAN8 is the clean consumer nutrition brand of Innaya Nutri Foods. 13 millet-first SKUs across pancake mixes, dosa mixes, upma, and cold-pressed protein bars with 15–24g plant protein.",
   alternates: { canonical: `${SITE.url}/brands/pan8` },
   openGraph: {
-    title: "PAN8 — A Nutri Co.",
+    title: "PAN8 — Clean Nutrition Brand by Innaya",
     description:
-      "Nutrition that works with you. Millet-first plant-protein nutrition for modern Indian households.",
+      "Heritage millets and pulses in everyday Indian formats. 15–24g plant protein, zero preservatives, 100% clean.",
     url: `${SITE.url}/brands/pan8`,
     type: "website",
   },
@@ -25,123 +25,140 @@ export default function Pan8BrandPage() {
   return (
     <>
       <Nav />
-      <main className="overflow-x-clip">
+      <main className="overflow-x-clip bg-bone">
         <PageHero
           eyebrow="Consumer Brands · Division 02"
-          title={
-            <>
-              PAN8
-              <span className="ml-3 align-top font-serif italic text-2xl md:text-3xl font-normal text-amber">
-                — A Nutri Co.
-              </span>
-            </>
-          }
+          title="PAN8 — Clean Nutrition for Modern Indian Homes"
           blurb={
             <>
-              <span className="font-semibold text-ink">
-                &ldquo;Just pan it!&rdquo;
-              </span>{" "}
-              — PAN8 is Innaya&apos;s consumer brand re-engineering traditional Indian morning
-              and snack formats with heritage millets, pulses, and modern nutrition science.
-              All 13 products below are developed, formulated, and sold under the PAN8 brand.
+              Traditional Indian breakfast staples and on-the-go snacks re-engineered with heritage millets, pulses, and modern food science. All 13 formulations are created, tested, and sold under the PAN8 brand.
             </>
           }
         />
 
-        {/* Hero Visual */}
-        <div className="mx-auto w-full max-w-[1400px] px-5 pt-8 md:px-10">
-          <div className="relative aspect-[21/9] w-full overflow-hidden rounded-3xl border border-line bg-bone-deep">
+        {/* Hero Visual Banner */}
+        <div className="mx-auto w-full max-w-[1360px] px-5 pt-8 sm:px-8 md:px-12">
+          <div className="relative aspect-[21/9] w-full overflow-hidden rounded-2xl border border-line bg-bone-deep shadow-sm">
             <Image
               src="/pan8-hero.jpg"
               alt="PAN8 Clean Nutrition Breakfast"
               fill
               priority
-              sizes="(max-width: 1400px) 100vw, 1400px"
+              sizes="(max-width: 1360px) 100vw, 1360px"
               className="object-cover"
             />
+            <div className="absolute inset-0 bg-gradient-to-t from-ink/60 via-transparent to-transparent" />
+            <div className="absolute bottom-6 left-6 right-6 flex flex-wrap items-center justify-between gap-4 text-bone">
+              <div>
+                <span className="font-mono text-xs uppercase tracking-[0.16em] text-amber">
+                  PAN8 — A Nutri Co.
+                </span>
+                <p className="mt-1 font-serif text-2xl sm:text-3xl font-normal text-bone">
+                  &ldquo;Just pan it!&rdquo;
+                </p>
+              </div>
+              <a
+                href="https://www.pan8.in"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-2 rounded-full bg-bone px-5 py-2.5 text-xs font-semibold uppercase tracking-[0.12em] text-ink transition-colors hover:bg-amber"
+              >
+                Visit Storefront (Beta) ↗
+              </a>
+            </div>
           </div>
         </div>
 
-        <section className="mx-auto w-full max-w-[1400px] px-5 py-12 md:px-10 md:py-16">
-          <div className="grid gap-px overflow-hidden rounded-3xl border border-line bg-line md:grid-cols-4">
-            <Stat k="Product Range" v="13 Active SKUs" />
-            <Stat k="Plant Protein" v="15–24g / 100g" />
-            <Stat k="Ingredients" v="0 Preservatives" />
-            <Stat k="Channels" v="D2C · Retail · MT" />
+        {/* Nutritional Guarantees Ledger */}
+        <section className="mx-auto w-full max-w-[1360px] px-5 py-12 sm:px-8 md:px-12 md:py-16">
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-6 border-y border-line py-8">
+            <div className="border-l-2 border-leaf-deep/40 pl-4">
+              <span className="font-mono text-xs uppercase tracking-[0.14em] text-mute">Range</span>
+              <div className="font-serif text-2xl sm:text-3xl font-normal text-ink mt-1">13 Formulations</div>
+              <p className="text-xs text-ink-soft mt-0.5">Pancakes, Dosas, Upma &amp; Bars</p>
+            </div>
+            <div className="border-l-2 border-leaf-deep/40 pl-4">
+              <span className="font-mono text-xs uppercase tracking-[0.14em] text-mute">Plant Protein</span>
+              <div className="font-serif text-2xl sm:text-3xl font-normal text-ink mt-1">15–24g / 100g</div>
+              <p className="text-xs text-ink-soft mt-0.5">Bioavailable heritage pulses &amp; grains</p>
+            </div>
+            <div className="border-l-2 border-leaf-deep/40 pl-4">
+              <span className="font-mono text-xs uppercase tracking-[0.14em] text-mute">Ingredients</span>
+              <div className="font-serif text-2xl sm:text-3xl font-normal text-ink mt-1">0 Preservatives</div>
+              <p className="text-xs text-ink-soft mt-0.5">Zero maida, zero artificial fillers</p>
+            </div>
+            <div className="border-l-2 border-leaf-deep/40 pl-4">
+              <span className="font-mono text-xs uppercase tracking-[0.14em] text-mute">Offtake</span>
+              <div className="font-serif text-2xl sm:text-3xl font-normal text-ink mt-1">D2C &amp; Retail</div>
+              <p className="text-xs text-ink-soft mt-0.5">Modern trade &amp; quick-commerce ready</p>
+            </div>
           </div>
         </section>
 
-        {/* 3 Flagship Commercial SKUs Showcase */}
-        <section className="mx-auto w-full max-w-[1400px] px-5 pb-16 md:px-10">
+        {/* 3 Flagship Commercial SKUs Showcase (With Real Delicious Food Imagery!) */}
+        <section className="mx-auto w-full max-w-[1360px] px-5 pb-16 sm:px-8 md:px-12">
           <div className="border-t border-line/60 pt-10">
-            <div className="flex items-center justify-between font-mono text-[10px] uppercase tracking-[0.2em] text-mute">
+            <div className="flex items-center justify-between font-mono text-xs uppercase tracking-[0.16em] text-mute">
               <span>Flagship Formulations</span>
-              <span>Commercial Shelf Anchors</span>
+              <span>Commercial Anchors</span>
             </div>
-            <h3 className="mt-3 font-sans text-2xl sm:text-3xl font-bold tracking-tight text-ink">
-              Three Hero Formulations.{" "}
-              <span className="font-serif italic font-normal text-leaf-deep">
-                Engineered for daily Indian routines.
-              </span>
-            </h3>
+            <h2 className="mt-3 font-serif text-3xl sm:text-4xl font-normal tracking-tight text-ink">
+              Three Hero Formulations
+            </h2>
+            <p className="mt-2 text-base text-ink-soft max-w-2xl">
+              Engineered for the breakfast and snack routines Indian households already follow every morning.
+            </p>
 
-            <div className="mt-8 grid gap-6 md:grid-cols-3">
+            <div className="mt-10 grid gap-8 md:grid-cols-3">
               <FlagshipCard
+                image="/images/pan8-dosa.jpg"
                 title="Multi-Millet Protein Dosa Mix"
                 category="Dosa Mix · 250g"
                 protein="18g Protein / 100g"
-                highlights={["5 Heritage Millets", "Zero Rice Filler", "Low Glycemic Index", "Zero Gluten"]}
-                desc="A crisp, golden South Indian staple re-engineered from ragi, foxtail, kodo, and yellow pea isolate. Zero artificial binders."
+                highlights={["5 Heritage Millets", "Zero Rice Filler", "Low GI", "Crispy Texture"]}
+                desc="A crisp, golden South Indian staple re-engineered from ragi, foxtail, kodo, and yellow pea isolate. Naturally fermented flavor with zero artificial binders."
               />
               <FlagshipCard
+                image="/images/pan8-pancake.jpg"
                 title="Choco-Chip Vanilla Pancake Mix"
                 category="Pancake Mix · 250g"
                 protein="15g Protein / 100g"
-                highlights={["Sorghum & Foxtail Base", "Zero Maida", "Refined-Sugar-Free", "Naturally Sweetened"]}
-                desc="Light, fluffy breakfast pancakes packed with dietary fiber and naturally sweetened with dried dates and cocoa nibs."
+                highlights={["Sorghum & Foxtail Base", "Zero Maida", "Refined-Sugar-Free", "Light & Fluffy"]}
+                desc="Fluffy golden breakfast pancakes packed with dietary fiber, naturally sweetened with dried dates, real vanilla extract, and dark cocoa nibs."
               />
               <FlagshipCard
+                image="/images/pan8-bar.jpg"
                 title="Coffee Almond Plant Protein Bar"
-                category="Protein Bar · 50g"
+                category="Plant Protein Bar · 50g"
                 protein="20g Protein / 100g"
-                highlights={["Clean Arabica Caffeine", "Roasted Almonds", "Zero Preservatives", "Cold-Pressed"]}
-                desc="Clean sustained morning fuel built with roasted California almonds, plant protein crisps, and whole South Indian filter coffee extract."
+                highlights={["South Indian Filter Coffee", "Roasted Almonds", "Cold-Pressed", "Zero Preservatives"]}
+                desc="Sustained morning fuel built with California almonds, pea protein crisps, and whole South Indian filter coffee extract. No added refined sugars."
               />
             </div>
           </div>
         </section>
 
+        {/* The Complete 13 SKU Shelf */}
         <Products />
 
-        <section className="border-y border-line bg-bone-deep/40">
-          <div className="mx-auto grid w-full max-w-[1400px] gap-10 px-5 py-20 md:grid-cols-2 md:gap-16 md:px-10 md:py-28">
+        {/* The Brand Philosophy */}
+        <section className="border-t border-line bg-bone-deep/40 py-20 sm:py-28">
+          <div className="mx-auto grid w-full max-w-[1360px] gap-10 px-5 sm:px-8 md:grid-cols-2 md:gap-16 md:px-12">
             <div>
-              <span className="font-mono text-[10px] uppercase tracking-[0.22em] text-mute">
-                The brand promise
+              <span className="font-mono text-xs uppercase tracking-[0.16em] text-mute">
+                The Brand Promise
               </span>
-              <h2 className="mt-4 font-sans text-[clamp(2rem,1rem+3vw,3.6rem)] font-bold leading-[0.98] tracking-[-0.02em] text-ink">
-                Indian formats.<br />
-                <em className="font-serif italic font-normal text-leaf-deep">Engineered nutrition.</em>
+              <h2 className="mt-4 font-serif text-3xl sm:text-4xl lg:text-[2.6rem] font-normal leading-[1.15] text-ink">
+                Familiar Indian formats. Clean nutritional science.
               </h2>
             </div>
-            <div className="space-y-4 text-[15px] leading-[1.65] text-ink-soft">
+            <div className="space-y-4 text-base leading-[1.7] text-ink-soft">
               <p>
-                Every PAN8 pack starts from a question: <em>what does this household
-                already eat for breakfast?</em> Then we re-formulate that exact format
-                with millets, pulses, and clean ingredients to hit specific protein,
-                fibre, and glycaemic targets.
+                Every PAN8 product starts with an honest question: <em>what does an Indian family already enjoy eating?</em> Rather than asking people to adopt unfamiliar Western protein powders or artificial bars, we reformulate the foods already rooted in our morning culture.
               </p>
               <p>
-                No behaviour change. No unfamiliar formats. Just better versions of
-                the foods Indians already love — built to fit into the morning, not
-                disrupt it.
+                By replacing polished white rice and maida fillers with heritage millets (ragi, foxtail, kodo, little millet) and blending them with clean plant proteins, we turn everyday breakfasts into nutrient-dense powerhouses with zero lifestyle friction.
               </p>
-              <Link
-                href="/contact"
-                className="inline-flex items-center gap-2 rounded-full bg-ink px-5 py-2.5 text-[13px] font-medium text-bone hover:bg-leaf-deep"
-              >
-                Distribution / retail enquiries →
-              </Link>
             </div>
           </div>
         </section>
@@ -151,24 +168,15 @@ export default function Pan8BrandPage() {
   );
 }
 
-function Stat({ k, v }: { k: string; v: string }) {
-  return (
-    <div className="bg-bone p-7">
-      <span className="block font-mono text-[10px] uppercase tracking-[0.22em] text-mute">
-        {k}
-      </span>
-      <span className="mt-3 block font-serif text-3xl tracking-tight">{v}</span>
-    </div>
-  );
-}
-
 function FlagshipCard({
+  image,
   title,
   category,
   protein,
   highlights,
   desc,
 }: {
+  image: string;
   title: string;
   category: string;
   protein: string;
@@ -176,32 +184,54 @@ function FlagshipCard({
   desc: string;
 }) {
   return (
-    <div className="flex flex-col justify-between rounded-2xl border border-line bg-bone-deep/50 p-7 transition-all hover:border-ink/30 hover:bg-bone">
+    <article className="group flex flex-col justify-between overflow-hidden rounded-2xl border border-line bg-bone shadow-sm transition-all duration-300 hover:border-ink/40 hover:shadow-md">
       <div>
-        <div className="flex items-center justify-between font-mono text-[10px] uppercase tracking-[0.16em] text-mute">
-          <span>{category}</span>
-          <span className="rounded-full bg-leaf px-2.5 py-0.5 text-bone font-semibold">
+        <div className="relative aspect-[4/3] w-full overflow-hidden bg-bone-deep">
+          <Image
+            src={image}
+            alt={title}
+            fill
+            sizes="(max-width: 768px) 100vw, 33vw"
+            className="object-cover transition-transform duration-500 ease-out group-hover:scale-105"
+          />
+          <div className="absolute top-3 left-3 rounded-full bg-ink/80 backdrop-blur px-3 py-1 font-mono text-[10px] uppercase tracking-[0.14em] text-bone">
+            {category}
+          </div>
+          <div className="absolute bottom-3 right-3 rounded-full bg-leaf text-bone font-semibold px-3 py-1 text-xs shadow-xs">
             {protein}
-          </span>
+          </div>
         </div>
-        <h4 className="mt-4 font-sans text-xl font-bold tracking-tight text-ink">
-          {title}
-        </h4>
-        <p className="mt-2 text-sm leading-[1.6] text-ink-soft">{desc}</p>
+
+        <div className="p-6">
+          <h3 className="font-serif text-2xl font-normal text-ink group-hover:text-leaf-deep transition-colors">
+            {title}
+          </h3>
+          <p className="mt-2.5 text-sm leading-[1.65] text-ink-soft">
+            {desc}
+          </p>
+
+          <div className="mt-6 flex flex-wrap gap-2 border-t border-line/60 pt-4">
+            {highlights.map((h) => (
+              <span
+                key={h}
+                className="rounded-full bg-bone-deep border border-line px-2.5 py-1 font-mono text-[10px] uppercase tracking-[0.1em] text-ink-soft"
+              >
+                {h}
+              </span>
+            ))}
+          </div>
+        </div>
       </div>
 
-      <div className="mt-6 border-t border-line/60 pt-4">
-        <ul className="flex flex-wrap gap-1.5">
-          {highlights.map((h) => (
-            <li
-              key={h}
-              className="rounded-full border border-line bg-bone px-2.5 py-0.5 font-mono text-[9px] uppercase tracking-[0.12em] text-ink-soft"
-            >
-              {h}
-            </li>
-          ))}
-        </ul>
+      <div className="p-6 pt-0">
+        <Link
+          href="/contact"
+          className="flex w-full items-center justify-between rounded-full border border-line bg-bone-deep/60 px-5 py-3 text-xs font-semibold uppercase tracking-[0.12em] text-ink transition-colors hover:border-ink hover:bg-ink hover:text-bone"
+        >
+          <span>Request Sample / Wholesale</span>
+          <span>→</span>
+        </Link>
       </div>
-    </div>
+    </article>
   );
 }

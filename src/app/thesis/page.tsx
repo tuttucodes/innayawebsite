@@ -112,12 +112,7 @@ export default function ThesisPage() {
       <main className="overflow-x-clip bg-bone">
         <PageHero
           eyebrow="The Assured Buyer Thesis · Strategic Foundation"
-          title={
-            <>
-              Building India&apos;s<br />
-              <em className="font-serif italic font-normal text-leaf-deep">Assured Buyer.</em>
-            </>
-          }
+          title="Building India's Assured Buyer"
           blurb={
             <>
               From farmgate volatility to branded shelf demand: why India&apos;s ₹57,000 Cr
@@ -131,14 +126,11 @@ export default function ThesisPage() {
         <section className="mx-auto w-full max-w-[1360px] px-5 py-20 sm:px-8 md:px-12 md:py-28">
           <div className="grid gap-12 lg:grid-cols-12 lg:gap-16">
             <div className="lg:col-span-5">
-              <span className="font-mono text-[10px] uppercase tracking-[0.24em] text-mute">
+              <span className="font-mono text-xs uppercase tracking-[0.16em] text-mute">
                 The Economic Paradox
               </span>
-              <h2 className="mt-4 font-sans text-[clamp(2.1rem,1.2rem+3.4vw,3.8rem)] font-bold leading-[1.04] tracking-tight text-ink">
-                Cold storage without an assured buyer is just a{" "}
-                <span className="font-serif italic font-normal text-leaf-deep">
-                  waiting room for spoilage.
-                </span>
+              <h2 className="mt-4 font-serif text-3xl sm:text-4xl lg:text-[2.6rem] font-normal leading-[1.15] tracking-tight text-ink">
+                Cold storage without an assured buyer is just a waiting room for spoilage.
               </h2>
               <p className="mt-6 text-[15px] sm:text-[16px] leading-[1.7] text-ink-soft">
                 India has built 403 lakh tonnes of bulk cold storage, yet loses ₹57,000 Crore of
@@ -236,14 +228,11 @@ export default function ThesisPage() {
         {/* Section 2: The Historical Precedent Table */}
         <section className="border-t border-line bg-bone-deep/30 py-20 sm:py-28">
           <div className="mx-auto w-full max-w-[1360px] px-5 sm:px-8 md:px-12">
-            <span className="font-mono text-[10px] uppercase tracking-[0.24em] text-mute">
+            <span className="font-mono text-xs uppercase tracking-[0.16em] text-mute">
               Historical Analogs
             </span>
-            <h2 className="mt-4 font-sans text-[clamp(2.1rem,1.2rem+3.2vw,3.6rem)] font-bold leading-[1.06] tracking-tight text-ink">
-              The playbook is proven.{" "}
-              <span className="font-serif italic font-normal text-leaf-deep">
-                Technology now makes it scalable.
-              </span>
+            <h2 className="mt-4 font-serif text-3xl sm:text-4xl lg:text-[2.6rem] font-normal leading-[1.15] tracking-tight text-ink">
+              The playbook is proven. Technology now makes it scalable.
             </h2>
             <p className="mt-4 max-w-2xl text-[15px] sm:text-[16px] leading-[1.65] text-ink-soft">
               Whenever agriculture has transitioned from subsistence vulnerability to institutional
@@ -302,11 +291,8 @@ export default function ThesisPage() {
               <span>The 4-Layer Closed Loop</span>
             </div>
 
-            <h2 className="mt-6 font-sans text-[clamp(2.2rem,1.2rem+3.6vw,4rem)] font-bold leading-[1.04] tracking-tight text-bone max-w-3xl">
-              From harvest glut to branded pantry staples.{" "}
-              <span className="font-serif italic font-normal text-amber">
-                Without government subsidies or warehouse rot.
-              </span>
+            <h2 className="mt-6 font-serif text-3xl sm:text-4xl lg:text-5xl font-normal leading-[1.15] text-bone max-w-3xl">
+              From harvest glut to branded pantry staples, without warehouse rot.
             </h2>
 
             <div className="mt-14 grid gap-8 sm:grid-cols-2 lg:grid-cols-4">

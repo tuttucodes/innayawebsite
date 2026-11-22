@@ -41,11 +41,8 @@ export default function Capabilities() {
 
         <div className="mt-8 grid gap-8 lg:grid-cols-12 lg:gap-16 lg:items-end">
           <div className="lg:col-span-6">
-            <h2 className="font-sans text-[clamp(2.1rem,1.2rem+3.5vw,3.8rem)] font-bold leading-[1.04] tracking-[-0.03em] text-ink">
-              Origin to processing.{" "}
-              <span className="font-serif italic font-normal text-leaf-deep">
-                The physical execution layer.
-              </span>
+            <h2 className="font-serif text-3xl sm:text-4xl lg:text-[2.6rem] font-normal leading-[1.15] text-ink">
+              From Origin to Processing: Sourcing Discipline
             </h2>
           </div>
           <div className="lg:col-span-6">

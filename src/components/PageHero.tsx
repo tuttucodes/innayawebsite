@@ -20,17 +20,17 @@ export default function PageHero({
         className,
       )}
     >
-      <div className="relative mx-auto w-full max-w-[1400px] px-5 md:px-10">
-        <div className="flex items-center gap-3 font-mono text-[10px] uppercase tracking-[0.22em] text-mute">
+      <div className="relative mx-auto w-full max-w-[1360px] px-5 sm:px-8 md:px-12">
+        <div className="flex items-center gap-3 font-mono text-xs uppercase tracking-[0.16em] text-mute">
           <span>{eyebrow}</span>
-          <span className="h-px w-10 bg-line" />
-          <span>Innaya Nutrifoods</span>
+          <span className="h-px w-8 bg-line" />
+          <span>Innaya Nutri Foods</span>
         </div>
-        <h1 className="mt-8 max-w-5xl font-sans text-[clamp(2.4rem,1.5rem+5vw,5.5rem)] font-bold leading-[0.96] tracking-[-0.035em] text-ink">
+        <h1 className="mt-6 max-w-4xl font-serif text-[clamp(2.2rem,1.5rem+3vw,4rem)] font-normal leading-[1.1] tracking-tight text-ink">
           {title}
         </h1>
         {blurb && (
-          <p className="mt-6 max-w-2xl text-[16px] leading-[1.65] text-ink-soft md:text-[17px]">
+          <p className="mt-6 max-w-2xl text-base sm:text-lg leading-[1.65] text-ink-soft">
             {blurb}
           </p>
         )}

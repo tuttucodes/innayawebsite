@@ -80,13 +80,8 @@ export default function Contact({
           index="06"
           showSectionNumber={showSectionNumber}
           eyebrow="Contact"
-          title={
-            <>
-              Start a conversation.{" "}
-              <span className="font-serif italic font-normal text-leaf-deep">We respond directly.</span>
-            </>
-          }
-          blurb="Connect with Innaya Nutrifoods regarding supply partnerships, PAN8 distribution, retail placement, or institutional procurement."
+          title="Start an Executive Conversation"
+          blurb="Connect with Innaya Nutri Foods regarding supply partnerships, PAN8 distribution, modern trade placement, or institutional procurement."
         />
       )}
 

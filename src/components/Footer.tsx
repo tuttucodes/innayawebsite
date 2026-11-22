@@ -24,9 +24,8 @@ export default function Footer() {
               </div>
             </div>
 
-            <h2 className="mt-6 font-sans text-[clamp(2.2rem,1rem+4.5vw,4.5rem)] font-bold leading-[0.98] tracking-[-0.035em] text-bone">
-              Operating the infrastructure{" "}
-              <span className="font-serif italic font-normal text-amber">of food.</span>
+            <h2 className="mt-6 font-serif text-3xl sm:text-4xl lg:text-5xl font-normal leading-[1.12] text-bone">
+              Rethinking Indian food, from farmgate to pantry.
             </h2>
 
             <p className="mt-5 max-w-md text-[15px] leading-[1.65] text-bone/70">

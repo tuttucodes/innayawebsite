@@ -28,18 +28,13 @@ export default function PlatformsPage() {
       <main className="overflow-x-clip">
         <PageHero
           eyebrow="Division 01 · Software & Platforms"
-          title={
-            <>
-              An operating system for<br />
-              <em className="font-serif italic font-normal text-leaf-deep">agricultural supply chains.</em>
-            </>
-          }
+          title="An Operating System for Agricultural Supply Chains"
           blurb={
             <>
               Food procurement across India has historically suffered from unrecorded
               deductions, subjective quality rejections, and chaotic telephony. Innaya
-              Intelligence replaces manual friction with autonomous vernacular voice
-              coordination, digital lot records, and continuous cold-chain telemetry.
+              Intelligence replaces manual friction with vernacular voice coordination,
+              digital lot records, and continuous cold-chain telemetry.
             </>
           }
         />
@@ -71,11 +66,8 @@ export default function PlatformsPage() {
                 <span className="font-mono text-[10px] uppercase tracking-[0.24em] text-mute">
                   Cloud Infrastructure
                 </span>
-                <h2 className="mt-4 font-sans text-[clamp(2rem,1.2rem+3vw,3.5rem)] font-bold leading-[1.04] tracking-tight text-ink">
-                  Built on AWS for{" "}
-                  <span className="font-serif italic font-normal text-leaf-deep">
-                    zero-downtime reliability.
-                  </span>
+                <h2 className="mt-4 font-serif text-3xl sm:text-4xl font-normal leading-[1.15] tracking-tight text-ink">
+                  Built on AWS for Enterprise Reliability
                 </h2>
                 <p className="mt-5 text-[15px] sm:text-[16px] leading-[1.65] text-ink-soft">
                   Agricultural logistics operate 24/7 across remote mandi hubs. Our platform

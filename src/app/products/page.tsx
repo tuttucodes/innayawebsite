@@ -33,13 +33,8 @@ export default function ProductsPage() {
       <Nav />
       <main className="overflow-x-clip">
         <PageHero
-          eyebrow="Products"
-          title={
-            <>
-              13 SKUs.<br />
-              <em className="font-serif italic font-normal text-leaf-deep">One philosophy.</em>
-            </>
-          }
+          eyebrow="PAN8 Catalog"
+          title="The PAN8 Shelf: 13 Millet-First Formulations"
           blurb={
             <>
               Every PAN8 pack is millet-first, plant-protein dense (15–24g per 100g),

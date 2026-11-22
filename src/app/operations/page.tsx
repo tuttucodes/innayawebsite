@@ -49,17 +49,12 @@ export default function OperationsPage() {
       <main className="overflow-x-clip">
         <PageHero
           eyebrow="Division 03 · Physical Operations"
-          title={
-            <>
-              Origin to processing.<br />
-              <em className="font-serif italic font-normal text-leaf-deep">The physical execution layer.</em>
-            </>
-          }
+          title="Origin to Processing: The Physical Execution Layer"
           blurb={
             <>
-              Software alone does not move agricultural harvest. Innaya pairs AI-driven
-              procurement and telemetry with physical sourcing corridors, FPO direct lines,
-              and audited commercial processing facilities across South India.
+              Software alone does not move agricultural harvest. Innaya pairs farmgate
+              telemetry with physical sourcing corridors, FPO direct lines, and audited
+              commercial processing facilities across South India.
             </>
           }
         />
@@ -91,11 +86,8 @@ export default function OperationsPage() {
 
             <div className="mt-8 grid gap-8 lg:grid-cols-12 lg:gap-16 lg:items-end">
               <div className="lg:col-span-6">
-                <h2 className="font-sans text-[clamp(2.1rem,1.2rem+3.5vw,3.8rem)] font-bold leading-[1.04] tracking-tight text-ink">
-                  Direct farmgate aggregation.{" "}
-                  <span className="font-serif italic font-normal text-leaf-deep">
-                    Zero intermediary opacity.
-                  </span>
+                <h2 className="font-serif text-3xl sm:text-4xl lg:text-[2.6rem] font-normal leading-[1.15] text-ink">
+                  Direct Farmgate Sourcing Across South India
                 </h2>
               </div>
               <div className="lg:col-span-6">
