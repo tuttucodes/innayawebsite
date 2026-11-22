@@ -19,18 +19,13 @@ export default function SustainabilityPage() {
       <main className="overflow-x-clip">
         <PageHero
           eyebrow="Sustainability"
-          title={
-            <>
-              Less water.<br />
-              <em className="font-serif italic font-normal text-leaf-deep">More nutrition.</em>
-            </>
-          }
+          title="Climate Resilience & Water-Efficient Crops"
           blurb={
             <>
-              Millets need ~70% less water than rice and ~40% less than wheat. Every
+              Millets consume ~70% less water than rice and ~40% less than wheat. Every
               PAN8 pack reduces a household&apos;s water footprint while improving
               its nutrition footprint — directly aligned with India&apos;s
-              millet-mission and climate-resilience goals.
+              millet mission and climate resilience goals.
             </>
           }
         />

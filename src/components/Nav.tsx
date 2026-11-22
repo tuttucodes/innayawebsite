@@ -51,7 +51,7 @@ export default function Nav() {
         className={cn(
           "fixed inset-x-0 top-0 z-50 transition-[backdrop-filter,background,border] duration-500",
           scrolled || open
-            ? "border-b border-line/60 bg-bone/80 backdrop-blur-xl"
+            ? "border-b border-line/60 bg-bone/85 backdrop-blur-xl shadow-[0_12px_36px_-12px_rgba(26,22,20,0.06),inset_0_-1px_0_rgba(255,255,255,0.4)]"
             : "border-b border-transparent bg-transparent",
         )}
       >
@@ -71,7 +71,7 @@ export default function Nav() {
               <Link
                 key={l.href}
                 href={l.href}
-                className="group relative rounded-full px-4 py-2 text-[13px] tracking-tight text-ink-soft transition-colors hover:text-ink"
+                className="group relative rounded-full px-4 py-2 text-[13px] tracking-tight text-ink-soft transition-colors hover:text-ink active:scale-[0.98]"
               >
                 <span className="relative z-10">{l.label}</span>
                 <span className="absolute inset-0 -z-0 rounded-full bg-ink/0 transition-colors duration-300 group-hover:bg-ink/[0.05]" />
@@ -82,7 +82,7 @@ export default function Nav() {
           <div className="flex items-center gap-2">
             <Link
               href="/contact"
-              className="hidden md:inline-flex group items-center gap-2 rounded-full border border-ink/20 bg-ink px-5 py-2.5 text-[13px] font-medium text-bone transition-all hover:border-ink hover:bg-ink-soft"
+              className="hidden md:inline-flex group items-center gap-2 rounded-full border border-ink/20 bg-ink px-5 py-2.5 text-[13px] font-medium text-bone shadow-[0_4px_14px_rgba(26,22,20,0.12),inset_0_1px_0_rgba(255,255,255,0.15)] transition-all hover:bg-leaf-deep hover:border-leaf-deep active:scale-[0.98] active:translate-y-[1px]"
             >
               <span className="relative h-1.5 w-1.5 rounded-full bg-leaf">
                 <span className="absolute inset-0 animate-ping rounded-full bg-leaf opacity-75" />

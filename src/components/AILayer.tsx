@@ -50,7 +50,7 @@ export default function AILayer() {
                       Flagship Formulation Engine · Deployed in PAN8
                     </span>
                   </div>
-                  <h3 className="mt-3 font-sans text-2xl font-bold tracking-tight text-bone">
+                  <h3 className="mt-3 font-serif text-2xl sm:text-3xl font-normal tracking-tight text-bone">
                     {INTEL_MODULES[6].name}
                     <span className="ml-3 font-serif italic text-base font-normal text-amber">
                       — {INTEL_MODULES[6].tagline}
@@ -136,7 +136,7 @@ function ModuleCard({ module: m, index: i }: { module: IntelModule; index: numbe
           </span>
         </div>
 
-        <h3 className="mt-4 font-sans text-xl font-bold tracking-tight text-bone">
+        <h3 className="mt-4 font-serif text-2xl font-normal tracking-tight text-bone">
           {m.name}
         </h3>
         <p className="font-serif italic text-sm text-amber/90">{m.tagline}</p>

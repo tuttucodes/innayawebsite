@@ -17,9 +17,9 @@ export default function Sustainability() {
             <span>05</span>
             <span>Resource Efficiency</span>
           </div>
-          <h2 className="mt-6 font-sans text-[clamp(2.2rem,1rem+4vw,4.2rem)] font-bold leading-[1.05] tracking-tight text-bone">
+          <h2 className="mt-6 font-serif text-[clamp(2.2rem,1.4rem+3.5vw,4.2rem)] font-normal leading-[1.08] tracking-tight text-bone">
             Less water.{" "}
-            <span className="font-serif italic font-normal text-amber">More nutrition.</span>
+            <span className="italic text-amber">More nutrition.</span>
           </h2>
           <p className="mt-6 max-w-md text-[16px] leading-[1.65] text-bone/80">
             Millets consume approximately 70% less water than paddy and 40% less than wheat.
@@ -29,7 +29,7 @@ export default function Sustainability() {
         </div>
 
         <div className="md:col-span-7">
-          <ul className="grid grid-cols-2 gap-3 md:grid-cols-3">
+          <ul className="grid grid-cols-2 gap-3.5 md:grid-cols-3">
             <Tile big="-70%" small="Water vs rice" />
             <Tile big="-40%" small="Water vs wheat" />
             <Tile big="0g" small="Preservatives" />
@@ -38,7 +38,7 @@ export default function Sustainability() {
             <Tile big="Low GI" small="Glycaemic load" />
           </ul>
 
-          <div className="mt-6 grid gap-3 md:grid-cols-2">
+          <div className="mt-6 grid gap-3.5 md:grid-cols-2">
             <Pill k="Sourced from" v="Smallholder farmers across South India" />
             <Pill k="Manufacturing" v="FSSAI Central licensed facilities" />
           </div>
@@ -55,9 +55,9 @@ function Tile({ big, small }: { big: string; small: string }) {
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true, margin: "-60px" }}
       transition={{ duration: 0.6, ease: [0.16, 1, 0.3, 1] }}
-      className="group relative overflow-hidden rounded-2xl border border-bone/15 bg-bone/[0.04] p-5 transition-colors hover:bg-bone/[0.08]"
+      className="group relative overflow-hidden rounded-2xl border border-bone/15 bg-bone/[0.04] p-5 backdrop-blur-sm transition-all duration-300 hover:bg-bone/[0.08] hover:-translate-y-1 hover:border-bone/30 hover:shadow-[0_16px_32px_rgba(0,0,0,0.25)]"
     >
-      <span className="block font-sans text-[clamp(1.8rem,1rem+1.8vw,2.8rem)] font-bold leading-none tracking-tight text-bone">
+      <span className="block font-serif text-[clamp(1.8rem,1rem+1.8vw,2.8rem)] font-normal leading-none tracking-tight text-bone">
         {big}
       </span>
       <span className="mt-3 block font-mono text-[10px] uppercase tracking-[0.18em] text-bone/60">
@@ -69,7 +69,7 @@ function Tile({ big, small }: { big: string; small: string }) {
 
 function Pill({ k, v }: { k: string; v: string }) {
   return (
-    <div className="rounded-2xl border border-bone/15 bg-bone/[0.05] p-5">
+    <div className="rounded-2xl border border-bone/15 bg-bone/[0.05] p-5 backdrop-blur-sm transition-all duration-300 hover:bg-bone/[0.08] hover:border-bone/25">
       <span className="font-mono text-[10px] uppercase tracking-[0.2em] text-bone/70">
         {k}
       </span>

@@ -63,14 +63,14 @@ export default function Capabilities() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, margin: "-60px" }}
               transition={{ duration: 0.6, delay: i * 0.08, ease: [0.16, 1, 0.3, 1] }}
-              className="flex flex-col justify-between rounded-2xl border border-line bg-bone-deep/40 p-6 transition-colors hover:border-ink/30 hover:bg-bone-deep/70"
+              className="flex flex-col justify-between rounded-3xl border border-line/70 bg-bone/90 backdrop-blur-md p-6 shadow-[0_16px_32px_-12px_rgba(26,22,20,0.05),inset_0_1px_0_rgba(255,255,255,0.7)] transition-all duration-300 hover:-translate-y-1.5 hover:shadow-[0_20px_40px_-12px_rgba(26,22,20,0.1)] hover:border-ink/30"
             >
               <div>
                 <div className="flex items-center justify-between font-mono text-[10px] uppercase tracking-[0.2em] text-mute">
                   <span className="font-semibold text-leaf-deep">/{op.num}</span>
                   <span>{op.label}</span>
                 </div>
-                <h3 className="mt-4 font-sans text-lg font-bold tracking-tight text-ink">
+                <h3 className="mt-4 font-serif text-xl font-normal tracking-tight text-ink">
                   {op.title}
                 </h3>
                 <p className="mt-2 text-[14px] leading-[1.6] text-ink-soft">

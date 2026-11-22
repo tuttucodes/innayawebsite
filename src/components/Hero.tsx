@@ -61,7 +61,7 @@ export default function Hero() {
           {/* Card 1: PAN8 Consumer Brand */}
           <Link
             href="/brands/pan8"
-            className="group relative flex flex-col justify-between overflow-hidden rounded-2xl border border-line bg-bone transition-all duration-300 hover:border-ink/40 hover:shadow-lg"
+            className="group relative flex flex-col justify-between overflow-hidden rounded-3xl border border-line/70 bg-bone/90 backdrop-blur-md shadow-[0_16px_36px_-12px_rgba(26,22,20,0.06),inset_0_1px_0_rgba(255,255,255,0.7)] transition-all duration-300 hover:-translate-y-1.5 hover:shadow-[0_24px_48px_-12px_rgba(26,22,20,0.12),inset_0_1px_0_rgba(255,255,255,0.9)] hover:border-ink/30"
           >
             <div className="relative aspect-[16/11] w-full overflow-hidden bg-bone-deep">
               <Image
@@ -72,15 +72,15 @@ export default function Hero() {
                 sizes="(max-width: 768px) 100vw, 33vw"
                 className="object-cover transition-transform duration-700 ease-out group-hover:scale-105"
               />
-              <div className="absolute top-3 left-3 rounded-full bg-ink/80 backdrop-blur px-3 py-1 text-[11px] font-mono uppercase tracking-[0.14em] text-bone">
+              <div className="absolute top-3 left-3 rounded-full bg-ink/75 backdrop-blur-md px-3 py-1 text-[11px] font-mono uppercase tracking-[0.14em] text-bone border border-white/10">
                 Division 02 · Brand
               </div>
-              <div className="absolute bottom-3 right-3 rounded-full bg-amber text-ink font-semibold px-3 py-1 text-xs shadow-xs">
+              <div className="absolute bottom-3 right-3 rounded-full bg-amber/95 backdrop-blur-md text-ink font-semibold px-3 py-1 text-xs shadow-xs border border-amber/30">
                 13 Active SKUs
               </div>
             </div>
             <div className="p-6">
-              <h3 className="font-sans text-xl font-bold tracking-tight text-ink group-hover:text-leaf-deep transition-colors">
+              <h3 className="font-serif text-2xl font-normal tracking-tight text-ink group-hover:text-leaf-deep transition-colors">
                 PAN8 — A Nutri Co.
               </h3>
               <p className="mt-2 text-sm leading-[1.6] text-ink-soft">
@@ -95,7 +95,7 @@ export default function Hero() {
           {/* Card 2: Supply & Corridors */}
           <Link
             href="/operations"
-            className="group relative flex flex-col justify-between overflow-hidden rounded-2xl border border-line bg-bone transition-all duration-300 hover:border-ink/40 hover:shadow-lg"
+            className="group relative flex flex-col justify-between overflow-hidden rounded-3xl border border-line/70 bg-bone/90 backdrop-blur-md shadow-[0_16px_36px_-12px_rgba(26,22,20,0.06),inset_0_1px_0_rgba(255,255,255,0.7)] transition-all duration-300 hover:-translate-y-1.5 hover:shadow-[0_24px_48px_-12px_rgba(26,22,20,0.12),inset_0_1px_0_rgba(255,255,255,0.9)] hover:border-ink/30"
           >
             <div className="relative aspect-[16/11] w-full overflow-hidden bg-bone-deep">
               <Image
@@ -106,15 +106,15 @@ export default function Hero() {
                 sizes="(max-width: 768px) 100vw, 33vw"
                 className="object-cover transition-transform duration-700 ease-out group-hover:scale-105"
               />
-              <div className="absolute top-3 left-3 rounded-full bg-ink/80 backdrop-blur px-3 py-1 text-[11px] font-mono uppercase tracking-[0.14em] text-bone">
+              <div className="absolute top-3 left-3 rounded-full bg-ink/75 backdrop-blur-md px-3 py-1 text-[11px] font-mono uppercase tracking-[0.14em] text-bone border border-white/10">
                 Division 03 · Sourcing
               </div>
-              <div className="absolute bottom-3 right-3 rounded-full bg-bone/90 backdrop-blur text-ink font-mono px-3 py-1 text-xs border border-line">
+              <div className="absolute bottom-3 right-3 rounded-full bg-bone/90 backdrop-blur-md text-ink font-mono px-3 py-1 text-xs border border-line/80 shadow-xs">
                 TN &amp; Kerala Corridors
               </div>
             </div>
             <div className="p-6">
-              <h3 className="font-sans text-xl font-bold tracking-tight text-ink group-hover:text-leaf-deep transition-colors">
+              <h3 className="font-serif text-2xl font-normal tracking-tight text-ink group-hover:text-leaf-deep transition-colors">
                 Farmgate Sourcing &amp; Processing
               </h3>
               <p className="mt-2 text-sm leading-[1.6] text-ink-soft">
@@ -129,7 +129,7 @@ export default function Hero() {
           {/* Card 3: Software & Platforms */}
           <Link
             href="/platforms"
-            className="group relative flex flex-col justify-between overflow-hidden rounded-2xl border border-line bg-bone transition-all duration-300 hover:border-ink/40 hover:shadow-lg"
+            className="group relative flex flex-col justify-between overflow-hidden rounded-3xl border border-line/70 bg-bone/90 backdrop-blur-md shadow-[0_16px_36px_-12px_rgba(26,22,20,0.06),inset_0_1px_0_rgba(255,255,255,0.7)] transition-all duration-300 hover:-translate-y-1.5 hover:shadow-[0_24px_48px_-12px_rgba(26,22,20,0.12),inset_0_1px_0_rgba(255,255,255,0.9)] hover:border-ink/30"
           >
             <div className="relative aspect-[16/11] w-full overflow-hidden bg-bone-deep">
               <Image
@@ -140,15 +140,15 @@ export default function Hero() {
                 sizes="(max-width: 768px) 100vw, 33vw"
                 className="object-cover transition-transform duration-700 ease-out group-hover:scale-105"
               />
-              <div className="absolute top-3 left-3 rounded-full bg-ink/80 backdrop-blur px-3 py-1 text-[11px] font-mono uppercase tracking-[0.14em] text-bone">
+              <div className="absolute top-3 left-3 rounded-full bg-ink/75 backdrop-blur-md px-3 py-1 text-[11px] font-mono uppercase tracking-[0.14em] text-bone border border-white/10">
                 Division 01 · Software
               </div>
-              <div className="absolute bottom-3 right-3 rounded-full bg-bone/90 backdrop-blur text-ink font-mono px-3 py-1 text-xs border border-line">
+              <div className="absolute bottom-3 right-3 rounded-full bg-bone/90 backdrop-blur-md text-ink font-mono px-3 py-1 text-xs border border-line/80 shadow-xs">
                 Innaya Intelligence
               </div>
             </div>
             <div className="p-6">
-              <h3 className="font-sans text-xl font-bold tracking-tight text-ink group-hover:text-leaf-deep transition-colors">
+              <h3 className="font-serif text-2xl font-normal tracking-tight text-ink group-hover:text-leaf-deep transition-colors">
                 Innaya Intelligence Suite
               </h3>
               <p className="mt-2 text-sm leading-[1.6] text-ink-soft">

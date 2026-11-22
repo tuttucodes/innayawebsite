@@ -103,12 +103,12 @@ export default function OperationsPage() {
               {CORRIDORS.map((c, i) => (
                 <div
                   key={c.region}
-                  className="rounded-2xl border border-line bg-bone p-7 sm:p-8"
+                  className="rounded-3xl border border-line/70 bg-bone/90 backdrop-blur-md p-7 sm:p-8 shadow-[0_16px_36px_-12px_rgba(26,22,20,0.06),inset_0_1px_0_rgba(255,255,255,0.7)] hover:-translate-y-1.5 transition-all duration-300"
                 >
                   <span className="font-mono text-[11px] uppercase tracking-[0.2em] text-leaf-deep font-semibold">
                     0{i + 1} · {c.region}
                   </span>
-                  <h3 className="mt-4 font-sans text-xl font-bold text-ink">
+                  <h3 className="mt-4 font-serif text-2xl font-normal text-ink">
                     {c.centers}
                   </h3>
                   <div className="mt-4 border-t border-line/60 pt-4">
@@ -122,18 +122,18 @@ export default function OperationsPage() {
               ))}
             </div>
 
-            <div className="mt-16 flex flex-col sm:flex-row items-center justify-between gap-6 rounded-2xl border border-line bg-ink p-8 text-bone md:p-10">
+            <div className="mt-16 flex flex-col sm:flex-row items-center justify-between gap-6 rounded-3xl border border-line bg-ink p-8 text-bone md:p-10 shadow-lg">
               <div>
                 <span className="font-mono text-[10px] uppercase tracking-[0.2em] text-amber">
                   Institutional Sourcing &amp; Processing
                 </span>
-                <h3 className="mt-2 font-sans text-2xl font-bold tracking-tight text-bone">
+                <h3 className="mt-2 font-serif text-2xl sm:text-3xl font-normal tracking-tight text-bone">
                   Looking to source verified grains or contract batch capacity?
                 </h3>
               </div>
               <Link
                 href="/contact"
-                className="shrink-0 inline-flex items-center gap-2 rounded-full bg-bone px-6 py-3.5 text-sm font-semibold text-ink hover:bg-amber transition-colors"
+                className="shrink-0 inline-flex items-center gap-2 rounded-full bg-bone px-6 py-3.5 text-xs font-semibold uppercase tracking-[0.12em] text-ink hover:bg-amber transition-colors active:scale-[0.98]"
               >
                 Inquire with Operations →
               </Link>

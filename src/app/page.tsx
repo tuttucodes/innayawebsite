@@ -44,19 +44,19 @@ export default function Home() {
 
             {/* 3 Real Food Showcase Cards */}
             <div className="mt-12 grid gap-8 md:grid-cols-3">
-              <div className="group rounded-2xl border border-line bg-bone overflow-hidden shadow-xs hover:shadow-md transition-all">
+              <div className="group rounded-3xl border border-line/70 bg-bone/90 backdrop-blur-md overflow-hidden shadow-[0_16px_32px_-12px_rgba(26,22,20,0.06),inset_0_1px_0_rgba(255,255,255,0.8)] hover:shadow-[0_24px_48px_-12px_rgba(26,22,20,0.12),inset_0_1px_0_rgba(255,255,255,0.9)] hover:-translate-y-1.5 transition-all duration-300">
                 <div className="relative aspect-[4/3] w-full overflow-hidden bg-bone-deep">
                   <Image
                     src="/images/pan8-dosa.jpg"
                     alt="PAN8 Crispy Millet Dosa"
                     fill
                     sizes="(max-width: 768px) 100vw, 33vw"
-                    className="object-cover transition-transform duration-500 group-hover:scale-105"
+                    className="object-cover transition-transform duration-700 ease-out group-hover:scale-105"
                   />
-                  <div className="absolute top-3 left-3 rounded-full bg-ink/80 backdrop-blur px-2.5 py-0.5 font-mono text-[10px] text-bone uppercase tracking-[0.12em]">
+                  <div className="absolute top-3 left-3 rounded-full bg-ink/75 backdrop-blur-md px-3 py-1 font-mono text-[10px] text-bone uppercase tracking-[0.14em] border border-white/10">
                     Dosa Mix · 250g
                   </div>
-                  <div className="absolute bottom-3 right-3 rounded-full bg-leaf text-bone font-semibold px-2.5 py-0.5 text-xs">
+                  <div className="absolute bottom-3 right-3 rounded-full bg-leaf/90 backdrop-blur-md text-bone font-semibold px-3 py-1 text-xs shadow-xs border border-white/20">
                     18g Protein
                   </div>
                 </div>
@@ -67,25 +67,25 @@ export default function Home() {
                   <p className="mt-2 text-xs leading-[1.65] text-ink-soft">
                     Crispy golden South Indian staple made from ragi, foxtail, and yellow pea isolate. Zero rice filler and low glycemic index.
                   </p>
-                  <Link href="/brands/pan8" className="mt-4 inline-flex items-center gap-1 text-xs font-semibold text-ink group-hover:text-leaf-deep">
+                  <Link href="/brands/pan8" className="mt-4 inline-flex items-center gap-1.5 text-xs font-semibold text-ink group-hover:text-leaf-deep transition-colors">
                     View formulation details →
                   </Link>
                 </div>
               </div>
 
-              <div className="group rounded-2xl border border-line bg-bone overflow-hidden shadow-xs hover:shadow-md transition-all">
+              <div className="group rounded-3xl border border-line/70 bg-bone/90 backdrop-blur-md overflow-hidden shadow-[0_16px_32px_-12px_rgba(26,22,20,0.06),inset_0_1px_0_rgba(255,255,255,0.8)] hover:shadow-[0_24px_48px_-12px_rgba(26,22,20,0.12),inset_0_1px_0_rgba(255,255,255,0.9)] hover:-translate-y-1.5 transition-all duration-300">
                 <div className="relative aspect-[4/3] w-full overflow-hidden bg-bone-deep">
                   <Image
                     src="/images/pan8-pancake.jpg"
                     alt="PAN8 Fluffy Millet Pancakes"
                     fill
                     sizes="(max-width: 768px) 100vw, 33vw"
-                    className="object-cover transition-transform duration-500 group-hover:scale-105"
+                    className="object-cover transition-transform duration-700 ease-out group-hover:scale-105"
                   />
-                  <div className="absolute top-3 left-3 rounded-full bg-ink/80 backdrop-blur px-2.5 py-0.5 font-mono text-[10px] text-bone uppercase tracking-[0.12em]">
+                  <div className="absolute top-3 left-3 rounded-full bg-ink/75 backdrop-blur-md px-3 py-1 font-mono text-[10px] text-bone uppercase tracking-[0.14em] border border-white/10">
                     Pancake Mix · 250g
                   </div>
-                  <div className="absolute bottom-3 right-3 rounded-full bg-amber text-ink font-semibold px-2.5 py-0.5 text-xs">
+                  <div className="absolute bottom-3 right-3 rounded-full bg-amber/95 backdrop-blur-md text-ink font-semibold px-3 py-1 text-xs shadow-xs border border-amber/30">
                     15g Protein
                   </div>
                 </div>
@@ -96,25 +96,25 @@ export default function Home() {
                   <p className="mt-2 text-xs leading-[1.65] text-ink-soft">
                     Light, fluffy morning pancakes made from sorghum and foxtail millets. Naturally sweetened with dried dates and real cocoa nibs.
                   </p>
-                  <Link href="/brands/pan8" className="mt-4 inline-flex items-center gap-1 text-xs font-semibold text-ink group-hover:text-leaf-deep">
+                  <Link href="/brands/pan8" className="mt-4 inline-flex items-center gap-1.5 text-xs font-semibold text-ink group-hover:text-leaf-deep transition-colors">
                     View formulation details →
                   </Link>
                 </div>
               </div>
 
-              <div className="group rounded-2xl border border-line bg-bone overflow-hidden shadow-xs hover:shadow-md transition-all">
+              <div className="group rounded-3xl border border-line/70 bg-bone/90 backdrop-blur-md overflow-hidden shadow-[0_16px_32px_-12px_rgba(26,22,20,0.06),inset_0_1px_0_rgba(255,255,255,0.8)] hover:shadow-[0_24px_48px_-12px_rgba(26,22,20,0.12),inset_0_1px_0_rgba(255,255,255,0.9)] hover:-translate-y-1.5 transition-all duration-300">
                 <div className="relative aspect-[4/3] w-full overflow-hidden bg-bone-deep">
                   <Image
                     src="/images/pan8-bar.jpg"
                     alt="PAN8 Plant Protein Bars"
                     fill
                     sizes="(max-width: 768px) 100vw, 33vw"
-                    className="object-cover transition-transform duration-500 group-hover:scale-105"
+                    className="object-cover transition-transform duration-700 ease-out group-hover:scale-105"
                   />
-                  <div className="absolute top-3 left-3 rounded-full bg-ink/80 backdrop-blur px-2.5 py-0.5 font-mono text-[10px] text-bone uppercase tracking-[0.12em]">
+                  <div className="absolute top-3 left-3 rounded-full bg-ink/75 backdrop-blur-md px-3 py-1 font-mono text-[10px] text-bone uppercase tracking-[0.14em] border border-white/10">
                     Protein Bar · 50g
                   </div>
-                  <div className="absolute bottom-3 right-3 rounded-full bg-leaf text-bone font-semibold px-2.5 py-0.5 text-xs">
+                  <div className="absolute bottom-3 right-3 rounded-full bg-leaf/90 backdrop-blur-md text-bone font-semibold px-3 py-1 text-xs shadow-xs border border-white/20">
                     20g Protein
                   </div>
                 </div>
@@ -125,7 +125,7 @@ export default function Home() {
                   <p className="mt-2 text-xs leading-[1.65] text-ink-soft">
                     Whole South Indian filter coffee extract paired with California almonds and crispy puffed millets. Clean sustained energy on the go.
                   </p>
-                  <Link href="/brands/pan8" className="mt-4 inline-flex items-center gap-1 text-xs font-semibold text-ink group-hover:text-leaf-deep">
+                  <Link href="/brands/pan8" className="mt-4 inline-flex items-center gap-1.5 text-xs font-semibold text-ink group-hover:text-leaf-deep transition-colors">
                     View formulation details →
                   </Link>
                 </div>
@@ -166,7 +166,7 @@ export default function Home() {
 
               {/* Right Column: Institutional Financial Comparison Plate */}
               <div className="lg:col-span-6">
-                <div className="overflow-hidden rounded-2xl border border-line bg-bone shadow-xs">
+                <div className="overflow-hidden rounded-3xl border border-line/70 bg-bone/90 backdrop-blur-md shadow-[0_20px_40px_-15px_rgba(26,22,20,0.08),inset_0_1px_0_rgba(255,255,255,0.8)]">
                   <div className="flex items-center justify-between border-b border-line bg-bone-deep/60 px-5 py-3.5 sm:px-6">
                     <span className="font-mono text-xs uppercase tracking-[0.14em] text-ink font-semibold">
                       Price Volatility vs. Farmer Realization

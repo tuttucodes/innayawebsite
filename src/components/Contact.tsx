@@ -87,7 +87,7 @@ export default function Contact({
 
       <div className={cn("grid gap-10 md:grid-cols-12 md:gap-12", !hideHeader && "mt-12 md:mt-16")}>
         <aside className="md:col-span-4">
-          <div className="sticky top-28 rounded-3xl border border-line bg-bone-deep/40 p-7 sm:p-8">
+          <div className="sticky top-28 rounded-3xl border border-line/70 bg-bone-deep/50 backdrop-blur-md p-7 sm:p-8 shadow-[0_16px_32px_-12px_rgba(26,22,20,0.04),inset_0_1px_0_rgba(255,255,255,0.7)]">
             <InfoBlock
               label="Direct Executive Line"
               primary={
@@ -152,7 +152,7 @@ export default function Contact({
           onSubmit={handleSubmit}
           className="flex flex-col md:col-span-8"
         >
-          <div className="overflow-hidden rounded-3xl border border-line bg-bone shadow-sm">
+          <div className="overflow-hidden rounded-3xl border border-line/70 bg-bone/90 backdrop-blur-md shadow-[0_20px_40px_-15px_rgba(26,22,20,0.06),inset_0_1px_0_rgba(255,255,255,0.8)]">
             {/* Reason selector */}
             <div className="border-b border-line bg-bone-deep/30 px-5 py-4 sm:px-8">
               <span className="block font-mono text-[10px] uppercase tracking-[0.22em] text-mute mb-2.5">

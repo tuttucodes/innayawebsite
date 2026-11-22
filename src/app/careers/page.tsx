@@ -38,38 +38,33 @@ export default function CareersPage() {
       <main className="overflow-x-clip">
         <PageHero
           eyebrow="Careers"
-          title={
-            <>
-              Build the company<br />
-              India will <em className="font-serif italic font-normal text-leaf-deep">eat tomorrow.</em>
-            </>
-          }
+          title="Build the Company Shaping Tomorrow's Nutrition"
           blurb={
             <>
-              We&apos;re a 15-person team in Kerala building an AI-first food
-              technology company. Tech, brand, ops, design, and growth — all under
-              one roof. Apply directly. Every email lands in the founders&apos; inbox.
+              We&apos;re a focused team in Kerala building an integrated food
+              technology company. Tech, brand, operations, design, and growth — all under
+              one roof. Every application is reviewed directly by the leadership team.
             </>
           }
         />
 
         <section className="mx-auto w-full max-w-[1400px] px-5 py-20 md:px-10 md:py-28">
-          <div className="grid gap-px overflow-hidden rounded-3xl border border-line bg-line md:grid-cols-4">
+          <div className="grid gap-px overflow-hidden rounded-3xl border border-line/70 bg-line/80 shadow-[0_16px_36px_-12px_rgba(26,22,20,0.05)] md:grid-cols-4">
             <Why
               k="Ground floor"
               v="Year-one of a venture-track FMCG company. Decisions you make this quarter live in next year's strategy."
             />
             <Why
               k="ESOP track"
-              v="Eligible roles get equity. Real upside, real downside."
+              v="Eligible roles get equity. Real upside, real ownership."
             />
             <Why
-              k="AI-native"
-              v="Tools, ops, and decisions are powered by AI. You'll work alongside it, not against it."
+              k="Tech-forward"
+              v="Modern operations, real-time telemetry, and computer vision. Build software that directly touches physical supply."
             />
             <Why
               k="In Kerala"
-              v="Kerala headquarters. Hybrid for some, remote-friendly for tech."
+              v="Headquartered in Kakkanad, Kochi. Hybrid for operating roles, remote-flexible for engineering."
             />
           </div>
         </section>

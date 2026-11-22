@@ -147,7 +147,7 @@ export default function ThesisPage() {
             </div>
 
             {/* SVG Data Visualization: Volatility vs Farmer Share */}
-            <div className="lg:col-span-7 rounded-3xl border border-line bg-bone-deep/50 p-6 sm:p-8 md:p-10">
+            <div className="lg:col-span-7 rounded-3xl border border-line/70 bg-bone-deep/50 backdrop-blur-md p-6 sm:p-8 md:p-10 shadow-[0_16px_36px_-12px_rgba(26,22,20,0.04),inset_0_1px_0_rgba(255,255,255,0.7)]">
               <div className="flex items-center justify-between border-b border-line pb-4">
                 <span className="font-mono text-[11px] uppercase tracking-[0.2em] text-ink font-semibold">
                   Price Volatility vs. Farmer Realization (2015–2025)
@@ -239,7 +239,7 @@ export default function ThesisPage() {
               resilience, the mechanism has always been an Assured Buyer operating branded processing.
             </p>
 
-            <div className="mt-12 overflow-x-auto rounded-2xl border border-line bg-bone shadow-sm">
+            <div className="mt-12 overflow-x-auto rounded-3xl border border-line/70 bg-bone/90 backdrop-blur-md shadow-[0_16px_36px_-12px_rgba(26,22,20,0.06),inset_0_1px_0_rgba(255,255,255,0.7)]">
               <table className="w-full min-w-[720px] text-left border-collapse">
                 <thead>
                   <tr className="border-b border-line bg-bone-deep/60 font-mono text-[11px] uppercase tracking-[0.18em] text-mute">
@@ -256,7 +256,7 @@ export default function ThesisPage() {
                       className={p.highlight ? "bg-leaf/5 font-medium" : "hover:bg-bone-deep/30"}
                     >
                       <td className="p-5 sm:p-6 align-top">
-                        <span className="font-sans font-bold text-base text-ink block">
+                        <span className="font-serif text-lg font-normal text-ink block">
                           {p.institution}
                         </span>
                         {p.highlight && (
@@ -299,13 +299,13 @@ export default function ThesisPage() {
               {LAYERS.map((l) => (
                 <div
                   key={l.layer}
-                  className="rounded-2xl border border-bone/15 bg-bone/[0.04] p-7 flex flex-col justify-between hover:bg-bone/[0.08] transition-colors"
+                  className="rounded-3xl border border-bone/15 bg-bone/[0.04] p-7 flex flex-col justify-between hover:bg-bone/[0.08] hover:-translate-y-1.5 transition-all duration-300 shadow-[0_16px_32px_rgba(0,0,0,0.2)]"
                 >
                   <div>
                     <span className="font-mono text-[11px] font-semibold uppercase tracking-[0.2em] text-amber">
                       {l.layer}
                     </span>
-                    <h3 className="mt-3 font-sans text-xl font-bold tracking-tight text-bone">
+                    <h3 className="mt-3 font-serif text-2xl font-normal tracking-tight text-bone">
                       {l.title}
                     </h3>
                     <p className="mt-1 font-serif italic text-xs text-bone/60">

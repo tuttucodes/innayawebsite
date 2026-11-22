@@ -44,7 +44,7 @@ export default function Team({
               delay: i * 0.1,
               ease: [0.16, 1, 0.3, 1],
             }}
-            className="group flex flex-col justify-between rounded-2xl border border-line bg-bone p-7 sm:p-8 transition-all hover:border-ink/30 hover:shadow-md"
+            className="group flex flex-col justify-between rounded-3xl border border-line/70 bg-bone/90 backdrop-blur-md p-7 sm:p-8 shadow-[0_16px_36px_-12px_rgba(26,22,20,0.06),inset_0_1px_0_rgba(255,255,255,0.7)] transition-all hover:border-ink/30 hover:-translate-y-1 hover:shadow-[0_20px_40px_-12px_rgba(26,22,20,0.1)]"
           >
             <div>
               <div className="flex flex-col sm:flex-row sm:items-center gap-6">
@@ -66,7 +66,7 @@ export default function Team({
 
       {/* Symmetric 4-Column Operating Team Row */}
       {showOperatingTeam && (
-        <div className="mt-12 rounded-2xl border border-line bg-bone-deep/50 p-7 sm:p-10">
+        <div className="mt-12 rounded-3xl border border-line/70 bg-bone-deep/50 backdrop-blur-md p-7 sm:p-10 shadow-[0_16px_32px_-12px_rgba(26,22,20,0.04),inset_0_1px_0_rgba(255,255,255,0.7)]">
           <div className="border-b border-line pb-6">
             <span className="font-mono text-xs uppercase tracking-[0.16em] text-mute">
               Operating Disciplines
@@ -83,7 +83,7 @@ export default function Team({
             {FUNCTIONS.map((f) => (
               <div
                 key={f.k}
-                className="rounded-xl border border-line bg-bone p-5 transition-colors hover:border-ink/30"
+                className="rounded-2xl border border-line/70 bg-bone/90 p-5 shadow-xs transition-all hover:border-ink/30 hover:-translate-y-1"
               >
                 <span className="font-mono text-xs uppercase tracking-[0.14em] text-leaf-deep font-semibold">
                   {f.k}

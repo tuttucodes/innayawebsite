@@ -184,7 +184,7 @@ function FlagshipCard({
   desc: string;
 }) {
   return (
-    <article className="group flex flex-col justify-between overflow-hidden rounded-2xl border border-line bg-bone shadow-sm transition-all duration-300 hover:border-ink/40 hover:shadow-md">
+    <article className="group flex flex-col justify-between overflow-hidden rounded-3xl border border-line/70 bg-bone/90 backdrop-blur-md shadow-[0_16px_36px_-12px_rgba(26,22,20,0.06),inset_0_1px_0_rgba(255,255,255,0.7)] transition-all duration-300 hover:-translate-y-1.5 hover:shadow-[0_24px_48px_-12px_rgba(26,22,20,0.12),inset_0_1px_0_rgba(255,255,255,0.9)] hover:border-ink/30">
       <div>
         <div className="relative aspect-[4/3] w-full overflow-hidden bg-bone-deep">
           <Image
@@ -192,12 +192,12 @@ function FlagshipCard({
             alt={title}
             fill
             sizes="(max-width: 768px) 100vw, 33vw"
-            className="object-cover transition-transform duration-500 ease-out group-hover:scale-105"
+            className="object-cover transition-transform duration-700 ease-out group-hover:scale-105"
           />
-          <div className="absolute top-3 left-3 rounded-full bg-ink/80 backdrop-blur px-3 py-1 font-mono text-[10px] uppercase tracking-[0.14em] text-bone">
+          <div className="absolute top-3 left-3 rounded-full bg-ink/75 backdrop-blur-md px-3 py-1 font-mono text-[10px] uppercase tracking-[0.14em] text-bone border border-white/10">
             {category}
           </div>
-          <div className="absolute bottom-3 right-3 rounded-full bg-leaf text-bone font-semibold px-3 py-1 text-xs shadow-xs">
+          <div className="absolute bottom-3 right-3 rounded-full bg-leaf/90 backdrop-blur-md text-bone font-semibold px-3 py-1 text-xs shadow-xs border border-white/20">
             {protein}
           </div>
         </div>
@@ -214,7 +214,7 @@ function FlagshipCard({
             {highlights.map((h) => (
               <span
                 key={h}
-                className="rounded-full bg-bone-deep border border-line px-2.5 py-1 font-mono text-[10px] uppercase tracking-[0.1em] text-ink-soft"
+                className="rounded-full bg-bone-deep/80 border border-line px-2.5 py-1 font-mono text-[10px] uppercase tracking-[0.1em] text-ink-soft"
               >
                 {h}
               </span>
@@ -226,7 +226,7 @@ function FlagshipCard({
       <div className="p-6 pt-0">
         <Link
           href="/contact"
-          className="flex w-full items-center justify-between rounded-full border border-line bg-bone-deep/60 px-5 py-3 text-xs font-semibold uppercase tracking-[0.12em] text-ink transition-colors hover:border-ink hover:bg-ink hover:text-bone"
+          className="flex w-full items-center justify-between rounded-full border border-line bg-bone-deep/70 px-5 py-3 text-xs font-semibold uppercase tracking-[0.12em] text-ink transition-all hover:border-ink hover:bg-ink hover:text-bone active:scale-[0.98]"
         >
           <span>Request Sample / Wholesale</span>
           <span>→</span>
