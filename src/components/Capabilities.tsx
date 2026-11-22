@@ -19,8 +19,8 @@ const OPERATIONS = [
   {
     num: "03",
     label: "Certified Facilities",
-    title: "FSSAI Central Type 1 Manufacturing",
-    desc: "Contract manufacturing in audited, FSSAI Central-licensed plants. Standardized batch lotting, nutritional consistency, and compliance for nationwide distribution and export.",
+    title: "Audited Commercial Processing",
+    desc: "Contract manufacturing in certified plants. Standardized batch lotting, nutritional consistency, and compliance for nationwide distribution and export.",
   },
   {
     num: "04",

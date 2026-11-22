@@ -1,5 +1,6 @@
 "use client";
 
+import Link from "next/link";
 import { motion } from "motion/react";
 
 export default function Hero() {
@@ -34,19 +35,19 @@ export default function Hero() {
             </p>
 
             <div className="mt-8 sm:mt-10 flex flex-col sm:flex-row items-stretch sm:items-center gap-3.5">
-              <a
-                href="#platforms"
+              <Link
+                href="/platforms"
                 className="inline-flex items-center justify-center gap-2 rounded-full bg-ink px-6 py-3.5 text-sm font-medium text-bone transition-all hover:bg-leaf-deep"
               >
                 Innaya Intelligence Suite
                 <span>→</span>
-              </a>
-              <a
-                href="#brands"
+              </Link>
+              <Link
+                href="/brands/pan8"
                 className="inline-flex items-center justify-center gap-2 rounded-full border border-line bg-bone-deep/50 px-6 py-3.5 text-sm font-medium text-ink transition-colors hover:border-ink/40 hover:bg-bone-deep"
               >
                 Consumer Brand (PAN8) ↗
-              </a>
+              </Link>
             </div>
           </div>
 
@@ -69,35 +70,47 @@ export default function Hero() {
               </div>
 
               <div className="mt-4 sm:mt-5 space-y-4">
-                <div className="border-b border-line/40 pb-3">
-                  <span className="block font-mono text-[10px] uppercase tracking-[0.18em] text-mute">
-                    Division 01 · Software &amp; Platforms
-                  </span>
-                  <p className="mt-0.5 font-sans text-sm font-bold text-ink">
+                <Link
+                  href="/platforms"
+                  className="group block border-b border-line/40 pb-3 transition-colors hover:border-ink/40"
+                >
+                  <div className="flex items-center justify-between font-mono text-[10px] uppercase tracking-[0.18em] text-mute group-hover:text-ink">
+                    <span>Division 01 · Software &amp; Platforms</span>
+                    <span>→</span>
+                  </div>
+                  <p className="mt-0.5 font-sans text-sm font-bold text-ink group-hover:text-leaf-deep">
                     Innaya Intelligence &amp; FirstMile Network
                   </p>
                   <p className="text-xs text-ink-soft">Voice, Source, Vision, Cold, Trace &amp; Nutri</p>
-                </div>
+                </Link>
 
-                <div className="border-b border-line/40 pb-3">
-                  <span className="block font-mono text-[10px] uppercase tracking-[0.18em] text-mute">
-                    Division 02 · Consumer Brands
-                  </span>
-                  <p className="mt-0.5 font-sans text-sm font-bold text-ink">
+                <Link
+                  href="/brands/pan8"
+                  className="group block border-b border-line/40 pb-3 transition-colors hover:border-ink/40"
+                >
+                  <div className="flex items-center justify-between font-mono text-[10px] uppercase tracking-[0.18em] text-mute group-hover:text-ink">
+                    <span>Division 02 · Consumer Brands</span>
+                    <span>→</span>
+                  </div>
+                  <p className="mt-0.5 font-sans text-sm font-bold text-ink group-hover:text-leaf-deep">
                     PAN8 — A Nutri Co.
                   </p>
                   <p className="text-xs text-ink-soft">13 Millet-First SKUs (Pancakes, Dosas, Upma, Bars)</p>
-                </div>
+                </Link>
 
-                <div>
-                  <span className="block font-mono text-[10px] uppercase tracking-[0.18em] text-mute">
-                    Division 03 · Supply Operations
-                  </span>
-                  <p className="mt-0.5 font-sans text-sm font-bold text-ink">
-                    Farmgate Sourcing &amp; FSSAI Central Facilities
+                <Link
+                  href="/operations"
+                  className="group block transition-colors hover:border-ink/40"
+                >
+                  <div className="flex items-center justify-between font-mono text-[10px] uppercase tracking-[0.18em] text-mute group-hover:text-ink">
+                    <span>Division 03 · Supply Operations</span>
+                    <span>→</span>
+                  </div>
+                  <p className="mt-0.5 font-sans text-sm font-bold text-ink group-hover:text-leaf-deep">
+                    Farmgate Sourcing &amp; Certified Processing
                   </p>
                   <p className="text-xs text-ink-soft">Tamil Nadu &amp; Kerala Agricultural Corridors</p>
-                </div>
+                </Link>
               </div>
             </motion.div>
           </div>
@@ -106,7 +119,7 @@ export default function Hero() {
 
       {/* Bottom anchor ticker */}
       <div className="mx-auto mt-12 sm:mt-16 flex w-full max-w-[1360px] flex-col gap-2 border-t border-line/60 pt-5 font-mono text-[10px] sm:text-[11px] uppercase tracking-[0.18em] text-mute sm:flex-row sm:items-center sm:justify-between">
-        <span>Innaya Nutrifoods Private Limited · DPIIT Recognized</span>
+        <span>Innaya Nutrifoods Private Limited · Food Systems &amp; Technology</span>
         <span>Kerala &amp; Tamil Nadu, India</span>
       </div>
     </section>

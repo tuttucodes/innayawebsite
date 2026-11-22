@@ -78,7 +78,7 @@ export default function Brands() {
                     Channels
                   </span>
                   <span className="mt-1 block font-sans text-lg font-bold text-bone">
-                    D2C · Retail Seeding
+                    D2C · Retail · Modern Trade
                   </span>
                 </div>
               </div>

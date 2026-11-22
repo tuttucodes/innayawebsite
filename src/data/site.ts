@@ -25,6 +25,9 @@ export interface Division {
   title: string;
   tagline: string;
   description: string;
+  image: string;
+  href: string;
+  cta: string;
   offerings: string[];
 }
 
@@ -36,10 +39,13 @@ export const DIVISIONS: Division[] = [
     tagline: "Supply Chain Intelligence",
     description:
       "Enterprise AI systems designed for food sourcing, logistics, and quality assurance. Combines vernacular telephony, computer vision, and cold-chain telemetry.",
+    image: "/innaya-infrastructure.jpg",
+    href: "/platforms",
+    cta: "Explore Software Suite",
     offerings: [
       "Innaya Intelligence Suite",
       "Innaya FirstMile Network",
-      "Multilingual Voice Agents",
+      "Multilingual Voice Telephony",
       "Transit Telemetry & Traceability",
     ],
   },
@@ -50,6 +56,9 @@ export const DIVISIONS: Division[] = [
     tagline: "Packaged Food Portfolio",
     description:
       "Innaya's fast-moving consumer goods arm. Formulates, manufactures, and markets clean-label, high-protein daily nutrition products for Indian households.",
+    image: "/pan8-hero.jpg",
+    href: "/brands/pan8",
+    cta: "Explore PAN8 & Products",
     offerings: [
       "PAN8 — A Nutri Co. (Live)",
       "13 Millet-First Formulations",
@@ -63,10 +72,13 @@ export const DIVISIONS: Division[] = [
     title: "Operations & Infrastructure",
     tagline: "Origin to Processing",
     description:
-      "Physical agricultural procurement corridors across Tamil Nadu and Kerala, paired with certified contract manufacturing under FSSAI Central standards.",
+      "Physical agricultural procurement corridors across Tamil Nadu and Kerala, paired with certified commercial contract processing facilities.",
+    image: "/innaya-sourcing.jpg",
+    href: "/operations",
+    cta: "Explore Supply Footprint",
     offerings: [
       "Farmgate & Mandi Aggregation",
-      "FSSAI Central Type 1 Processing",
+      "Certified Manufacturing Partnerships",
       "Strict Quality Sampling",
       "Cold-Chain Logistics Management",
     ],
@@ -192,18 +204,6 @@ export const PRODUCTS: Product[] = PAN8_PRODUCTS.map((p) => ({
   size: p.weight,
   highlight: p.keyBenefit,
 }));
-
-/* =========================================================================
-   COMPLIANCE & GOVERNANCE
-   ========================================================================= */
-export const COMPLIANCE = [
-  { label: "FSSAI Central License", value: "Type 1 — Export & Interstate Ready" },
-  { label: "DPIIT / Startup India", value: "Recognised Startup, valid till 2034" },
-  { label: "Udyam (MSME)", value: "Micro · Food Processing & Manufacturing" },
-  { label: "GSTIN Registration", value: "Kerala — State Code 32" },
-  { label: "Incorporation", value: "22 July 2024 · Ernakulam, Kerala" },
-  { label: "Corporate Category", value: "Private Limited Company (INFPL)" },
-];
 
 /* =========================================================================
    LEADERSHIP

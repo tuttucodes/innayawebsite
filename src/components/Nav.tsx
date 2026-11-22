@@ -8,9 +8,9 @@ import { LogoLockup } from "./Logo";
 
 const links = [
   { href: "/#divisions", label: "Divisions" },
-  { href: "/#platforms", label: "Intelligence" },
-  { href: "/#brands", label: "PAN8 (Brand)" },
-  { href: "/#operations", label: "Operations" },
+  { href: "/platforms", label: "Platforms" },
+  { href: "/brands/pan8", label: "PAN8 (Brand)" },
+  { href: "/operations", label: "Operations" },
   { href: "/about", label: "Company" },
   { href: "/contact", label: "Contact" },
 ];

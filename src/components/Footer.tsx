@@ -62,27 +62,27 @@ export default function Footer() {
           {/* Directory Columns */}
           <div className="grid grid-cols-2 gap-8 sm:grid-cols-3 lg:col-span-7">
             <Col title="The Group">
-              <Link href="/#top">Overview</Link>
+              <Link href="/">Overview</Link>
               <Link href="/#divisions">Divisions</Link>
-              <Link href="/#operations">Operations</Link>
+              <Link href="/operations">Operations</Link>
               <Link href="/about">Corporate Info</Link>
               <Link href="/contact">Contact</Link>
             </Col>
             <Col title="Platforms & Software">
-              <Link href="/#platforms">Innaya Intelligence</Link>
-              <Link href="/#platforms">Innaya Voice</Link>
-              <Link href="/#platforms">Innaya Source</Link>
-              <Link href="/#platforms">Innaya FirstMile</Link>
-              <Link href="/#platforms">Innaya Cold &amp; Trace</Link>
+              <Link href="/platforms">Innaya Intelligence</Link>
+              <Link href="/platforms">Innaya Voice &amp; Source</Link>
+              <Link href="/platforms">Innaya FirstMile</Link>
+              <Link href="/platforms">Cold-Chain Telemetry</Link>
+              <Link href="/platforms">AWS Cloud Stack</Link>
             </Col>
             <Col title="Consumer Brands">
               <a href={SITE.social.pan8} target="_blank" rel="noopener noreferrer">
-                PAN8 Store ↗
+                PAN8 Store (pan8.in) ↗
               </a>
-              <Link href="/#brands">Pancake Mixes (3)</Link>
-              <Link href="/#brands">Dosa Mixes (5)</Link>
-              <Link href="/#brands">Upma Mixes (2)</Link>
-              <Link href="/#brands">Protein Bars (3)</Link>
+              <Link href="/brands/pan8">PAN8 Brand Overview</Link>
+              <Link href="/products">All 13 Millet SKUs</Link>
+              <Link href="/brands/pan8">Pancakes &amp; Dosas</Link>
+              <Link href="/brands/pan8">Upma &amp; Protein Bars</Link>
             </Col>
           </div>
         </div>
@@ -90,7 +90,7 @@ export default function Footer() {
         {/* Corporate bottom row */}
         <div className="mt-16 flex flex-col gap-4 border-t border-bone/15 pt-6 font-mono text-[10px] uppercase tracking-[0.2em] text-bone/60 sm:flex-row sm:items-center sm:justify-between">
           <span>
-            © {year} {SITE.legal} · CIN / DPIIT Recognized
+            © {year} {SITE.legal} · All Rights Reserved
           </span>
           <span>{SITE.hq}</span>
         </div>

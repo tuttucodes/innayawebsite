@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 import Link from "next/link";
 import Nav from "@/components/Nav";
 import Footer from "@/components/Footer";
@@ -26,42 +27,47 @@ export default function Pan8BrandPage() {
       <Nav />
       <main className="overflow-x-clip">
         <PageHero
-          eyebrow="Brand · 01"
+          eyebrow="Consumer Brands · Division 02"
           title={
             <>
-              PAN<span className="relative">8<span className="absolute -right-3 top-2 h-3 w-3 rounded-full bg-amber md:-right-5 md:top-4 md:h-5 md:w-5" /></span>
-              <span className="ml-3 align-top font-sans text-base font-normal tracking-tight text-mute">
+              PAN8
+              <span className="ml-3 align-top font-serif italic text-2xl md:text-3xl font-normal text-amber">
                 — A Nutri Co.
               </span>
             </>
           }
           blurb={
             <>
-              <span className="text-ink">
-                &ldquo;Nutrition that works with you.&rdquo;
+              <span className="font-semibold text-ink">
+                &ldquo;Just pan it!&rdquo;
               </span>{" "}
-              13 SKUs across pancake, dosa, upma and bar formats — every one
-              millet-first, plant-protein dense, and zero-preservative. Sold direct
-              on{" "}
-              <a
-                href={SITE.social.pan8}
-                className="underline decoration-line underline-offset-4 hover:decoration-ink"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                pan8.in
-              </a>
-              .
+              — PAN8 is Innaya&apos;s consumer brand re-engineering traditional Indian morning
+              and snack formats with heritage millets, pulses, and modern nutrition science.
+              All 13 products below are developed, formulated, and sold under the PAN8 brand.
             </>
           }
         />
 
-        <section className="mx-auto w-full max-w-[1400px] px-5 py-20 md:px-10 md:py-28">
+        {/* Hero Visual */}
+        <div className="mx-auto w-full max-w-[1400px] px-5 pt-8 md:px-10">
+          <div className="relative aspect-[21/9] w-full overflow-hidden rounded-3xl border border-line bg-bone-deep">
+            <Image
+              src="/pan8-hero.jpg"
+              alt="PAN8 Clean Nutrition Breakfast"
+              fill
+              priority
+              sizes="(max-width: 1400px) 100vw, 1400px"
+              className="object-cover"
+            />
+          </div>
+        </div>
+
+        <section className="mx-auto w-full max-w-[1400px] px-5 py-12 md:px-10 md:py-16">
           <div className="grid gap-px overflow-hidden rounded-3xl border border-line bg-line md:grid-cols-4">
-            <Stat k="SKUs" v="13" />
+            <Stat k="Product Range" v="13 Active SKUs" />
             <Stat k="Plant Protein" v="15–24g / 100g" />
-            <Stat k="Format" v="Everyday Indian" />
-            <Stat k="Channels" v="D2C · Modern Trade · QC" />
+            <Stat k="Ingredients" v="0 Preservatives" />
+            <Stat k="Channels" v="D2C · Retail · MT" />
           </div>
         </section>
 

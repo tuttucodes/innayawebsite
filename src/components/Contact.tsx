@@ -49,7 +49,7 @@ export default function Contact() {
   return (
     <SectionShell id="contact" className="pb-32">
       <SectionHead
-        index="08"
+        index="06"
         eyebrow="Contact"
         title={
           <>
