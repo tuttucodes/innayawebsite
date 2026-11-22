@@ -38,11 +38,11 @@ export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),
   applicationName: "Innaya Nutri Foods",
   title: {
-    default: "Innaya — AI Operating System for Food Supply Chains",
+    default: "Innaya Nutri Foods — Farmgate to Consumer Nutrition",
     template: "%s · Innaya Nutri Foods",
   },
   description:
-    "Innaya Nutri Foods Pvt Ltd (INFPL) builds the AI operating system for food supply chains — sourcing, quality, logistics, and traceability through multilingual AI agents. Parent company of PAN8, India's millet-based plant-protein nutrition brand.",
+    "Innaya Nutri Foods Pvt Ltd (INFPL) bridges South Indian agriculture and everyday nutrition. Operating direct FPO procurement, farmgate telemetry, and clean-label consumer brand PAN8.",
   keywords: [
     "Innaya Nutri Foods",
     "Innaya Nutri Foods Pvt Ltd",
@@ -73,16 +73,16 @@ export const metadata: Metadata = {
     type: "website",
     url: SITE_URL,
     siteName: "Innaya Nutri Foods",
-    title: "Innaya — AI Operating System for Food Supply Chains",
+    title: "Innaya Nutri Foods — Farmgate to Consumer Nutrition",
     description:
-      "AI operating system for food supply chains. Multilingual AI agents, procurement intelligence, quality inspection. Parent company of PAN8.",
+      "Bridging South Indian agriculture and everyday nutrition. Operating farmgate sourcing networks and clean consumer nutrition brand PAN8.",
     locale: "en_IN",
   },
   twitter: {
     card: "summary_large_image",
-    title: "Innaya — AI Operating System for Food Supply Chains",
+    title: "Innaya Nutri Foods — Farmgate to Consumer Nutrition",
     description:
-      "AI operating system for food supply chains. Multilingual AI agents, procurement intelligence. Parent company of PAN8.",
+      "Bridging South Indian agriculture and everyday nutrition. Operating farmgate sourcing networks and clean consumer nutrition brand PAN8.",
   },
   robots: {
     index: true,
