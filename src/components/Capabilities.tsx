@@ -1,114 +1,92 @@
 "use client";
 
 import { motion } from "motion/react";
-import { SectionHead, SectionShell } from "./Section";
+import { SectionShell } from "./Section";
 
-const STAGES = [
+const OPERATIONS = [
   {
-    id: "01",
-    title: "Sourcing",
-    body: "Direct lines into mandis, FPOs and smallholder farmers. AI signals price elasticity, quality cohorts, and harvest-cycle timing across Indian millet belts.",
-    points: ["Mandi price intelligence", "Quality scoring", "Counter-party risk"],
+    num: "01",
+    label: "Sourcing Corridors",
+    title: "Farmgate & Mandi Aggregation",
+    desc: "Direct procurement partnerships with FPOs and growers across Tamil Nadu and Kerala. Eliminates blind spot deductions and connects smallholder harvests with guaranteed buyers.",
   },
   {
-    id: "02",
-    title: "Formulation",
-    body: "Recipe-and-nutrition models that hold protein, fibre, glycaemic and palate targets simultaneously — re-engineering Indian formats with millet and pulses.",
-    points: ["Plant-protein engines", "Sensory mapping", "Cost-of-pack modelling"],
+    num: "02",
+    label: "Quality Verification",
+    title: "Standardized Intake Checklists",
+    desc: "Physical sampling and visual inspection checklists at point of collection. Eliminating arbitrary grade rejections at factory gates through verified evidence.",
   },
   {
-    id: "03",
-    title: "Manufacturing",
-    body: "FSSAI-licensed contract manufacturing partners. Automated production planning against forecast, with QC sampling and traceability built in.",
-    points: ["FSSAI-compliant plants", "Production planning", "Batch traceability"],
+    num: "03",
+    label: "Certified Facilities",
+    title: "FSSAI Central Type 1 Manufacturing",
+    desc: "Contract manufacturing in audited, FSSAI Central-licensed plants. Standardized batch lotting, nutritional consistency, and compliance for nationwide distribution and export.",
   },
   {
-    id: "04",
-    title: "Brand & Packaging",
-    body: "In-house design and content. Packaging engineered for kirana shelves, modern trade, and quick-commerce thumbnails. Brand systems that stay consistent at scale.",
-    points: ["Pack design", "Content engine", "Photography pipeline"],
-  },
-  {
-    id: "05",
-    title: "Distribution",
-    body: "Routing intelligence across D2C, modern trade, e-commerce and quick-commerce. Each SKU goes to the right lane in the right pin-code at the right time.",
-    points: ["Channel routing", "Marketplace ops", "Quick-commerce"],
-  },
-  {
-    id: "06",
-    title: "Demand & Insights",
-    body: "Time-series demand forecasting, retention curves, and cohort intelligence feeding back into procurement and production runs. Closed loop, not a dashboard.",
-    points: ["Forecasting", "Cohort intel", "Closed-loop ops"],
+    num: "04",
+    label: "Cold-Chain Oversight",
+    title: "Active Temperature Telemetry",
+    desc: "Telemetry monitoring for temperature-sensitive transit lanes. Early detection of cooling equipment failures allows rapid intervention before irreversible spoilage occurs.",
   },
 ];
 
 export default function Capabilities() {
   return (
-    <SectionShell id="capabilities">
-      <SectionHead
-        index="02"
-        eyebrow="What we do"
-        title={
-          <>
-            End-to-end FMCG.<br />
-            <span className="italic text-leaf-deep">Powered by AI.</span>
-          </>
-        }
-        blurb="Innaya is a parent food-tech company. We don't just ship a brand — we run the full FMCG stack from sourcing to distribution, with AI threaded through every layer. Brands that sit on top inherit the entire operating system."
-      />
-
-      <ol className="mt-20 grid gap-px overflow-hidden rounded-3xl border border-line bg-line md:mt-28 md:grid-cols-2 lg:grid-cols-3">
-        {STAGES.map((s, i) => (
-          <motion.li
-            key={s.id}
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true, margin: "-80px" }}
-            transition={{
-              duration: 0.7,
-              delay: (i % 3) * 0.06,
-              ease: [0.16, 1, 0.3, 1],
-            }}
-            className="group relative flex flex-col gap-6 bg-bone p-8 transition-colors hover:bg-bone-deep/60"
-          >
-            <div className="flex items-center justify-between">
-              <span className="font-mono text-[10px] uppercase tracking-[0.22em] text-mute">
-                {s.id} · stage
-              </span>
-              <span className="grid h-8 w-8 place-items-center rounded-full border border-line text-mute transition-all group-hover:border-leaf-deep group-hover:bg-leaf-deep group-hover:text-bone">
-                →
-              </span>
-            </div>
-            <h3 className="font-serif text-3xl tracking-tight">{s.title}</h3>
-            <p className="text-sm leading-[1.6] text-ink-soft">{s.body}</p>
-            <ul className="mt-auto flex flex-wrap gap-2">
-              {s.points.map((p) => (
-                <li
-                  key={p}
-                  className="rounded-full border border-line bg-bone px-3 py-1 font-mono text-[10px] uppercase tracking-[0.18em] text-mute"
-                >
-                  {p}
-                </li>
-              ))}
-            </ul>
-          </motion.li>
-        ))}
-      </ol>
-
-      <div className="mt-12 grid gap-4 rounded-3xl border border-line bg-bone-deep/40 p-8 md:grid-cols-3 md:p-12">
-        <div className="md:col-span-2">
-          <span className="font-mono text-[10px] uppercase tracking-[0.22em] text-mute">
-            Operating model
-          </span>
-          <h3 className="mt-3 font-serif text-[clamp(1.6rem,1rem+1.6vw,2.4rem)] leading-[1.1] tracking-tight">
-            We treat FMCG as a system, not a series of departments.
-          </h3>
+    <SectionShell id="operations">
+      <div className="border-t border-line/60 pt-10 md:pt-14">
+        <div className="flex items-center justify-between font-mono text-[11px] uppercase tracking-[0.24em] text-mute">
+          <span>Division 03 · Physical Operations</span>
+          <span>Field to Factory</span>
         </div>
-        <p className="text-[15px] leading-[1.65] text-ink-soft md:col-span-1">
-          Every brand that comes out of Innaya inherits the full sourcing, formulation,
-          manufacturing, brand, and distribution stack. New products go from idea to
-          first commercial batch in a fraction of the typical FMCG timeline.
-        </p>
+
+        <div className="mt-8 grid gap-8 lg:grid-cols-12 lg:gap-16 lg:items-end">
+          <div className="lg:col-span-6">
+            <h2 className="font-sans text-[clamp(2.1rem,1.2rem+3.5vw,3.8rem)] font-bold leading-[1.04] tracking-[-0.03em] text-ink">
+              Origin to processing.{" "}
+              <span className="font-serif italic font-normal text-leaf-deep">
+                The physical execution layer.
+              </span>
+            </h2>
+          </div>
+          <div className="lg:col-span-6">
+            <p className="text-[16px] leading-[1.65] text-ink-soft">
+              Software alone does not move agricultural harvest. Innaya pairs AI-driven
+              coordination with physical sourcing corridors, FSSAI-compliant manufacturing,
+              and disciplined cold-chain transit.
+            </p>
+          </div>
+        </div>
+
+        {/* 4 Architectural Columns */}
+        <div className="mt-14 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
+          {OPERATIONS.map((op, i) => (
+            <motion.div
+              key={op.num}
+              initial={{ opacity: 0, y: 16 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true, margin: "-60px" }}
+              transition={{ duration: 0.6, delay: i * 0.08, ease: [0.16, 1, 0.3, 1] }}
+              className="flex flex-col justify-between rounded-2xl border border-line bg-bone-deep/40 p-6 transition-colors hover:border-ink/30 hover:bg-bone-deep/70"
+            >
+              <div>
+                <div className="flex items-center justify-between font-mono text-[10px] uppercase tracking-[0.2em] text-mute">
+                  <span className="font-semibold text-leaf-deep">/{op.num}</span>
+                  <span>{op.label}</span>
+                </div>
+                <h3 className="mt-4 font-sans text-lg font-bold tracking-tight text-ink">
+                  {op.title}
+                </h3>
+                <p className="mt-2 text-[14px] leading-[1.6] text-ink-soft">
+                  {op.desc}
+                </p>
+              </div>
+
+              <div className="mt-6 border-t border-line/50 pt-3 text-xs font-mono uppercase tracking-[0.15em] text-mute">
+                Tamil Nadu &amp; Kerala
+              </div>
+            </motion.div>
+          ))}
+        </div>
       </div>
     </SectionShell>
   );

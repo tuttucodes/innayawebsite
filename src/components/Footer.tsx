@@ -5,29 +5,35 @@ import { LogoMark } from "./Logo";
 export default function Footer() {
   const year = new Date().getFullYear();
   return (
-    <footer className="relative overflow-hidden bg-ink text-bone">
-      <div className="mx-auto max-w-[1400px] px-5 pb-10 pt-24 md:px-10 md:pt-32">
-        <div className="grid gap-12 md:grid-cols-12">
-          <div className="md:col-span-6">
-            <div className="mb-8 flex items-center gap-4">
-              <span className="block h-12 w-12">
+    <footer className="relative max-w-full overflow-hidden bg-ink text-bone">
+      <div className="mx-auto max-w-[1360px] px-5 pb-10 pt-20 sm:px-8 md:px-12 md:pt-28">
+        <div className="grid gap-12 lg:grid-cols-12">
+          {/* Brand Column */}
+          <div className="lg:col-span-5">
+            <div className="mb-6 flex items-center gap-3.5">
+              <span className="block h-10 w-10">
                 <LogoMark tone="bone" />
               </span>
               <div className="flex flex-col leading-none">
-                <span className="font-serif text-xl tracking-tight">Innaya</span>
-                <span className="mt-1 font-mono text-[10px] uppercase tracking-[0.22em] text-bone/70">
-                  Nutri Foods · INFPL
+                <span className="font-sans text-xl font-bold tracking-tight text-bone">
+                  Innaya
+                </span>
+                <span className="mt-1 font-mono text-[9px] uppercase tracking-[0.22em] text-bone/60">
+                  Nutrifoods Private Limited
                 </span>
               </div>
             </div>
-            <h2 className="mt-6 font-serif text-[clamp(3rem,1rem+7vw,7rem)] leading-[0.92] tracking-[-0.03em]">
-              Nutrition,<br />
-              <em className="text-amber">at scale.</em>
+
+            <h2 className="mt-6 font-sans text-[clamp(2.2rem,1rem+4.5vw,4.5rem)] font-bold leading-[0.98] tracking-[-0.035em] text-bone">
+              Operating the infrastructure{" "}
+              <span className="font-serif italic font-normal text-amber">of food.</span>
             </h2>
-            <p className="mt-8 max-w-md text-[15px] leading-[1.6] text-bone/70">
-              An AI-first food technology company, headquartered in Kerala. Building the
-              brands India will eat tomorrow.
+
+            <p className="mt-5 max-w-md text-[15px] leading-[1.65] text-bone/70">
+              Integrated agricultural technology and consumer food operations. Headquartered
+              in Kakkanad, Kerala. Operating across South India.
             </p>
+
             <div className="mt-8 flex items-center gap-3">
               <a
                 href={SITE.social.linkedin}
@@ -47,50 +53,55 @@ export default function Footer() {
                 title="PAN8 — A Nutri Co."
                 className="group inline-flex items-center gap-2 rounded-full border border-bone/20 bg-bone/[0.05] px-4 py-2 text-[13px] tracking-tight text-bone/85 transition-all hover:border-amber hover:bg-bone/[0.1] hover:text-amber"
               >
-                <span className="font-serif italic">pan8.in</span>
+                <span className="font-sans font-medium">pan8.in</span>
                 <span className="opacity-50 transition-opacity group-hover:opacity-100">↗</span>
               </a>
             </div>
           </div>
 
-          <div className="grid grid-cols-2 gap-8 md:col-span-6 md:grid-cols-3">
-            <Col title="Sitemap">
-              <Link href="/about">Company</Link>
-              <Link href="/brands/pan8">Brands</Link>
-              <Link href="/products">Products</Link>
-              <Link href="/sustainability">Sustainability</Link>
-              <Link href="/careers">Careers</Link>
+          {/* Directory Columns */}
+          <div className="grid grid-cols-2 gap-8 sm:grid-cols-3 lg:col-span-7">
+            <Col title="The Group">
+              <Link href="/#top">Overview</Link>
+              <Link href="/#divisions">Divisions</Link>
+              <Link href="/#operations">Operations</Link>
+              <Link href="/about">Corporate Info</Link>
               <Link href="/contact">Contact</Link>
             </Col>
-            <Col title="Brands">
-              <a href={SITE.social.pan8} target="_blank" rel="noopener noreferrer">
-                pan8.in ↗
-              </a>
-              <span className="text-bone/70">More — soon</span>
+            <Col title="Platforms & Software">
+              <Link href="/#platforms">Innaya Intelligence</Link>
+              <Link href="/#platforms">Innaya Voice</Link>
+              <Link href="/#platforms">Innaya Source</Link>
+              <Link href="/#platforms">Innaya FirstMile</Link>
+              <Link href="/#platforms">Innaya Cold &amp; Trace</Link>
             </Col>
-            <Col title="Reach us">
-              <a href={`mailto:${SITE.contactEmail}`}>{SITE.contactEmail}</a>
-              <a href={`mailto:${SITE.hrEmail}`}>{SITE.hrEmail}</a>
-              <a href={`mailto:${SITE.brandEmail}`}>{SITE.brandEmail}</a>
-              <span className="text-bone/70">{SITE.hq}</span>
+            <Col title="Consumer Brands">
+              <a href={SITE.social.pan8} target="_blank" rel="noopener noreferrer">
+                PAN8 Store ↗
+              </a>
+              <Link href="/#brands">Pancake Mixes (3)</Link>
+              <Link href="/#brands">Dosa Mixes (5)</Link>
+              <Link href="/#brands">Upma Mixes (2)</Link>
+              <Link href="/#brands">Protein Bars (3)</Link>
             </Col>
           </div>
         </div>
 
-        <div className="mt-20 flex flex-col gap-4 border-t border-bone/15 pt-6 font-mono text-[10px] uppercase tracking-[0.22em] text-bone/70 md:flex-row md:items-center md:justify-between">
+        {/* Corporate bottom row */}
+        <div className="mt-16 flex flex-col gap-4 border-t border-bone/15 pt-6 font-mono text-[10px] uppercase tracking-[0.2em] text-bone/60 sm:flex-row sm:items-center sm:justify-between">
           <span>
-            © {year} INFPL — {SITE.legal}. All rights reserved.
+            © {year} {SITE.legal} · CIN / DPIIT Recognized
           </span>
-          <span>Made in India</span>
+          <span>{SITE.hq}</span>
         </div>
       </div>
 
       <div
         aria-hidden="true"
-        className="pointer-events-none select-none px-5 pb-6 md:px-10"
+        className="pointer-events-none select-none overflow-hidden px-5 pb-4 md:px-12"
       >
-        <span className="block font-serif text-[clamp(5rem,1rem+22vw,22rem)] leading-[0.85] tracking-[-0.04em] text-bone/[0.16]">
-          INFPL
+        <span className="block font-sans font-bold text-[clamp(3.5rem,1rem+16vw,16rem)] leading-[0.8] tracking-[-0.05em] text-bone/[0.08]">
+          INNAYA
         </span>
       </div>
     </footer>
@@ -100,10 +111,10 @@ export default function Footer() {
 function Col({ title, children }: { title: string; children: React.ReactNode }) {
   return (
     <div>
-      <span className="block font-mono text-[10px] uppercase tracking-[0.22em] text-bone/70">
+      <span className="block font-mono text-[10px] uppercase tracking-[0.22em] text-bone/50">
         {title}
       </span>
-      <div className="mt-4 flex flex-col gap-2 text-[14px] text-bone/85 [&_a]:transition-colors [&_a:hover]:text-amber">
+      <div className="mt-4 flex flex-col gap-2.5 text-[14px] text-bone/85 [&_a]:transition-colors [&_a:hover]:text-amber">
         {children}
       </div>
     </div>

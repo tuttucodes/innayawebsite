@@ -7,11 +7,11 @@ import { cn } from "@/lib/cn";
 import { LogoLockup } from "./Logo";
 
 const links = [
+  { href: "/#divisions", label: "Divisions" },
+  { href: "/#platforms", label: "Intelligence" },
+  { href: "/#brands", label: "PAN8 (Brand)" },
+  { href: "/#operations", label: "Operations" },
   { href: "/about", label: "Company" },
-  { href: "/brands/pan8", label: "Brands" },
-  { href: "/products", label: "Products" },
-  { href: "/sustainability", label: "Sustainability" },
-  { href: "/careers", label: "Careers" },
   { href: "/contact", label: "Contact" },
 ];
 

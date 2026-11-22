@@ -46,8 +46,8 @@ export function LogoLockup({ className, tone = "ink" }: LogoLockupProps) {
           priority
         />
       </span>
-      <span className={cn("flex flex-col gap-1 leading-none", text)}>
-        <span className="font-serif text-[16px] tracking-[-0.01em] sm:text-[18px]">
+      <span className={cn("flex flex-col gap-0.5 leading-none", text)}>
+        <span className="font-sans font-bold text-[16px] tracking-tight sm:text-[18px]">
           Innaya
         </span>
         <span

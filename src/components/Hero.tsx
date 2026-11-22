@@ -1,193 +1,114 @@
 "use client";
 
-import { useRef } from "react";
-import { motion, useScroll, useTransform, useMotionValue, useSpring } from "motion/react";
+import { motion } from "motion/react";
 
 export default function Hero() {
-  const ref = useRef<HTMLDivElement>(null);
-  const { scrollYProgress } = useScroll({
-    target: ref,
-    offset: ["start start", "end start"],
-  });
-
-  const y = useTransform(scrollYProgress, [0, 1], [0, 160]);
-  const opacity = useTransform(scrollYProgress, [0, 0.7], [1, 0]);
-
-  const mouseX = useMotionValue(0.5);
-  const mouseY = useMotionValue(0.5);
-  const sx = useSpring(mouseX, { stiffness: 60, damping: 18, mass: 0.8 });
-  const sy = useSpring(mouseY, { stiffness: 60, damping: 18, mass: 0.8 });
-
-  const orbX1 = useTransform(sx, [0, 1], [-30, 30]);
-  const orbY1 = useTransform(sy, [0, 1], [-30, 30]);
-  const orbX2 = useTransform(sx, [0, 1], [25, -25]);
-  const orbY2 = useTransform(sy, [0, 1], [20, -20]);
-
-  function onMove(e: React.MouseEvent<HTMLDivElement>) {
-    const rect = e.currentTarget.getBoundingClientRect();
-    mouseX.set((e.clientX - rect.left) / rect.width);
-    mouseY.set((e.clientY - rect.top) / rect.height);
-  }
-
   return (
     <section
       id="top"
-      ref={ref}
-      onMouseMove={onMove}
-      className="grain relative isolate flex min-h-[100svh] items-end overflow-hidden bg-bone pb-12 pt-28 sm:pb-16 sm:pt-40"
+      className="relative flex min-h-[90svh] flex-col justify-between overflow-hidden bg-bone px-5 pt-32 pb-10 sm:px-8 sm:pt-36 sm:pb-12 md:px-12 md:pt-40 md:pb-16"
     >
-      {/* Background orbs */}
-      <motion.div
-        style={{ x: orbX1, y: orbY1 }}
-        className="pointer-events-none absolute -left-40 top-20 -z-10 h-[520px] w-[520px] rounded-full bg-leaf/30 blur-3xl"
+      {/* Subtle architectural hairline grid background */}
+      <div
+        className="pointer-events-none absolute inset-0 opacity-[0.035] [background-image:linear-gradient(to_right,currentColor_1px,transparent_1px),linear-gradient(to_bottom,currentColor_1px,transparent_1px)] [background-size:64px_64px]"
         aria-hidden="true"
       />
-      <motion.div
-        style={{ x: orbX2, y: orbY2 }}
-        className="pointer-events-none absolute -right-32 top-40 -z-10 h-[580px] w-[580px] rounded-full bg-amber/30 blur-3xl"
-        aria-hidden="true"
-      />
-      <div className="pointer-events-none absolute inset-0 -z-10 [background-image:radial-gradient(ellipse_at_50%_-20%,oklch(95%_0.06_140)_0%,transparent_60%)]" />
 
-      {/* Top meta strip */}
-      <motion.div
-        style={{ opacity }}
-        className="absolute inset-x-0 top-24 z-10 mx-auto hidden max-w-[1400px] grid-cols-3 gap-8 px-5 font-mono text-[10px] uppercase tracking-[0.22em] text-mute md:grid md:px-10"
-      >
-        <span>Est. 22 / 07 / 2024</span>
-        <span className="text-center">Kerala · India</span>
-        <span className="text-right">DPIIT recognised · FSSAI central</span>
-      </motion.div>
-
-      <motion.div
-        style={{ y, opacity }}
-        className="relative z-10 mx-auto w-full max-w-[1400px] px-5 md:px-10"
-      >
-        {/* Eyebrow */}
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.9, ease: [0.16, 1, 0.3, 1] }}
-          className="mb-6 inline-flex items-center gap-3 rounded-full border border-line/80 bg-bone/60 px-4 py-2 backdrop-blur"
-        >
-          <span className="relative grid h-1.5 w-1.5 place-items-center rounded-full bg-leaf">
-            <span className="absolute inset-0 animate-ping rounded-full bg-leaf opacity-75" />
-          </span>
-          <span className="font-mono text-[10px] uppercase tracking-[0.22em] text-ink-soft">
-            Parent company · India
-          </span>
-        </motion.div>
-
-        {/* Headline */}
-        <h1 className="font-serif text-[clamp(2.8rem,1rem+8vw,11rem)] leading-[0.92] tracking-[-0.03em]">
-          <Reveal delay={0.05}>
-            <span className="block">FMCG, end-to-end —</span>
-          </Reveal>
-          <Reveal delay={0.18}>
-            <span className="block italic text-leaf-deep">sourcing to shelf,</span>
-          </Reveal>
-          <Reveal delay={0.32}>
-            <span className="flex items-baseline gap-4 sm:gap-6">
-              <span>powered by</span>
-              <span className="relative">
-                <span className="gradient-text">A.I.</span>
-                <span className="absolute -right-3 -top-2 h-2 w-2 rounded-full bg-amber sm:-right-5 sm:-top-3" />
+      <div className="relative mx-auto w-full max-w-[1360px]">
+        {/* Asymmetrical 2-column hero split */}
+        <div className="grid gap-10 lg:grid-cols-12 lg:gap-16 lg:items-end">
+          {/* Left Column: Core statement & actions */}
+          <div className="lg:col-span-7">
+            <h1 className="font-sans text-[clamp(2.4rem,1.3rem+5vw,5.5rem)] font-bold leading-[1.02] tracking-[-0.035em] text-ink">
+              Operating the infrastructure of food.
+              <span className="block mt-2 font-serif italic font-normal text-leaf-deep">
+                From agricultural origin to consumer shelf.
               </span>
-            </span>
-          </Reveal>
-        </h1>
+            </h1>
 
-        {/* Sub + ctas */}
-        <div className="mt-10 grid gap-10 md:mt-16 md:grid-cols-12">
-          <div className="md:col-span-5">
-            <motion.p
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.9, delay: 0.55, ease: [0.16, 1, 0.3, 1] }}
-              className="max-w-md text-[17px] leading-[1.55] text-ink-soft"
-            >
-              Innaya Nutri Foods Pvt Ltd (INFPL) is a parent food-tech company. We run the full
-              FMCG stack —{" "}
-              <span className="text-ink">
-                sourcing, formulation, manufacturing, brand, and distribution
-              </span>{" "}
-              — with AI threaded through every layer. Brands launch on top of our
-              operating system. First brand:{" "}
-              <span className="font-serif italic text-ink">PAN8 — A Nutri Co.</span>
-            </motion.p>
+            <p className="mt-6 sm:mt-8 max-w-xl text-[16px] sm:text-[17px] leading-[1.65] text-ink-soft">
+              Innaya is an integrated food technology group. We develop enterprise AI
+              systems that automate agricultural procurement, quality inspection, and logistics —
+              while operating a consumer goods portfolio anchored by our clean-nutrition brand{" "}
+              <span className="font-semibold text-ink">PAN8</span>.
+            </p>
+
+            <div className="mt-8 sm:mt-10 flex flex-col sm:flex-row items-stretch sm:items-center gap-3.5">
+              <a
+                href="#platforms"
+                className="inline-flex items-center justify-center gap-2 rounded-full bg-ink px-6 py-3.5 text-sm font-medium text-bone transition-all hover:bg-leaf-deep"
+              >
+                Innaya Intelligence Suite
+                <span>→</span>
+              </a>
+              <a
+                href="#brands"
+                className="inline-flex items-center justify-center gap-2 rounded-full border border-line bg-bone-deep/50 px-6 py-3.5 text-sm font-medium text-ink transition-colors hover:border-ink/40 hover:bg-bone-deep"
+              >
+                Consumer Brand (PAN8) ↗
+              </a>
+            </div>
           </div>
-          <div className="md:col-span-4 md:col-start-9">
+
+          {/* Right Column: High-end architectural overview card */}
+          <div className="lg:col-span-5">
             <motion.div
-              initial={{ opacity: 0, y: 20 }}
+              initial={{ opacity: 0, y: 24 }}
               animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.9, delay: 0.7, ease: [0.16, 1, 0.3, 1] }}
-              className="flex flex-wrap items-center gap-3"
+              transition={{ duration: 0.8, delay: 0.2, ease: [0.16, 1, 0.3, 1] }}
+              className="rounded-2xl border border-line bg-bone-deep/40 p-5 sm:p-6 md:p-8"
             >
-              <a
-                href="#capabilities"
-                className="group relative inline-flex items-center gap-2 overflow-hidden rounded-full bg-ink px-6 py-3.5 text-sm font-medium text-bone transition-colors"
-              >
-                <span className="relative z-10">What we do</span>
-                <span className="relative z-10 transition-transform group-hover:translate-x-1">→</span>
-                <span className="absolute inset-0 -translate-x-full bg-gradient-to-r from-leaf-deep to-leaf transition-transform duration-500 group-hover:translate-x-0" />
-              </a>
-              <a
-                href="/contact"
-                className="inline-flex items-center gap-2 rounded-full border border-ink/30 px-6 py-3.5 text-sm font-medium text-ink transition-all hover:border-ink hover:bg-ink hover:text-bone"
-              >
-                Talk to us
-              </a>
+              <div className="flex items-center justify-between border-b border-line/60 pb-3.5 sm:pb-4">
+                <span className="font-mono text-[10px] uppercase tracking-[0.2em] text-mute">
+                  The Innaya Portfolio
+                </span>
+                <span className="inline-flex items-center gap-1.5 font-mono text-[10px] uppercase tracking-[0.16em] text-leaf-deep">
+                  <span className="h-1.5 w-1.5 rounded-full bg-leaf" />
+                  Active Operations
+                </span>
+              </div>
+
+              <div className="mt-4 sm:mt-5 space-y-4">
+                <div className="border-b border-line/40 pb-3">
+                  <span className="block font-mono text-[10px] uppercase tracking-[0.18em] text-mute">
+                    Division 01 · Software &amp; Platforms
+                  </span>
+                  <p className="mt-0.5 font-sans text-sm font-bold text-ink">
+                    Innaya Intelligence &amp; FirstMile Network
+                  </p>
+                  <p className="text-xs text-ink-soft">Voice, Source, Vision, Cold, Trace &amp; Nutri</p>
+                </div>
+
+                <div className="border-b border-line/40 pb-3">
+                  <span className="block font-mono text-[10px] uppercase tracking-[0.18em] text-mute">
+                    Division 02 · Consumer Brands
+                  </span>
+                  <p className="mt-0.5 font-sans text-sm font-bold text-ink">
+                    PAN8 — A Nutri Co.
+                  </p>
+                  <p className="text-xs text-ink-soft">13 Millet-First SKUs (Pancakes, Dosas, Upma, Bars)</p>
+                </div>
+
+                <div>
+                  <span className="block font-mono text-[10px] uppercase tracking-[0.18em] text-mute">
+                    Division 03 · Supply Operations
+                  </span>
+                  <p className="mt-0.5 font-sans text-sm font-bold text-ink">
+                    Farmgate Sourcing &amp; FSSAI Central Facilities
+                  </p>
+                  <p className="text-xs text-ink-soft">Tamil Nadu &amp; Kerala Agricultural Corridors</p>
+                </div>
+              </div>
             </motion.div>
           </div>
         </div>
+      </div>
 
-        {/* Bottom marker row */}
-        <div className="mt-16 grid grid-cols-2 gap-x-6 gap-y-6 border-t border-line/70 pt-6 font-mono text-[11px] uppercase tracking-[0.18em] text-mute md:mt-24 md:grid-cols-4">
-          <Stat k="Founded" v="2024" />
-          <Stat k="Stack" v="Sourcing → Distribution" />
-          <Stat k="Brands Live" v="01 · PAN8" />
-          <Stat k="HQ" v="Kerala, IN" />
-        </div>
-      </motion.div>
-
-      {/* Scroll affordance — desktop only */}
-      <motion.div
-        style={{ opacity }}
-        className="absolute bottom-6 left-1/2 z-10 hidden -translate-x-1/2 flex-col items-center gap-2 font-mono text-[10px] uppercase tracking-[0.2em] text-mute md:flex"
-      >
-        <span>Scroll</span>
-        <span className="block h-8 w-px bg-line">
-          <motion.span
-            className="block h-3 w-px bg-ink"
-            animate={{ y: [0, 32, 0] }}
-            transition={{ duration: 2.4, repeat: Infinity, ease: "easeInOut" }}
-          />
-        </span>
-      </motion.div>
+      {/* Bottom anchor ticker */}
+      <div className="mx-auto mt-12 sm:mt-16 flex w-full max-w-[1360px] flex-col gap-2 border-t border-line/60 pt-5 font-mono text-[10px] sm:text-[11px] uppercase tracking-[0.18em] text-mute sm:flex-row sm:items-center sm:justify-between">
+        <span>Innaya Nutrifoods Private Limited · DPIIT Recognized</span>
+        <span>Kerala &amp; Tamil Nadu, India</span>
+      </div>
     </section>
-  );
-}
-
-function Reveal({ children, delay = 0 }: { children: React.ReactNode; delay?: number }) {
-  return (
-    <span className="block overflow-hidden">
-      <span
-        className="block hero-reveal"
-        style={{ animationDelay: `${delay}s` }}
-      >
-        {children}
-      </span>
-    </span>
-  );
-}
-
-function Stat({ k, v }: { k: string; v: string }) {
-  return (
-    <div className="flex flex-col gap-1">
-      <span className="text-mute">{k}</span>
-      <span className="font-sans text-[15px] normal-case tracking-tight text-ink">
-        {v}
-      </span>
-    </div>
   );
 }

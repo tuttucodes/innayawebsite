@@ -53,11 +53,11 @@ export default function Contact() {
         eyebrow="Contact"
         title={
           <>
-            Investors, retailers,<br />
-            <span className="italic text-leaf-deep">distributors —</span> say hi.
+            Start a conversation.{" "}
+            <span className="font-serif italic font-normal text-leaf-deep">We respond directly.</span>
           </>
         }
-        blurb="Drop INFPL a note. The form drafts an email straight to the CEO."
+        blurb="Connect with Innaya Nutrifoods regarding supply partnerships, PAN8 distribution, retail placement, or institutional procurement."
       />
 
       <div className="mt-16 grid gap-10 md:mt-24 md:grid-cols-12 md:gap-12">
@@ -68,7 +68,7 @@ export default function Contact() {
               primary={
                 <a
                   href={`mailto:${SITE.contactEmail}`}
-                  className="block break-all font-serif text-[22px] leading-[1.15] tracking-tight text-ink hover:text-leaf-deep"
+                  className="block break-all font-sans font-semibold text-[18px] leading-[1.25] tracking-tight text-ink hover:text-leaf-deep"
                 >
                   {SITE.contactEmail}
                 </a>
@@ -93,7 +93,7 @@ export default function Contact() {
                   href={SITE.social.pan8}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="block font-serif text-[20px] tracking-tight text-ink hover:text-leaf-deep"
+                  className="block font-sans font-semibold text-[18px] tracking-tight text-ink hover:text-leaf-deep"
                 >
                   pan8.in <span className="text-mute">↗</span>
                 </a>
@@ -195,7 +195,7 @@ export default function Contact() {
             </p>
             <button
               type="submit"
-              className="group inline-flex items-center justify-center gap-2 rounded-full bg-ink px-7 py-4 text-[14px] font-medium text-bone transition-colors hover:bg-leaf-deep sm:w-auto"
+              className="group inline-flex w-full sm:w-auto items-center justify-center gap-2 rounded-full bg-ink px-7 py-4 text-[14px] font-medium text-bone transition-colors hover:bg-leaf-deep"
             >
               {sent ? "Email drafted ✓" : "Send to CEO"}
               <ArrowRight />
@@ -253,7 +253,7 @@ function Field({
   className,
 }: FieldProps) {
   return (
-    <div className={cn("px-7 py-6 md:px-9", className)}>
+    <div className={cn("px-5 py-4 sm:px-7 sm:py-6 md:px-9", className)}>
       <div className="flex items-baseline justify-between gap-3">
         <FieldLabel htmlFor={id}>{label}</FieldLabel>
         {hint && (
@@ -269,7 +269,7 @@ function Field({
         value={value}
         onChange={(e) => onChange(e.target.value)}
         placeholder={placeholder}
-        className="mt-3 w-full border-0 border-b border-transparent bg-transparent pb-1.5 text-[18px] tracking-tight text-ink placeholder:text-mute/60 focus:border-ink focus:outline-none"
+        className="mt-2 w-full border-0 border-b border-transparent bg-transparent pb-1.5 text-[16px] sm:text-[18px] tracking-tight text-ink placeholder:text-mute/60 focus:border-ink focus:outline-none"
       />
     </div>
   );

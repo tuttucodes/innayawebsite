@@ -1,162 +1,188 @@
 "use client";
 
 import Image from "next/image";
-import Link from "next/link";
-import { motion, useScroll, useTransform } from "motion/react";
-import { useRef } from "react";
-import { SectionHead, SectionShell } from "./Section";
+import { useState } from "react";
+import { SectionShell } from "./Section";
+import { PAN8_PRODUCTS, type Pan8Product } from "@/data/site";
+import { cn } from "@/lib/cn";
+
+const CATEGORIES = ["All Products", "Pancake Mix", "Dosa Mix", "Upma Mix", "Plant Protein Bar"] as const;
+type CategoryFilter = (typeof CATEGORIES)[number];
 
 export default function Brands() {
-  const ref = useRef<HTMLDivElement>(null);
-  const { scrollYProgress } = useScroll({
-    target: ref,
-    offset: ["start end", "end start"],
-  });
-  const yBg = useTransform(scrollYProgress, [0, 1], [60, -60]);
+  const [activeCategory, setActiveCategory] = useState<CategoryFilter>("All Products");
+
+  const filteredProducts =
+    activeCategory === "All Products"
+      ? PAN8_PRODUCTS
+      : PAN8_PRODUCTS.filter((p) => p.category === activeCategory);
 
   return (
     <SectionShell id="brands">
-      <SectionHead
-        index="04"
-        eyebrow="Portfolio"
-        title={
-          <>
-            One platform.<br />
-            <span className="italic">Brands on top.</span>
-          </>
-        }
-        blurb="Innaya operates as the parent company. Every brand we build inherits our sourcing, manufacturing, distribution and AI infrastructure. Today, one brand is live — more are in the lab."
-      />
+      <div className="border-t border-line/60 pt-10 md:pt-14">
+        <div className="flex items-center justify-between font-mono text-[11px] uppercase tracking-[0.24em] text-mute">
+          <span>Division 02 · Consumer Brands</span>
+          <span>Owned &amp; Operated by Innaya</span>
+        </div>
 
-      <article
-        ref={ref}
-        className="relative mt-20 overflow-hidden rounded-[28px] border border-leaf-deep/30 md:mt-28 md:rounded-[40px]"
-        style={{
-          background:
-            "linear-gradient(135deg, oklch(28% 0.06 180) 0%, oklch(22% 0.05 195) 60%, oklch(18% 0.04 200) 100%)",
-        }}
-      >
-        <motion.div
-          style={{ y: yBg }}
-          aria-hidden="true"
-          className="pointer-events-none absolute -right-32 -top-32 h-[500px] w-[500px] rounded-full bg-amber/10 blur-3xl"
-        />
-        <motion.div
-          style={{ y: yBg }}
-          aria-hidden="true"
-          className="pointer-events-none absolute -left-24 -bottom-24 h-[420px] w-[420px] rounded-full bg-leaf/15 blur-3xl"
-        />
-
-        <div className="relative grid gap-10 p-8 md:grid-cols-12 md:gap-14 md:p-14 lg:p-20">
-          <div className="md:col-span-7">
-            <div className="flex items-center gap-3 font-mono text-[10px] uppercase tracking-[0.22em] text-bone/60">
-              <span>Portfolio brand · 01</span>
-              <span className="h-px w-10 bg-bone/30" />
-              <span>Live</span>
-            </div>
-
-            <h3 className="mt-6 font-serif text-[clamp(2.6rem,1rem+8vw,7rem)] leading-[0.9] tracking-[-0.03em] text-bone">
-              PAN8
-              <span className="ml-3 inline-block align-baseline font-sans text-base font-normal tracking-tight text-bone/60">
-                — A Nutri Co.
+        {/* Brand Master Hero Box */}
+        <div className="mt-8 overflow-hidden rounded-[24px] border border-leaf-deep/20 bg-gradient-to-br from-[oklch(22%_0.05_180)] via-[oklch(18%_0.04_195)] to-[oklch(15%_0.03_200)] p-7 sm:p-10 md:p-14 text-bone">
+          <div className="grid gap-8 lg:grid-cols-12 lg:items-center">
+            <div className="lg:col-span-8">
+              <span className="inline-flex items-center gap-2 rounded-full border border-bone/20 bg-bone/10 px-3 py-1 font-mono text-[10px] uppercase tracking-[0.18em] text-bone">
+                <span className="h-1.5 w-1.5 rounded-full bg-leaf" />
+                Flagship Nutrition Brand
               </span>
-            </h3>
 
-            <p className="mt-8 max-w-xl text-[17px] leading-[1.55] text-bone/80">
-              <span className="text-bone">
-                &ldquo;Just pan it!&rdquo;
-              </span>{" "}
-              Millet-first, plant-protein nutrition for modern Indian households.
-              Pancake mixes, dosa mixes, upma mixes and on-the-go bars.
-            </p>
+              <h2 className="mt-4 font-sans text-[clamp(2.4rem,1.3rem+4vw,4.5rem)] font-bold leading-[1.02] tracking-tight text-bone">
+                PAN8
+                <span className="ml-3 font-serif italic text-xl font-normal text-amber">
+                  — A Nutri Co.
+                </span>
+              </h2>
 
-            <div className="mt-10 grid grid-cols-3 gap-6 border-t border-bone/15 pt-6">
-              <Stat k="Format" v="Everyday Indian" />
-              <Stat k="Plant Protein" v="15–24g / 100g" />
-              <Stat k="Channels" v="D2C live · Retail seeding" />
+              <p className="mt-4 max-w-2xl text-[16px] leading-[1.65] text-bone/80">
+                <span className="font-semibold text-bone">&ldquo;Just pan it!&rdquo;</span> —
+                PAN8 is Innaya&apos;s consumer brand re-engineering traditional Indian morning
+                and snack formats with heritage millets, pulses, and modern nutrition science.
+                All 13 products below are developed, formulated, and sold exclusively under the PAN8 brand.
+              </p>
+
+              <div className="mt-8 grid grid-cols-2 sm:grid-cols-4 gap-4 border-t border-bone/15 pt-5">
+                <div>
+                  <span className="block font-mono text-[10px] uppercase tracking-[0.18em] text-bone/60">
+                    Product Portfolio
+                  </span>
+                  <span className="mt-1 block font-sans text-lg font-bold text-bone">
+                    13 Active SKUs
+                  </span>
+                </div>
+                <div>
+                  <span className="block font-mono text-[10px] uppercase tracking-[0.18em] text-bone/60">
+                    Plant Protein
+                  </span>
+                  <span className="mt-1 block font-sans text-lg font-bold text-bone">
+                    15–24g / 100g
+                  </span>
+                </div>
+                <div>
+                  <span className="block font-mono text-[10px] uppercase tracking-[0.18em] text-bone/60">
+                    Ingredient Promise
+                  </span>
+                  <span className="mt-1 block font-sans text-lg font-bold text-bone">
+                    0 Preservatives
+                  </span>
+                </div>
+                <div>
+                  <span className="block font-mono text-[10px] uppercase tracking-[0.18em] text-bone/60">
+                    Channels
+                  </span>
+                  <span className="mt-1 block font-sans text-lg font-bold text-bone">
+                    D2C · Retail Seeding
+                  </span>
+                </div>
+              </div>
+
+              <div className="mt-8 flex flex-wrap items-center gap-3">
+                <a
+                  href="https://www.pan8.in"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center gap-2 rounded-full bg-bone px-6 py-3.5 text-sm font-semibold text-ink transition-colors hover:bg-amber"
+                >
+                  Visit Brand Store (pan8.in) ↗
+                </a>
+                <a
+                  href="#pan8-catalog"
+                  className="inline-flex items-center gap-2 rounded-full border border-bone/30 px-6 py-3.5 text-sm font-medium text-bone transition-colors hover:bg-bone/10"
+                >
+                  Browse PAN8 SKUs ↓
+                </a>
+              </div>
             </div>
 
-            <div className="mt-10 flex flex-wrap items-center gap-3">
-              <Link
-                href="/brands/pan8"
-                className="group inline-flex items-center gap-2 rounded-full bg-bone px-6 py-3.5 text-sm font-medium text-ink transition-colors hover:bg-amber"
-              >
-                Read the case
-                <span className="transition-transform group-hover:translate-x-1">→</span>
-              </Link>
-              <a
-                href="https://www.pan8.in"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="inline-flex items-center gap-2 rounded-full border border-bone/30 px-6 py-3.5 text-sm font-medium text-bone transition-colors hover:bg-bone/10"
-              >
-                Visit pan8.in ↗
-              </a>
+            <div className="flex justify-center lg:col-span-4">
+              <div className="relative aspect-[3/2] w-full max-w-[340px] overflow-hidden rounded-2xl border border-bone/15 bg-[oklch(22%_0.05_195)] p-6 shadow-2xl">
+                <Image
+                  src="/pan8-logo.png"
+                  alt="PAN8 — A Nutri Co."
+                  fill
+                  sizes="340px"
+                  className="object-contain p-4"
+                  priority={false}
+                />
+              </div>
             </div>
-          </div>
-
-          <div className="relative flex items-center justify-center md:col-span-5">
-            <motion.div
-              animate={{ rotate: [-1.5, 1.5, -1.5] }}
-              transition={{ duration: 14, repeat: Infinity, ease: "easeInOut" }}
-              className="relative aspect-[3/2] w-full overflow-hidden rounded-[24px] border border-bone/15 bg-[oklch(22%_0.05_195)] shadow-[0_40px_80px_-30px_rgba(0,0,0,0.5)]"
-            >
-              <Image
-                src="/pan8-logo.png"
-                alt="PAN8 — A Nutri Co."
-                fill
-                sizes="(min-width: 1024px) 480px, 100vw"
-                className="object-contain"
-                priority={false}
-              />
-            </motion.div>
           </div>
         </div>
-      </article>
 
-      <div className="mt-12 grid gap-4 md:grid-cols-2">
-        <FutureBrand
-          tag="Brand · 02"
-          title="In incubation"
-          body="Protein-forward sub-brand for athletes and fitness-led households. Quietly being formulated."
-        />
-        <FutureBrand
-          tag="Brand · 03"
-          title="On the roadmap"
-          body="Export-first millet line built for international shelves and the diaspora."
-        />
+        {/* PRODUCTS UNDER PAN8 (Categorized Shelf) */}
+        <div id="pan8-catalog" className="mt-16 sm:mt-20">
+          <div className="flex flex-col sm:flex-row sm:items-end justify-between gap-4 border-b border-line/60 pb-5">
+            <div>
+              <span className="font-mono text-[10px] uppercase tracking-[0.2em] text-mute">
+                The PAN8 Catalog
+              </span>
+              <h3 className="mt-1 font-sans text-2xl font-bold tracking-tight text-ink">
+                Products under PAN8
+              </h3>
+            </div>
+
+            {/* Category tabs */}
+            <div className="flex flex-wrap gap-1.5">
+              {CATEGORIES.map((cat) => {
+                const isActive = activeCategory === cat;
+                return (
+                  <button
+                    key={cat}
+                    type="button"
+                    onClick={() => setActiveCategory(cat)}
+                    className={cn(
+                      "rounded-full px-3.5 py-1.5 font-mono text-[11px] uppercase tracking-[0.14em] transition-colors",
+                      isActive
+                        ? "bg-ink text-bone"
+                        : "border border-line bg-bone-deep/40 text-ink-soft hover:border-ink/40 hover:text-ink",
+                    )}
+                  >
+                    {cat}
+                  </button>
+                );
+              })}
+            </div>
+          </div>
+
+          {/* Product Cards Grid */}
+          <div className="mt-8 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
+            {filteredProducts.map((p) => (
+              <ProductItem key={p.name} product={p} />
+            ))}
+          </div>
+        </div>
       </div>
     </SectionShell>
   );
 }
 
-function Stat({ k, v }: { k: string; v: string }) {
+function ProductItem({ product: p }: { product: Pan8Product }) {
   return (
-    <div>
-      <span className="block font-mono text-[10px] uppercase tracking-[0.22em] text-bone/55">
-        {k}
-      </span>
-      <span className="mt-1 block font-serif text-2xl tracking-tight text-bone">
-        {v}
-      </span>
-    </div>
-  );
-}
-
-function FutureBrand({ tag, title, body }: { tag: string; title: string; body: string }) {
-  return (
-    <article className="group relative flex flex-col gap-5 overflow-hidden rounded-2xl border border-dashed border-ink/15 bg-bone-deep/20 p-8 transition-colors hover:border-ink/40 hover:bg-bone-deep/40">
-      <div className="flex items-center justify-between">
-        <span className="font-mono text-[10px] uppercase tracking-[0.22em] text-mute">
-          {tag}
-        </span>
-        <span className="font-mono text-[10px] uppercase tracking-[0.22em] text-mute">
-          Soon
-        </span>
+    <div className="flex flex-col justify-between rounded-2xl border border-line bg-bone-deep/30 p-5 transition-colors hover:border-ink/30 hover:bg-bone-deep/60">
+      <div>
+        <div className="flex items-center justify-between font-mono text-[10px] uppercase tracking-[0.16em] text-mute">
+          <span>{p.category}</span>
+          <span>{p.weight}</span>
+        </div>
+        <h4 className="mt-3 font-sans text-base font-bold tracking-tight text-ink">
+          {p.name}
+        </h4>
+        <p className="mt-1 font-serif italic text-sm text-leaf-deep">
+          {p.keyBenefit}
+        </p>
       </div>
-      <h3 className="font-serif text-3xl tracking-tight">{title}</h3>
-      <p className="text-sm leading-[1.55] text-ink-soft">{body}</p>
-      <span className="mt-2 h-px w-full bg-line transition-colors group-hover:bg-ink/40" />
-    </article>
+
+      <div className="mt-5 border-t border-line/50 pt-3 flex items-center justify-between text-xs text-mute">
+        <span className="font-mono text-[10px] uppercase">Brand · PAN8</span>
+        <span className="font-medium text-ink">Clean Label</span>
+      </div>
+    </div>
   );
 }

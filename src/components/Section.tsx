@@ -4,8 +4,8 @@ import { motion } from "motion/react";
 import { cn } from "@/lib/cn";
 
 interface SectionHeadProps {
-  index: string;
-  eyebrow: string;
+  index?: string;
+  eyebrow?: string;
   title: React.ReactNode;
   blurb?: string;
   align?: "left" | "center";
@@ -23,31 +23,31 @@ export function SectionHead({
   return (
     <header
       className={cn(
-        "relative flex flex-col gap-8 border-t border-line pt-8",
+        "relative flex flex-col gap-5 border-t border-line/60 pt-10 md:pt-14",
         align === "center" && "items-center text-center",
         className,
       )}
     >
-      <div className="flex w-full items-center justify-between font-mono text-[10px] uppercase tracking-[0.22em] text-mute">
-        <span>{index}</span>
-        <span>{eyebrow}</span>
+      <div className="flex items-center justify-between font-mono text-[11px] uppercase tracking-[0.24em] text-mute">
+        {eyebrow && <span>{eyebrow}</span>}
+        {index && <span>/{index}</span>}
       </div>
       <motion.h2
-        initial={{ opacity: 0, y: 24 }}
+        initial={{ opacity: 0, y: 16 }}
         whileInView={{ opacity: 1, y: 0 }}
-        viewport={{ once: true, margin: "-80px" }}
-        transition={{ duration: 0.9, ease: [0.16, 1, 0.3, 1] }}
-        className="font-serif text-[clamp(2.4rem,1rem+5vw,5.6rem)] leading-[0.96] tracking-[-0.025em]"
+        viewport={{ once: true, margin: "-60px" }}
+        transition={{ duration: 0.7, ease: [0.16, 1, 0.3, 1] }}
+        className="font-sans text-[clamp(2.1rem,1rem+3.6vw,4rem)] font-bold leading-[1.04] tracking-[-0.03em] text-ink"
       >
         {title}
       </motion.h2>
       {blurb && (
         <motion.p
-          initial={{ opacity: 0, y: 16 }}
+          initial={{ opacity: 0, y: 12 }}
           whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true, margin: "-80px" }}
-          transition={{ duration: 0.8, delay: 0.1, ease: [0.16, 1, 0.3, 1] }}
-          className="max-w-2xl text-[16px] leading-[1.6] text-ink-soft"
+          viewport={{ once: true, margin: "-60px" }}
+          transition={{ duration: 0.7, delay: 0.08, ease: [0.16, 1, 0.3, 1] }}
+          className="max-w-2xl text-[16px] leading-[1.65] text-ink-soft"
         >
           {blurb}
         </motion.p>
@@ -69,7 +69,7 @@ export function SectionShell({
     <section
       id={id}
       className={cn(
-        "mx-auto w-full max-w-[1400px] px-5 py-24 md:px-10 md:py-32 lg:py-40",
+        "mx-auto w-full max-w-[1360px] px-6 py-20 md:px-12 md:py-28 lg:py-36",
         className,
       )}
     >

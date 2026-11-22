@@ -1,17 +1,18 @@
 import type { Metadata, Viewport } from "next";
-import { Inter, Instrument_Serif, JetBrains_Mono } from "next/font/google";
+import { Plus_Jakarta_Sans, Cormorant_Garamond, JetBrains_Mono } from "next/font/google";
 import "./globals.css";
 
-const inter = Inter({
+const sans = Plus_Jakarta_Sans({
   variable: "--font-sans",
   subsets: ["latin"],
   display: "swap",
 });
 
-const serif = Instrument_Serif({
+const serif = Cormorant_Garamond({
   variable: "--font-serif",
   subsets: ["latin"],
   weight: "400",
+  style: "italic",
   display: "swap",
 });
 
@@ -37,21 +38,21 @@ export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),
   applicationName: "Innaya Nutri Foods",
   title: {
-    default: "Innaya Nutri Foods — AI-Powered Food Technology Company",
+    default: "Innaya — AI Operating System for Food Supply Chains",
     template: "%s · Innaya Nutri Foods",
   },
   description:
-    "Innaya Nutri Foods Pvt Ltd (INFPL) is an AI-first food technology company from Kerala, India. Parent company of PAN8 — India's millet-based plant-protein nutrition brand. End-to-end FMCG: sourcing, formulation, manufacturing, distribution.",
+    "Innaya Nutri Foods Pvt Ltd (INFPL) builds the AI operating system for food supply chains — sourcing, quality, logistics, and traceability through multilingual AI agents. Parent company of PAN8, India's millet-based plant-protein nutrition brand.",
   keywords: [
     "Innaya Nutri Foods",
     "Innaya Nutri Foods Pvt Ltd",
     "INFPL",
     "PAN8",
     "Pan8 millet",
-    "AI food tech India",
-    "AI FMCG company",
-    "millet protein India",
-    "plant protein India",
+    "food supply chain AI",
+    "supply chain intelligence",
+    "multilingual AI agents",
+    "food logistics AI",
     "food technology Kerala",
     "Kerala food technology company",
     "millet pancake mix",
@@ -72,16 +73,16 @@ export const metadata: Metadata = {
     type: "website",
     url: SITE_URL,
     siteName: "Innaya Nutri Foods",
-    title: "Innaya Nutri Foods — AI-Powered Food Technology Company",
+    title: "Innaya — AI Operating System for Food Supply Chains",
     description:
-      "AI-first food technology company from Kerala. Parent company of PAN8. End-to-end FMCG, powered by A.I. — sourcing to shelf.",
+      "AI operating system for food supply chains. Multilingual AI agents, procurement intelligence, quality inspection. Parent company of PAN8.",
     locale: "en_IN",
   },
   twitter: {
     card: "summary_large_image",
-    title: "Innaya Nutri Foods — AI-Powered Food Technology Company",
+    title: "Innaya — AI Operating System for Food Supply Chains",
     description:
-      "AI-first food technology company from Kerala. Parent company of PAN8. End-to-end FMCG, powered by A.I.",
+      "AI operating system for food supply chains. Multilingual AI agents, procurement intelligence. Parent company of PAN8.",
   },
   robots: {
     index: true,
@@ -104,7 +105,7 @@ export default function RootLayout({
   return (
     <html
       lang="en-IN"
-      className={`${inter.variable} ${serif.variable} ${mono.variable} antialiased`}
+      className={`${sans.variable} ${serif.variable} ${mono.variable} antialiased`}
     >
       <body className="bg-bone text-ink min-h-screen">{children}</body>
     </html>

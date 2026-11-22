@@ -36,17 +36,17 @@ export default function Team() {
           >
             <div className="flex items-start justify-between">
               <span className="font-mono text-[10px] uppercase tracking-[0.22em] text-mute">
-                Co-founder · 0{i + 1}
+                Leadership · 0{i + 1}
               </span>
               <span className="font-mono text-[10px] uppercase tracking-[0.22em] text-mute">
-                50% equity
+                Executive
               </span>
             </div>
             <div className="flex items-end gap-5">
               <Initials name={m.name} />
               <div>
-                <h3 className="font-serif text-3xl tracking-tight md:text-4xl">{m.name}</h3>
-                <p className="mt-1 text-sm text-ink-soft">{m.role}</p>
+                <h3 className="font-sans text-2xl font-bold tracking-tight text-ink md:text-3xl">{m.name}</h3>
+                <p className="mt-1 text-sm font-medium text-leaf-deep">{m.role}</p>
               </div>
             </div>
             <p className="text-[15px] leading-[1.6] text-ink-soft">{m.bio}</p>
@@ -62,7 +62,7 @@ export default function Team() {
           <span className="font-mono text-[10px] uppercase tracking-[0.22em] text-bone/55">
             Operating team
           </span>
-          <h3 className="mt-3 font-serif text-3xl tracking-tight md:text-4xl">
+          <h3 className="mt-3 font-sans text-2xl font-bold tracking-tight text-bone md:text-3xl">
             13 operators across 4 functions.
           </h3>
         </div>

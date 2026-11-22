@@ -2,7 +2,7 @@ export const SITE = {
   name: "Innaya Nutri Foods",
   legal: "Innaya Nutri Foods Private Limited",
   short: "INFPL",
-  tagline: "Food technology, powered by AI.",
+  tagline: "Operating the infrastructure of food — from origin to shelf.",
   domain: "innayanutrifoods.com",
   url: "https://innayanutrifoods.com",
   contactEmail: "ceo@innayanutrifoods.com",
@@ -16,6 +16,168 @@ export const SITE = {
   },
 } as const;
 
+/* =========================================================================
+   DIVISIONS OF INNAYA
+   ========================================================================= */
+export interface Division {
+  id: string;
+  num: string;
+  title: string;
+  tagline: string;
+  description: string;
+  offerings: string[];
+}
+
+export const DIVISIONS: Division[] = [
+  {
+    id: "platforms",
+    num: "01",
+    title: "Software & Platforms",
+    tagline: "Supply Chain Intelligence",
+    description:
+      "Enterprise AI systems designed for food sourcing, logistics, and quality assurance. Combines vernacular telephony, computer vision, and cold-chain telemetry.",
+    offerings: [
+      "Innaya Intelligence Suite",
+      "Innaya FirstMile Network",
+      "Multilingual Voice Agents",
+      "Transit Telemetry & Traceability",
+    ],
+  },
+  {
+    id: "brands",
+    num: "02",
+    title: "Consumer Brands",
+    tagline: "Packaged Food Portfolio",
+    description:
+      "Innaya's fast-moving consumer goods arm. Formulates, manufactures, and markets clean-label, high-protein daily nutrition products for Indian households.",
+    offerings: [
+      "PAN8 — A Nutri Co. (Live)",
+      "13 Millet-First Formulations",
+      "Direct-to-Consumer & Retail",
+      "Export-Ready Clean Formulations",
+    ],
+  },
+  {
+    id: "operations",
+    num: "03",
+    title: "Operations & Infrastructure",
+    tagline: "Origin to Processing",
+    description:
+      "Physical agricultural procurement corridors across Tamil Nadu and Kerala, paired with certified contract manufacturing under FSSAI Central standards.",
+    offerings: [
+      "Farmgate & Mandi Aggregation",
+      "FSSAI Central Type 1 Processing",
+      "Strict Quality Sampling",
+      "Cold-Chain Logistics Management",
+    ],
+  },
+];
+
+/* =========================================================================
+   INNAYA INTELLIGENCE & FIRSTMILE (Software Products of Innaya)
+   ========================================================================= */
+export interface IntelModule {
+  id: string;
+  name: string;
+  tagline: string;
+  body: string;
+  capabilities: string[];
+  status: "Active Pilot" | "Core Platform" | "Deployed in PAN8";
+}
+
+export const INTEL_MODULES: IntelModule[] = [
+  {
+    id: "voice",
+    name: "Innaya Voice",
+    tagline: "Multilingual operations agents",
+    body: "Consent-aware autonomous phone interactions in Tamil, Malayalam, Hindi, and English. Contacts drivers and suppliers for dispatch updates, ETA confirmation, and delay logging without requiring app downloads.",
+    capabilities: ["Vernacular Speech", "Delay Extraction", "Automatic Escalation"],
+    status: "Active Pilot",
+  },
+  {
+    id: "source",
+    name: "Innaya Source",
+    tagline: "Procurement intelligence",
+    body: "Aggregates mandi prices, RFQs, and supplier availability across regional hubs. Automatically calculates true landed cost inclusive of handling, freight, and expected grade deductions.",
+    capabilities: ["Mandi Price Discovery", "RFQ Comparison", "Landed-Cost Analysis"],
+    status: "Active Pilot",
+  },
+  {
+    id: "firstmile",
+    name: "Innaya FirstMile",
+    tagline: "Farmgate-to-buyer network",
+    body: "Orchestration system connecting farmer producer organisations (FPOs) with commercial food processors. Enables transparent net realization and scheduled batch collection.",
+    capabilities: ["FPO Coordination", "Pickup Scheduling", "Loss Prevention"],
+    status: "Active Pilot",
+  },
+  {
+    id: "vision",
+    name: "Innaya Vision",
+    tagline: "Crop quality verification",
+    body: "Image-based screening calibrated against verified field ground truth. Evaluates crop physical attributes at collection points to prevent subjective quality disputes at intake.",
+    capabilities: ["Intake Screening", "Defect Detection", "Standardized Grading"],
+    status: "Core Platform",
+  },
+  {
+    id: "cold",
+    name: "Innaya Cold",
+    tagline: "Cold-chain telemetry",
+    body: "Sensor integration tracking temperature telemetry in transit. Detects refrigeration failures in real time to reroute vulnerable produce before spoilage occurs.",
+    capabilities: ["IoT Temperature Logs", "Failure Alerts", "Dynamic Rerouting"],
+    status: "Core Platform",
+  },
+  {
+    id: "trace",
+    name: "Innaya Trace",
+    tagline: "Batch lineage & compliance",
+    body: "Generates auditable digital batch records, weighment evidence, and regulatory documentation for domestic processors and food exporters.",
+    capabilities: ["Batch Lineage", "Weighment Evidence", "Export Workflows"],
+    status: "Core Platform",
+  },
+  {
+    id: "nutri",
+    name: "Innaya Nutri",
+    tagline: "Formulation & nutritional engine",
+    body: "Formulation optimization engine that balances bioavailable plant protein, dietary fiber, and glycemic load. Powers the recipes and nutrition panels across the PAN8 brand.",
+    capabilities: ["Protein Target Engines", "Sensory Balance", "Clean Labeling"],
+    status: "Deployed in PAN8",
+  },
+];
+
+/* =========================================================================
+   PAN8 — A NUTRI CO. (Brand Owned by Innaya)
+   PRODUCTS UNDER PAN8 (Not direct products of Innaya)
+   ========================================================================= */
+export interface Pan8Product {
+  name: string;
+  category: "Pancake Mix" | "Dosa Mix" | "Upma Mix" | "Plant Protein Bar";
+  weight: string;
+  keyBenefit: string;
+}
+
+export const PAN8_PRODUCTS: Pan8Product[] = [
+  // Pancake Mixes
+  { name: "Choco-Chip Vanilla Pancake", category: "Pancake Mix", weight: "250g", keyBenefit: "Cocoa + sorghum blend" },
+  { name: "Banana & Dates Pancake", category: "Pancake Mix", weight: "250g", keyBenefit: "Naturally sweetened" },
+  { name: "Blueberry Pancake", category: "Pancake Mix", weight: "250g", keyBenefit: "Antioxidant-rich breakfast" },
+
+  // Dosa Mixes
+  { name: "Multi-Millet Dosa", category: "Dosa Mix", weight: "250g", keyBenefit: "5 heritage millets" },
+  { name: "Ragi Dosa", category: "Dosa Mix", weight: "250g", keyBenefit: "Iron & calcium rich" },
+  { name: "Millet-Spinach Dosa", category: "Dosa Mix", weight: "250g", keyBenefit: "Baked-in daily greens" },
+  { name: "Millet-Moong Dosa", category: "Dosa Mix", weight: "250g", keyBenefit: "High protein staple" },
+  { name: "Millet-Moringa Dosa", category: "Dosa Mix", weight: "250g", keyBenefit: "Superfood breakfast" },
+
+  // Upma Mixes
+  { name: "Millet Upma", category: "Upma Mix", weight: "250g", keyBenefit: "Traditional format, low GI" },
+  { name: "Vermicelli Upma", category: "Upma Mix", weight: "250g", keyBenefit: "Quick-cook morning bowl" },
+
+  // Protein Bars
+  { name: "Coffee Almond Bar", category: "Plant Protein Bar", weight: "50g", keyBenefit: "Clean caffeine & protein" },
+  { name: "Blueberry Bar", category: "Plant Protein Bar", weight: "50g", keyBenefit: "Whole fruit on-the-go" },
+  { name: "Dry Fruits Bar", category: "Plant Protein Bar", weight: "50g", keyBenefit: "Nut & seed nutrient density" },
+];
+
 export interface Product {
   name: string;
   category: "Pancake" | "Dosa" | "Upma" | "Bar";
@@ -23,83 +185,40 @@ export interface Product {
   highlight: string;
 }
 
-export const PRODUCTS: Product[] = [
-  { name: "Choco-Chip Vanilla Pancake", category: "Pancake", size: "250g", highlight: "Cocoa + sorghum" },
-  { name: "Banana & Dates Pancake", category: "Pancake", size: "250g", highlight: "Naturally sweet" },
-  { name: "Blueberry Pancake", category: "Pancake", size: "250g", highlight: "Antioxidant-rich" },
-  { name: "Multi-Millet Dosa", category: "Dosa", size: "250g", highlight: "5 millets blend" },
-  { name: "Ragi Dosa", category: "Dosa", size: "250g", highlight: "Iron + calcium" },
-  { name: "Millet-Spinach Dosa", category: "Dosa", size: "250g", highlight: "Greens, baked-in" },
-  { name: "Millet-Moong Dosa", category: "Dosa", size: "250g", highlight: "Protein-stacked" },
-  { name: "Millet-Moringa Dosa", category: "Dosa", size: "250g", highlight: "Superfood greens" },
-  { name: "Millet Upma", category: "Upma", size: "250g", highlight: "Classic, reformulated" },
-  { name: "Vermicelli Upma", category: "Upma", size: "250g", highlight: "Quick-cook breakfast" },
-  { name: "Coffee Almond Bar", category: "Bar", size: "50g", highlight: "Caffeine + protein" },
-  { name: "Blueberry Bar", category: "Bar", size: "50g", highlight: "Antioxidant on-the-go" },
-  { name: "Dry Fruits Bar", category: "Bar", size: "50g", highlight: "Whole-food snack" },
-];
+/* Backward compatibility alias if needed */
+export const PRODUCTS: Product[] = PAN8_PRODUCTS.map((p) => ({
+  name: p.name,
+  category: p.category.split(" ")[0] as "Pancake" | "Dosa" | "Upma" | "Bar",
+  size: p.weight,
+  highlight: p.keyBenefit,
+}));
 
+/* =========================================================================
+   COMPLIANCE & GOVERNANCE
+   ========================================================================= */
 export const COMPLIANCE = [
-  { label: "FSSAI Central License", value: "Type 1 — export ready" },
-  { label: "DPIIT / Startup India", value: "Recognised, valid till 2034" },
-  { label: "Udyam (MSME)", value: "Micro · Manufacturing" },
-  { label: "GSTIN", value: "Kerala — state code 32" },
-  { label: "Incorporation", value: "22 July 2024" },
-  { label: "Sector", value: "Food & Beverages / Processing" },
+  { label: "FSSAI Central License", value: "Type 1 — Export & Interstate Ready" },
+  { label: "DPIIT / Startup India", value: "Recognised Startup, valid till 2034" },
+  { label: "Udyam (MSME)", value: "Micro · Food Processing & Manufacturing" },
+  { label: "GSTIN Registration", value: "Kerala — State Code 32" },
+  { label: "Incorporation", value: "22 July 2024 · Ernakulam, Kerala" },
+  { label: "Corporate Category", value: "Private Limited Company (INFPL)" },
 ];
 
+/* =========================================================================
+   LEADERSHIP
+   ========================================================================= */
 export const TEAM = [
   {
     name: "Rahul Babu",
     role: "Managing Director & CEO",
-    focus: "Tech · Brand · Growth · Supply chain",
-    bio: "Builds the technology stack and runs day-to-day operations. B.Tech CS @ VIT Chennai.",
+    focus: "Technology · Supply Chain · Growth",
+    bio: "Oversees system architecture, platform software, and corporate operations. B.Tech Computer Science @ VIT Chennai.",
   },
   {
     name: "Irfan Habeeb",
     role: "Co-founder & Director",
-    focus: "Design · Manufacturing · Operations",
-    bio: "Leads product design and manufacturing-partner relationships. Bachelors in Transportation Design.",
-  },
-];
-
-export const AI_PILLARS = [
-  {
-    title: "Sourcing intelligence",
-    body: "Models that price-discover millet lots across mandis, score quality signals, and time procurement to harvest cycles.",
-    metric: "Lower COGS per pack",
-  },
-  {
-    title: "Recipe & nutrition engine",
-    body: "Formulation systems that hold protein, fibre, and glycaemic targets while honouring Indian palate constraints.",
-    metric: "15–24g plant protein / 100g",
-  },
-  {
-    title: "Demand forecasting",
-    body: "Time-series models on D2C, retail seeding, and search trends — feeding production runs and dispatch lanes.",
-    metric: "Tighter inventory turns",
-  },
-  {
-    title: "Distribution graph",
-    body: "Routing intelligence across modern trade, kirana, and quick-commerce — picking the right lane per SKU per pin.",
-    metric: "Pan-India in months, not years",
-  },
-];
-
-export const TAILWINDS = [
-  {
-    eyebrow: "Tailwind 01",
-    title: "Millet revival",
-    body: "Government of India's National Year of Millets and ICAR-IIMR's leadership are reframing millet from rural to mainstream.",
-  },
-  {
-    eyebrow: "Tailwind 02",
-    title: "Plant protein, on-fire",
-    body: "India's plant-protein consumption is compounding 25–30% YoY across urban households.",
-  },
-  {
-    eyebrow: "Tailwind 03",
-    title: "Convenient breakfast",
-    body: "On-the-go nutrition is the fastest-growing FMCG segment — and we don't ask consumers to change behaviour.",
+    focus: "Product Design · Manufacturing · Operations",
+    bio: "Leads food manufacturing partnerships, packaging engineering, and physical plant operations. Bachelors in Transportation Design.",
   },
 ];

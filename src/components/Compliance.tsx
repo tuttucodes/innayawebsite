@@ -39,7 +39,7 @@ export default function Compliance() {
               </span>
               <Check />
             </div>
-            <h3 className="font-serif text-2xl tracking-tight">{c.label}</h3>
+            <h3 className="font-sans text-lg font-bold tracking-tight text-ink">{c.label}</h3>
             <p className="text-sm text-ink-soft">{c.value}</p>
           </motion.li>
         ))}

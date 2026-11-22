@@ -1,10 +1,8 @@
 import Hero from "@/components/Hero";
-import Marquee from "@/components/Marquee";
-import About from "@/components/About";
-import Capabilities from "@/components/Capabilities";
+import Divisions from "@/components/Divisions";
 import AILayer from "@/components/AILayer";
 import Brands from "@/components/Brands";
-import Sustainability from "@/components/Sustainability";
+import Capabilities from "@/components/Capabilities";
 import Compliance from "@/components/Compliance";
 import Team from "@/components/Team";
 import Contact from "@/components/Contact";
@@ -19,12 +17,10 @@ export default function Home() {
       <Nav />
       <main className="overflow-x-clip">
         <Hero />
-        <Marquee />
-        <About />
-        <Capabilities />
+        <Divisions />
         <AILayer />
         <Brands />
-        <Sustainability />
+        <Capabilities />
         <Compliance />
         <Team />
         <Contact />
