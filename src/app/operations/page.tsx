@@ -66,7 +66,7 @@ const STEPS: AccordionItem[] = [
   {
     title: "Audited contract processing",
     meta: "Certified facilities",
-    body: "Manufacturing in FSSAI-licensed plants with batch lotting, nutritional consistency checks and documentation for national distribution and export.",
+    body: "Manufacturing in partner plants with batch lotting, nutritional consistency checks and documentation for national distribution and export.",
   },
   {
     title: "Cold-chain oversight",

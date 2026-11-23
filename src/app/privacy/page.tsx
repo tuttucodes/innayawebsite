@@ -20,7 +20,7 @@ export default function PrivacyPage() {
           kicker="Legal"
           title="Privacy policy."
           accent="Last updated November 2026."
-          lede={`How Innaya Nutri Foods Private Limited collects, protects and handles information across our software and consumer operations. CIN ${SITE.cin}.`}
+          lede={`How Innaya Nutri Foods Private Limited collects, protects and handles information across our software and consumer operations.`}
         />
 
         <article className="wrap pb-24 md:pb-36"><div className="prose-ledger max-w-[70ch] border-t border-line pt-10">
@@ -59,7 +59,6 @@ export default function PrivacyPage() {
             </p>
             <div className="mt-5 rounded-[6px] border border-line bg-paper-deep px-5 py-4 text-[15px] leading-[1.7] text-ink">
               <p className="!mt-0 font-medium">{SITE.legal}</p>
-              <p className="!mt-0">CIN: {SITE.cin}</p>
               <p className="!mt-0">Grievance Officer: CEO Office</p>
               <p className="!mt-0">Email: {SITE.contactEmail}</p>
               <p className="!mt-0">Address: {SITE.hq}</p>

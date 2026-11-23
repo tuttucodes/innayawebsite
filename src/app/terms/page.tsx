@@ -20,7 +20,7 @@ export default function TermsPage() {
           kicker="Legal"
           title="Terms of use."
           accent="Last updated November 2026."
-          lede={`The terms that govern your use of this website and your dealings with Innaya Nutri Foods Private Limited. CIN ${SITE.cin}.`}
+          lede={`The terms that govern your use of this website and your dealings with Innaya Nutri Foods Private Limited.`}
         />
 
         <article className="wrap pb-24 md:pb-36"><div className="prose-ledger max-w-[70ch] border-t border-line pt-10">

@@ -118,7 +118,7 @@ export default function SustainabilityPage() {
           </ul>
           <div className="mt-10 max-w-[60ch]">
             <Headline as="h3" size="md" accent="Sourced from smallholders across South India.">
-              Made in FSSAI-licensed facilities.
+              Made in South India.
             </Headline>
           </div>
         </section>

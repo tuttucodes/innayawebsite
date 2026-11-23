@@ -21,7 +21,7 @@ export const TRACTION = [
   { value: "50+ Panels", label: "Blind Taste Trials (Chennai & Kochi)" },
   { value: "85%+", label: "Repeat-Purchase Intent" },
   { value: "3 Flagship SKUs", label: "R&D Formulation Finalized" },
-  { value: "FSSAI + DPIIT", label: "Central Licensed · Valid till 2034" },
+  { value: "DPIIT", label: "Recognised Startup" },
 ] as const;
 
 export interface FarmerShareRow {
@@ -387,7 +387,7 @@ export const TEAM = [
     name: "Rahul Babu",
     role: "Managing Director & CEO",
     focus: "Technology · Supply Chain · Growth",
-    bio: "Oversees system architecture, platform software, and corporate operations. B.Tech Computer Science @ VIT Chennai.",
+    bio: "Oversees system architecture, platform software, and corporate operations.",
   },
   {
     name: "Irfan Habeeb",

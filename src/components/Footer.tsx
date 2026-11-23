@@ -105,12 +105,7 @@ export default function Footer() {
             <br />
             F223, DLF New Town Heights, Kakkanad, Ernakulam, Kerala 682037
           </address>
-          <p className="leading-relaxed md:col-span-4">
-            CIN {SITE.cin}
-            <br />
-            DPIIT recognised · FSSAI central licence
-          </p>
-          <div className="flex flex-wrap items-start gap-x-5 gap-y-2 md:col-span-3 md:justify-end">
+          <div className="flex flex-wrap items-start gap-x-5 gap-y-2 md:col-span-7 md:justify-end">
             <Link href="/privacy" className="hover:text-paper">
               Privacy
             </Link>

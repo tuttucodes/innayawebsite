@@ -55,15 +55,6 @@ const DISCIPLINES: Discipline[] = [
   { name: "Supply & logistics", scope: "FPO aggregation, contract units, cold chain" },
 ];
 
-const REGISTRY = [
-  { label: "Legal name", value: SITE.legal },
-  { label: "Incorporated", value: SITE.incorporated },
-  { label: "CIN", value: SITE.cin },
-  { label: "Registered office", value: "Kakkanad, Ernakulam, Kerala 682037" },
-  { label: "Recognition", value: "DPIIT-recognised startup" },
-  { label: "Food licence", value: "FSSAI central licence, valid to 2034" },
-];
-
 export default function AboutPage() {
   return (
     <>
@@ -131,10 +122,10 @@ export default function AboutPage() {
 
         <Founders />
 
-        {/* Team + registry */}
+        {/* Team */}
         <section className="bg-paper-deep">
           <div className="wrap grid gap-16 py-24 md:grid-cols-12 md:py-32">
-            <div className="md:col-span-5">
+            <div className="md:col-span-8">
               <Headline size="md" accent="Across food, brand and supply.">
                 A small, cross-functional team.
               </Headline>
@@ -146,19 +137,6 @@ export default function AboutPage() {
                   </li>
                 ))}
               </ul>
-            </div>
-            <div className="md:col-span-6 md:col-start-7">
-              <Headline size="md" accent="For the record.">
-                Company details.
-              </Headline>
-              <dl className="mt-10 border-t border-line-strong">
-                {REGISTRY.map((r) => (
-                  <div key={r.label} className="grid grid-cols-[9rem_1fr] gap-4 border-b border-line py-5 sm:grid-cols-[11rem_1fr]">
-                    <dt className="text-[14px] text-mute">{r.label}</dt>
-                    <dd className="text-[15px] text-ink">{r.value}</dd>
-                  </div>
-                ))}
-              </dl>
             </div>
           </div>
         </section>
