@@ -57,22 +57,22 @@ interface Spec {
 const STACK: Spec[] = [
   {
     title: "Multilingual telephony",
-    engine: "Amazon Bedrock, Twilio SIP",
+    engine: "Voice AI",
     body: "Voice agents log arrival times and weighments with drivers and mandi suppliers.",
   },
   {
     title: "Procurement workflows",
-    engine: "AWS Step Functions",
+    engine: "Workflow orchestration",
     body: "Multi-step flows for quotes, freight confirmation and intake checklists, with human sign-off gates.",
   },
   {
     title: "Cold-chain telemetry",
-    engine: "AWS IoT Core, Timestream",
+    engine: "Real-time IoT",
     body: "GPS and temperature logged every three minutes, with automatic alerts and rerouting.",
   },
   {
     title: "Batch provenance",
-    engine: "Amazon Aurora Serverless",
+    engine: "Audit-grade ledger",
     body: "Lot records linking mandi receipts, lab assays and factory intake certificates.",
   },
 ];
@@ -140,9 +140,9 @@ export default function PlatformsPage() {
         <section className="wrap py-24 md:py-36">
           <SectionIntro
             kicker="Under the hood"
-            title="Built on AWS."
+            title="Enterprise-grade infrastructure."
             accent="Running when the mandi does."
-            body="Agricultural logistics never close. The platform runs on managed AWS services chosen for uptime in remote hubs and an auditable trail."
+            body="Agricultural logistics never close. The platform runs on the same class of infrastructure trusted by the world's leading platforms, built for uptime in remote hubs and a complete audit trail."
           />
           <dl className="mt-14 grid gap-x-10 md:mt-20 md:grid-cols-2">
             {STACK.map((s) => (

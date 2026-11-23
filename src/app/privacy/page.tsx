@@ -46,7 +46,7 @@ export default function PrivacyPage() {
             <h2>3. Data Security &amp; Retention</h2>
             <p>
               Operational records and customer inquiries are stored in secure, access-controlled cloud infrastructure
-              hosted in the AWS Asia Pacific (Mumbai) region. We do not sell or monetize personal or transaction data
+              hosted in India. We do not sell or monetize personal or transaction data
               to third-party advertising networks.
             </p>
           </section>

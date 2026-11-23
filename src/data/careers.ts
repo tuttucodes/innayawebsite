@@ -70,13 +70,13 @@ export const JOBS: JobOpening[] = [
     about:
       "Build the operating system underneath Innaya — internal tools for sourcing, formulation, demand forecasting, and the consumer e-commerce stack at pan8.in.",
     responsibilities: [
-      "Ship features end-to-end across Next.js + Postgres + edge runtime",
+      "Ship features end-to-end across product, data and infrastructure",
       "Own e-commerce, checkout, and the order-to-fulfilment pipeline",
       "Integrate AI models (LLMs, classical ML) into ops workflows",
     ],
     requirements: [
       "Strong TypeScript, React, and Node.js fundamentals",
-      "Comfort with SQL, Postgres, and at least one cloud (AWS/GCP/Vercel)",
+      "Comfort with SQL, Postgres, and at least one major cloud platform",
       "Has shipped production code that real users touch",
     ],
     niceToHave: ["AI/ML exposure", "Open-source contributions"],
