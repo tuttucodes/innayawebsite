@@ -24,6 +24,20 @@ export const TRACTION = [
   { value: "FSSAI + DPIIT", label: "Central Licensed · Valid till 2034" },
 ] as const;
 
+export interface FarmerShareRow {
+  crop: string;
+  model: string;
+  share: number;
+  volatility: number;
+}
+
+/** Farmer share of the consumer rupee and max 1-year price swing. MoSPI CPI 2015-2025, RBI WP Oct 2024, NDDB. */
+export const FARMER_SHARE: FarmerShareRow[] = [
+  { crop: "Milk", model: "Co-op buyer", share: 70, volatility: 10 },
+  { crop: "Potato", model: "Mandi traders", share: 37, volatility: 107 },
+  { crop: "Tomato", model: "Open spot market", share: 33, volatility: 202 },
+];
+
 /* =========================================================================
    DIVISIONS OF INNAYA
    ========================================================================= */

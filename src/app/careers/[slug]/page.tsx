@@ -1,9 +1,9 @@
 import type { Metadata } from "next";
-import Link from "next/link";
 import { notFound } from "next/navigation";
 import Nav from "@/components/Nav";
 import Footer from "@/components/Footer";
 import JobApplyButton from "@/components/JobApplyButton";
+import PageHeader from "@/components/ui/PageHeader";
 import { JOBS } from "@/data/careers";
 import { SITE } from "@/data/site";
 
@@ -20,7 +20,7 @@ export async function generateMetadata({ params }: Params): Promise<Metadata> {
   const job = JOBS.find((j) => j.slug === slug);
   if (!job) return {};
   return {
-    title: `${job.title} — Careers at Innaya Nutri Foods`,
+    title: `${job.title} · Careers`,
     description: job.about,
     alternates: { canonical: `${SITE.url}/careers/${job.slug}` },
     openGraph: {
@@ -40,51 +40,32 @@ export default async function JobPage({ params }: Params) {
   return (
     <>
       <Nav />
-      <main className="overflow-x-clip">
-        <header className="relative overflow-hidden border-b border-line bg-bone pb-16 pt-32 sm:pt-40">
-          <div className="pointer-events-none absolute -right-20 -top-10 h-[420px] w-[420px] rounded-full bg-leaf/15 blur-3xl" />
-          <div className="relative mx-auto w-full max-w-[1200px] px-5 md:px-10">
-            <Link
-              href="/careers"
-              className="inline-flex items-center gap-2 font-mono text-[10px] uppercase tracking-[0.22em] text-mute hover:text-ink"
-            >
-              <span>← All roles</span>
-            </Link>
-            <div className="mt-8 flex flex-wrap items-center gap-2 font-mono text-[10px] uppercase tracking-[0.22em] text-mute">
-              <span>{job.team}</span>
-              <span className="text-line">·</span>
-              <span>{job.location}</span>
-              <span className="text-line">·</span>
-              <span>{job.type}</span>
-              <span className="text-line">·</span>
-              <span>{job.experience}</span>
-            </div>
-            <h1 className="mt-6 max-w-4xl font-serif text-[clamp(2.4rem,1rem+5vw,5.6rem)] leading-[0.96] tracking-[-0.025em]">
-              {job.title}
-            </h1>
-            <p className="mt-8 max-w-2xl text-[17px] leading-[1.65] text-ink-soft">
-              {job.about}
-            </p>
-            <div className="mt-10 flex flex-wrap items-center gap-3">
-              <JobApplyButton job={job} />
-              <span className="text-sm text-mute">
-                Compensation · {job.compensation}
-              </span>
-            </div>
-          </div>
-        </header>
+      <main id="main" className="overflow-x-clip">
+        <PageHeader
+          crumbs={[{ label: "Careers", href: "/careers" }, { label: job.title }]}
+          kicker={`${job.team} · ${job.location}`}
+          title={job.title}
+          lede={job.about}
+          actions={<JobApplyButton job={job} />}
+          facts={[
+            { value: job.type, label: "Employment" },
+            { value: job.experience, label: "Experience" },
+            { value: job.location.split(",")[0], label: "Based in" },
+            { value: job.compensation.split("·")[0].trim(), label: "Compensation" },
+          ]}
+        />
 
-        <section className="mx-auto grid w-full max-w-[1200px] gap-12 px-5 py-20 md:grid-cols-12 md:gap-16 md:px-10 md:py-28">
+        <section className="wrap grid gap-12 py-20 md:grid-cols-12 md:gap-16 md:py-28">
           <div className="md:col-span-7">
-            <Block title="What you&apos;ll do" items={job.responsibilities} />
-            <Block title="What we&apos;re looking for" items={job.requirements} />
+            <Block title="What you'll do" items={job.responsibilities} />
+            <Block title="What we're looking for" items={job.requirements} />
             {job.niceToHave && (
               <Block title="Nice to have" items={job.niceToHave} muted />
             )}
           </div>
           <aside className="md:col-span-5">
-            <div className="sticky top-28 rounded-3xl border border-line bg-bone-deep/40 p-8">
-              <span className="font-mono text-[10px] uppercase tracking-[0.22em] text-mute">
+            <div className="sticky top-28 rounded-[6px] bg-paper-deep p-8">
+              <span className="text-[13px] text-mute">
                 Apply
               </span>
               <p className="mt-3 text-[15px] leading-[1.6] text-ink-soft">
@@ -95,19 +76,19 @@ export default async function JobPage({ params }: Params) {
                 <JobApplyButton job={job} />
               </div>
               <hr className="my-6 border-line" />
-              <span className="font-mono text-[10px] uppercase tracking-[0.22em] text-mute">
+              <span className="text-[13px] text-mute">
                 Or email directly
               </span>
               <a
                 href={`mailto:${SITE.hrEmail}?subject=${encodeURIComponent(
                   `Application — ${job.title}`,
                 )}`}
-                className="mt-2 block break-all font-serif text-xl tracking-tight text-ink hover:text-leaf-deep"
+                className="mt-2 block break-all text-[18px] tracking-[-0.015em] text-ink underline decoration-line-strong underline-offset-4 hover:decoration-ink"
               >
                 {SITE.hrEmail}
               </a>
               <hr className="my-6 border-line" />
-              <span className="font-mono text-[10px] uppercase tracking-[0.22em] text-mute">
+              <span className="text-[13px] text-mute">
                 Hiring team
               </span>
               <p className="mt-3 text-sm text-ink-soft">
@@ -133,14 +114,14 @@ function Block({
 }) {
   return (
     <section className="mb-12 border-t border-line pt-8">
-      <h2 className="font-serif text-3xl tracking-tight">{title}</h2>
+      <h2 className="text-[26px] font-normal tracking-[-0.03em] text-ink">{title}</h2>
       <ul className="mt-6 space-y-3">
         {items.map((it, i) => (
           <li
             key={i}
             className={`relative pl-6 text-[16px] leading-[1.6] ${muted ? "text-ink-soft" : "text-ink"}`}
           >
-            <span className="absolute left-0 top-3 h-1 w-2 rounded-full bg-leaf-deep" />
+            <span aria-hidden="true" className="absolute left-0 top-[0.05em] text-sand">+</span>
             {it}
           </li>
         ))}

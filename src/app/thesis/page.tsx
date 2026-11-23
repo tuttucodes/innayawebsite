@@ -1,342 +1,285 @@
 import type { Metadata } from "next";
-import Link from "next/link";
 import Nav from "@/components/Nav";
 import Footer from "@/components/Footer";
-import PageHero from "@/components/PageHero";
-import { SITE } from "@/data/site";
+import PageHeader from "@/components/ui/PageHeader";
+import Headline from "@/components/ui/Headline";
+import Reveal from "@/components/ui/Reveal";
+import ScrubText from "@/components/ui/ScrubText";
+import SectionIntro from "@/components/ui/SectionIntro";
+import WorkWithUs from "@/components/ui/WorkWithUs";
+import { FARMER_SHARE, SITE } from "@/data/site";
+import { cn } from "@/lib/cn";
 
 export const metadata: Metadata = {
-  title: "The Assured Buyer Thesis — Building India's Agricultural Stability",
+  title: "The Assured Buyer Thesis",
   description:
-    "Why India's ₹57,000 Cr farmgate loss is not a cold storage problem, but an Assured Buyer problem. The economic blueprint behind Innaya Nutrifoods.",
+    "Why India's ₹57,000 Cr farmgate loss is not a cold storage problem but an assured buyer problem, and how Innaya Nutri Foods is built to solve it.",
   alternates: { canonical: `${SITE.url}/thesis` },
   openGraph: {
-    title: "The Assured Buyer Thesis — Innaya Nutri Foods",
-    description:
-      "From Farmgate Volatility to Branded Shelf Demand: A Category-Defining Food-Tech Institutional Blueprint.",
+    title: "The Assured Buyer Thesis · Innaya Nutri Foods",
+    description: "Storage was never the problem. A buyer was.",
     url: `${SITE.url}/thesis`,
     type: "article",
   },
 };
 
-const VOLATILITY_DATA = [
+interface Precedent {
+  name: string;
+  origin: string;
+  scale: string;
+  how: string;
+  lesson: string;
+  ours?: boolean;
+}
+
+const PRECEDENTS: Precedent[] = [
   {
-    commodity: "Milk",
-    model: "Assured Buyer (Dairy Co-ops / Amul)",
-    volatility: 10,
-    farmerShare: 70,
-    color: "#14453D",
-    note: "Co-op processing converts seasonal liquid flush into shelf-stable butter & powder.",
+    name: "Amul",
+    origin: "Anand, Gujarat · 1946",
+    scale: "₹1,00,000 Cr+ a year",
+    how: "Absorbed the seasonal flush of liquid milk into butter, cheese and milk powder.",
+    lesson: "Processing plus a brand turns a perishable glut into shelf-stable value.",
   },
   {
-    commodity: "Potato",
-    model: "Unorganized Mandi Intermediaries",
-    volatility: 107,
-    farmerShare: 37,
-    color: "#B45309",
-    note: "High storage capacity (403L tonnes), but zero price protection at harvest gate.",
+    name: "Zespri",
+    origin: "Mount Maunganui, NZ · 1999",
+    scale: "NZ$5.9 bn a year",
+    how: "United 2,800 kiwifruit growers under one brand with strict grading and pooled export.",
+    lesson: "A shelf premium needs standard grades and one disciplined seller.",
   },
   {
-    commodity: "Tomato",
-    model: "Speculative Open Market Spot Trade",
-    volatility: 202,
-    farmerShare: 33,
-    color: "#991B1B",
-    note: "No captive brand demand; 200%+ annual price swings; ₹33/₹100 consumer rupee.",
+    name: "Suguna Foods",
+    origin: "Coimbatore, Tamil Nadu · 1990",
+    scale: "~₹9,100 Cr a year",
+    how: "Gave 40,000+ poultry farmers inputs, chicks and guaranteed buyback.",
+    lesson: "Take the risk off the farm and supply becomes resilient.",
+  },
+  {
+    name: "Innaya",
+    origin: "Ernakulam, Kerala · 2024",
+    scale: "Phase one: 13 PAN8 products",
+    how: "Software at the farmgate, certified processing, and a captive consumer brand for millets and pulses.",
+    lesson: "Millets first, then fruit and moringa bases, then the buyer model for many brands.",
+    ours: true,
   },
 ];
 
-const PRECEDENTS = [
+interface Layer {
+  title: string;
+  subtitle: string;
+  body: string;
+}
+
+const LAYERS: Layer[] = [
   {
-    institution: "Amul (GCMMF)",
-    origin: "1946 · Anand, Gujarat",
-    scale: "₹1,00,000+ Cr / yr",
-    mechanism: "Absorbed seasonal liquid milk surplus into branded butter, cheese, and milk powders.",
-    lesson: "Processing + captive consumer brand turns perishable glut into non-perishable equity.",
+    title: "Captive brand demand",
+    subtitle: "A shelf that absorbs the harvest",
+    body: "Amul did not just store milk; it built butter and powder lines that soaked up surplus. PAN8 turns climate-resilient millets and pulses into pancakes, dosas, upma and bars that sell every week, which creates steady volume farmers can plan around.",
   },
   {
-    institution: "Zespri International",
-    origin: "1999 · Mount Maunganui, NZ",
-    scale: "NZ$ 5.9 Billion / yr",
-    mechanism: "Unified 2,800 growers under a single global brand with strict quality grading and export pooling.",
-    lesson: "Global shelf premium requires standardized grading and disciplined single-desk marketing.",
+    title: "Innaya Intelligence",
+    subtitle: "Prices, grades and calls without guesswork",
+    body: "Vernacular voice agents, mandi price discovery and camera-based intake grading remove the subjective deductions that cost farmers most. When a surge depresses spot prices, our formulation engine adjusts blends to take more Grade-B grain without changing the label.",
   },
   {
-    institution: "Suguna Foods",
-    origin: "1990 · Coimbatore, TN",
-    scale: "~₹9,100 Cr / yr",
-    mechanism: "Contract poultry farming providing feed, day-old chicks, and guaranteed offtake to 40,000+ farmers.",
-    lesson: "De-risking farm inputs and guaranteeing buyback creates massive supply resilience.",
+    title: "Micro pack-houses near the farm",
+    subtitle: "Closing the 68,700 pack-house gap",
+    body: "India has 1,300 of the 70,000 farmgate pack-houses it needs. With FPOs in Kerala and Tamil Nadu we place asset-light sorting, pre-cooling and drying units within 30 km of harvest points.",
   },
   {
-    institution: "Innaya Nutri Foods",
-    origin: "2024 · Ernakulam, Kerala",
-    scale: "Phase 1: 13 PAN8 SKUs",
-    mechanism: "Integrated AI OS (telephony, vision, cold telemetry) powering captive brand demand across millets, pulses & agro-corridors.",
-    lesson: "Phase 1 (Millets/PAN8) → Phase 2 (Fruit/Moringa bases) → Phase 3 (Multi-brand Assured Buyer OS).",
-    highlight: true,
+    title: "Closed-loop farmer economics",
+    subtitle: "From ₹33 towards ₹70 of every ₹100",
+    body: "Cutting speculative intermediaries, recording every weighment in Innaya Trace and paying digitally within 48 hours raises what farmers take home, while fixing raw-material costs for our own shelf.",
   },
 ];
 
-const LAYERS = [
-  {
-    layer: "Layer 01",
-    title: "Captive Brand Demand",
-    subtitle: "Solving the 'Winter Milk' Surplus via Branded Shelf Offtake",
-    desc: "Amul succeeded because it didn't just store milk; it built butter, cheese, and powder lines that absorbed excess supply. PAN8 converts climate-resilient millets and pulses into everyday pancake, dosa, upma, and bar formats—creating predictable, year-round volume demand that insulates farmers from seasonal spot crashes.",
-  },
-  {
-    layer: "Layer 02",
-    title: "Innaya Intelligence Suite",
-    subtitle: "Mandi Arbitrage Elimination & Dynamic Batch Formulation",
-    desc: "Autonomous vernacular voice agents, real-time mandi price discovery, and intake vision scoring eliminate subjective grading deductions. When harvest surges depress spot prices, our dynamic formulation engine adjusts recipe blend ratios to absorb Grade-B surplus without compromising finished nutritional specs.",
-  },
-  {
-    layer: "Layer 03",
-    title: "Asset-Light Micro Pack-Houses",
-    subtitle: "Filling the 68,000 Pack-House Gap Near Farmgates",
-    desc: "India has 403 lakh tonnes of cold storage, but only 1,300 of the 70,000 required pack-houses exist at farmgates. Innaya partners with Farmer Producer Organisations (FPOs) across Kerala and Tamil Nadu to deploy asset-light micro-sorting, pre-cooling, and dehydration units within 30km of harvest points.",
-  },
-  {
-    layer: "Layer 04",
-    title: "Closed-Loop Farmer Economics",
-    subtitle: "Lifting Farmer Share from ₹33 to ₹70 per Consumer Rupee",
-    desc: "By cutting speculative mandi intermediaries, logging immutable weighments via Innaya Trace, and providing direct digital payouts within 48 hours, Innaya raises farmer net realization while locking in predictable raw-material COGS for our branded shelf products.",
-  },
-];
+const MAX_SWING = 220;
 
 export default function ThesisPage() {
   return (
     <>
       <Nav />
-      <main className="overflow-x-clip bg-bone">
-        <PageHero
-          eyebrow="The Assured Buyer Thesis · Strategic Foundation"
-          title="Building India's Assured Buyer"
-          blurb={
-            <>
-              From farmgate volatility to branded shelf demand: why India&apos;s ₹57,000 Cr
-              annual food loss is not a cold storage capacity crisis, but the structural
-              absence of an Assured Buyer.
-            </>
-          }
+      <main id="main" className="overflow-x-clip">
+        <PageHeader
+          crumbs={[{ label: "Thesis" }]}
+          kicker="The assured buyer thesis"
+          title="Storage was never the problem."
+          accent="A buyer was."
+          lede="India loses ₹57,000 crore of harvest every year. Not for lack of cold rooms, but for lack of a buyer with the processing and the brand to take the crop, season after season."
+          facts={[
+            { value: "₹57,000 Cr", label: "Harvest lost every year" },
+            { value: "403 L t", label: "Cold storage already built" },
+            { value: "1,300", label: "of 70,000 pack-houses needed" },
+            { value: "₹33", label: "Tomato farmer's share of ₹100" },
+          ]}
         />
 
-        {/* Section 1: The Macro Structural Gap */}
-        <section className="mx-auto w-full max-w-[1360px] px-5 py-20 sm:px-8 md:px-12 md:py-28">
-          <div className="grid gap-12 lg:grid-cols-12 lg:gap-16">
-            <div className="lg:col-span-5">
-              <span className="font-mono text-xs uppercase tracking-[0.16em] text-mute">
-                The Economic Paradox
-              </span>
-              <h2 className="mt-4 font-serif text-3xl sm:text-4xl lg:text-[2.6rem] font-normal leading-[1.15] tracking-tight text-ink">
-                Cold storage without an assured buyer is just a waiting room for spoilage.
-              </h2>
-              <p className="mt-6 text-[15px] sm:text-[16px] leading-[1.7] text-ink-soft">
-                India has built 403 lakh tonnes of bulk cold storage, yet loses ₹57,000 Crore of
-                harvest every year. The root cause is not warehouse volume: it is that 98% of cold
-                stores are single-commodity potato vaults, reefer transport is under-equipped
-                (19,000 of 62,000 needed), and farmgate pack-houses stand at an alarming 1,300 against
-                a national requirement of 70,000 (a 68,700-facility deficit).
-              </p>
-              <p className="mt-4 text-[15px] sm:text-[16px] leading-[1.7] text-ink-soft">
-                When perishable crops hit peak harvest without a guaranteed buyer with processing
-                capacity, farmers are forced to dump produce at ₹2/kg while consumers pay ₹60/kg in
-                urban centers weeks later.
-              </p>
+        {/* The paradox */}
+        <section className="wrap py-24 md:py-36">
+          <div className="grid gap-12 md:grid-cols-12">
+            <div className="md:col-span-4">
+              <div className="md:sticky md:top-28">
+                <p className="kicker mb-7 text-ink-soft">The paradox</p>
+                <Headline size="md" accent="Still losing the harvest.">
+                  More cold storage than ever.
+                </Headline>
+              </div>
             </div>
-
-            {/* SVG Data Visualization: Volatility vs Farmer Share */}
-            <div className="lg:col-span-7 rounded-3xl border border-line/70 bg-bone-deep/50 backdrop-blur-md p-6 sm:p-8 md:p-10 shadow-[0_16px_36px_-12px_rgba(26,22,20,0.04),inset_0_1px_0_rgba(255,255,255,0.7)]">
-              <div className="flex items-center justify-between border-b border-line pb-4">
-                <span className="font-mono text-[11px] uppercase tracking-[0.2em] text-ink font-semibold">
-                  Price Volatility vs. Farmer Realization (2015–2025)
-                </span>
-                <span className="font-mono text-[10px] uppercase tracking-[0.14em] text-mute">
-                  RBI &amp; MoSPI Benchmark
-                </span>
-              </div>
-
-              {/* Data Rows Visualized */}
-              <div className="mt-8 space-y-8">
-                {VOLATILITY_DATA.map((item) => (
-                  <div key={item.commodity} className="space-y-3">
-                    <div className="flex items-baseline justify-between">
-                      <div>
-                        <span className="font-sans text-lg font-bold text-ink">{item.commodity}</span>
-                        <span className="ml-2 font-mono text-[11px] text-mute">({item.model})</span>
-                      </div>
-                      <div className="text-right">
-                        <span className="font-mono text-sm font-bold text-ink">
-                          ₹{item.farmerShare} of ₹100
-                        </span>
-                        <span className="block font-mono text-[10px] text-mute">
-                          Farmer Share of Consumer Rupee
-                        </span>
-                      </div>
-                    </div>
-
-                    {/* Comparative Double Bars */}
-                    <div className="space-y-1.5">
-                      {/* Farmer Realization Bar */}
-                      <div>
-                        <div className="flex justify-between text-[11px] font-mono text-mute mb-1">
-                          <span>Farmer Share of Retail Value</span>
-                          <span className="font-semibold text-ink">{item.farmerShare}%</span>
-                        </div>
-                        <div className="h-3 w-full rounded-full bg-line overflow-hidden">
-                          <div
-                            className="h-full rounded-full transition-all duration-1000"
-                            style={{
-                              width: `${item.farmerShare}%`,
-                              backgroundColor: item.color,
-                            }}
-                          />
-                        </div>
-                      </div>
-
-                      {/* 10-Year Price Volatility Spike */}
-                      <div>
-                        <div className="flex justify-between text-[11px] font-mono text-mute mb-1">
-                          <span>Max 1-Year Price Swing Volatility</span>
-                          <span className="font-semibold text-ink">+{item.volatility}%</span>
-                        </div>
-                        <div className="h-2 w-full rounded-full bg-line/60 overflow-hidden">
-                          <div
-                            className="h-full rounded-full bg-clay opacity-80"
-                            style={{ width: `${Math.min(item.volatility / 2.2, 100)}%` }}
-                          />
-                        </div>
-                      </div>
-                    </div>
-
-                    <p className="text-xs text-ink-soft/90 italic">{item.note}</p>
-                  </div>
-                ))}
-              </div>
-
-              {/* Verified Government Sources */}
-              <div className="mt-8 border-t border-line/60 pt-4 font-mono text-[10px] uppercase tracking-[0.14em] text-mute leading-relaxed">
-                Sources: Ministry of Statistics &amp; Programme Implementation (MoSPI) CPI Data (2015–2025);
-                Reserve Bank of India (RBI) Working Paper Series (Oct 2024); National Dairy Development Board (NDDB);
-                National Centre for Cold-chain Development (NCCD Assessment 2015 &amp; 2025); NABCONS Pack-House Study via Lok Sabha Unstarred Q. No. 1294 (Dec 2024).
-              </div>
+            <div className="prose-ledger md:col-span-7 md:col-start-6">
+              <p>
+                India has built 403 lakh tonnes of bulk cold storage, yet loses ₹57,000 crore of
+                harvest every year. The bottleneck is not warehouse volume. Ninety-eight per cent of
+                cold stores are single-commodity potato vaults. Reefer transport stands at 19,000 of
+                the 62,000 vehicles needed. Farmgate pack-houses number 1,300 against a national
+                need of 70,000.
+              </p>
+              <p>
+                When a perishable crop peaks without a guaranteed buyer that can process it, farmers
+                sell at ₹2 a kilo while city shoppers pay ₹60 a kilo a few weeks later. Storage only
+                delays that moment. A buyer ends it.
+              </p>
+              <p>
+                <strong>Where an assured buyer exists, the numbers change.</strong> Dairy farmers
+                selling to co-operatives keep ₹70 of every ₹100 a consumer spends, and milk prices
+                barely move year to year. Tomato and potato farmers, selling into open mandis, keep a
+                third of that and live with price swings of over 100 per cent.
+              </p>
             </div>
           </div>
         </section>
 
-        {/* Section 2: The Historical Precedent Table */}
-        <section className="border-t border-line bg-bone-deep/30 py-20 sm:py-28">
-          <div className="mx-auto w-full max-w-[1360px] px-5 sm:px-8 md:px-12">
-            <span className="font-mono text-xs uppercase tracking-[0.16em] text-mute">
-              Historical Analogs
-            </span>
-            <h2 className="mt-4 font-serif text-3xl sm:text-4xl lg:text-[2.6rem] font-normal leading-[1.15] tracking-tight text-ink">
-              The playbook is proven. Technology now makes it scalable.
-            </h2>
-            <p className="mt-4 max-w-2xl text-[15px] sm:text-[16px] leading-[1.65] text-ink-soft">
-              Whenever agriculture has transitioned from subsistence vulnerability to institutional
-              resilience, the mechanism has always been an Assured Buyer operating branded processing.
-            </p>
-
-            <div className="mt-12 overflow-x-auto rounded-3xl border border-line/70 bg-bone/90 backdrop-blur-md shadow-[0_16px_36px_-12px_rgba(26,22,20,0.06),inset_0_1px_0_rgba(255,255,255,0.7)]">
-              <table className="w-full min-w-[720px] text-left border-collapse">
+        {/* Figure */}
+        <section className="bg-paper-deep">
+          <div className="wrap py-24 md:py-32">
+            <SectionIntro
+              kicker="The evidence"
+              title="A buyer steadies the price."
+              accent="And pays the farmer more."
+              body="Farmer share of the consumer rupee against the largest one-year price swing, 2015 to 2025."
+            />
+            <div className="mt-14 overflow-x-auto md:mt-20">
+              <table className="w-full min-w-[640px] border-collapse text-left">
                 <thead>
-                  <tr className="border-b border-line bg-bone-deep/60 font-mono text-[11px] uppercase tracking-[0.18em] text-mute">
-                    <th className="p-5 sm:p-6">Institution</th>
-                    <th className="p-5 sm:p-6">Origin &amp; Scale</th>
-                    <th className="p-5 sm:p-6">Operating Mechanism</th>
-                    <th className="p-5 sm:p-6">Structural Takeaway</th>
+                  <tr className="border-b border-line-strong text-[13px] text-mute">
+                    <th scope="col" className="w-[24%] pb-4 font-normal">Crop and buyer</th>
+                    <th scope="col" className="pb-4 font-normal">Farmer share of ₹100</th>
+                    <th scope="col" className="pb-4 font-normal">Largest 1-year price swing</th>
                   </tr>
                 </thead>
-                <tbody className="divide-y divide-line text-sm">
-                  {PRECEDENTS.map((p) => (
-                    <tr
-                      key={p.institution}
-                      className={p.highlight ? "bg-leaf/5 font-medium" : "hover:bg-bone-deep/30"}
-                    >
-                      <td className="p-5 sm:p-6 align-top">
-                        <span className="font-serif text-lg font-normal text-ink block">
-                          {p.institution}
-                        </span>
-                        {p.highlight && (
-                          <span className="inline-block mt-1 rounded-full bg-leaf px-2.5 py-0.5 font-mono text-[9px] uppercase tracking-[0.14em] text-bone">
-                            Our Architecture
-                          </span>
-                        )}
-                      </td>
-                      <td className="p-5 sm:p-6 align-top font-mono text-xs text-ink-soft">
-                        <span className="block text-ink font-semibold">{p.origin}</span>
-                        <span className="text-leaf-deep">{p.scale}</span>
-                      </td>
-                      <td className="p-5 sm:p-6 align-top text-ink-soft leading-[1.6]">
-                        {p.mechanism}
-                      </td>
-                      <td className="p-5 sm:p-6 align-top text-ink leading-[1.6]">
-                        {p.lesson}
-                      </td>
-                    </tr>
-                  ))}
+                <tbody>
+                  {FARMER_SHARE.map((row) => {
+                    const good = row.share >= 60;
+                    return (
+                      <tr key={row.crop} className="border-b border-line align-middle">
+                        <th scope="row" className="py-7 pr-6 font-normal">
+                          <span className="block text-[20px] tracking-[-0.02em] text-ink">{row.crop}</span>
+                          <span className="block text-[13px] text-mute">{row.model}</span>
+                        </th>
+                        <td className="py-7 pr-10">
+                          <div className="flex items-center gap-5">
+                            <span className="num w-12 text-[22px] text-ink">₹{row.share}</span>
+                            <span className="h-2 flex-1 overflow-hidden rounded-full bg-line">
+                              <span
+                                className={cn("block h-full rounded-full", good ? "bg-forest" : "bg-rust/80")}
+                                style={{ width: `${row.share}%` }}
+                              />
+                            </span>
+                          </div>
+                        </td>
+                        <td className="py-7">
+                          <div className="flex items-center gap-5">
+                            <span className="num w-14 text-[22px] text-ink">{row.volatility}%</span>
+                            <span className="h-2 flex-1 overflow-hidden rounded-full bg-line">
+                              <span
+                                className={cn("block h-full rounded-full", good ? "bg-forest" : "bg-rust/80")}
+                                style={{ width: `${Math.min((row.volatility / MAX_SWING) * 100, 100)}%` }}
+                              />
+                            </span>
+                          </div>
+                        </td>
+                      </tr>
+                    );
+                  })}
                 </tbody>
               </table>
             </div>
+            <p className="mt-8 max-w-[90ch] text-[13px] leading-relaxed text-mute">
+              Sources: MoSPI CPI series 2015–2025; RBI Working Paper Series, October 2024; National
+              Dairy Development Board; NCCD cold-chain assessments 2015 and 2025; NABCONS pack-house
+              study cited in Lok Sabha Unstarred Question 1294, December 2024.
+            </p>
           </div>
         </section>
 
-        {/* Section 3: Innaya's 4-Layer Closed-Loop Solution */}
-        <section className="border-t border-line bg-ink text-bone py-20 sm:py-28">
-          <div className="mx-auto w-full max-w-[1360px] px-5 sm:px-8 md:px-12">
-            <div className="flex items-center justify-between font-mono text-[11px] uppercase tracking-[0.24em] text-bone/50">
-              <span>Architectural Blueprint</span>
-              <span>The 4-Layer Closed Loop</span>
-            </div>
-
-            <h2 className="mt-6 font-serif text-3xl sm:text-4xl lg:text-5xl font-normal leading-[1.15] text-bone max-w-3xl">
-              From harvest glut to branded pantry staples, without warehouse rot.
-            </h2>
-
-            <div className="mt-14 grid gap-8 sm:grid-cols-2 lg:grid-cols-4">
-              {LAYERS.map((l) => (
-                <div
-                  key={l.layer}
-                  className="rounded-3xl border border-bone/15 bg-bone/[0.04] p-7 flex flex-col justify-between hover:bg-bone/[0.08] hover:-translate-y-1.5 transition-all duration-300 shadow-[0_16px_32px_rgba(0,0,0,0.2)]"
-                >
-                  <div>
-                    <span className="font-mono text-[11px] font-semibold uppercase tracking-[0.2em] text-amber">
-                      {l.layer}
-                    </span>
-                    <h3 className="mt-3 font-serif text-2xl font-normal tracking-tight text-bone">
-                      {l.title}
-                    </h3>
-                    <p className="mt-1 font-serif italic text-xs text-bone/60">
-                      {l.subtitle}
-                    </p>
-                    <p className="mt-4 text-[13.5px] leading-[1.65] text-bone/75">
-                      {l.desc}
-                    </p>
-                  </div>
-                </div>
-              ))}
-            </div>
-
-            <div className="mt-16 border-t border-bone/15 pt-8 flex flex-col sm:flex-row items-center justify-between gap-6">
-              <div>
-                <span className="font-mono text-[10px] uppercase tracking-[0.2em] text-bone/50">
-                  Venture &amp; Institutional Inquiries
-                </span>
-                <p className="mt-1 text-sm font-medium text-bone/90">
-                  Review our complete unit economics and farmgate pilot data room.
-                </p>
-              </div>
-              <Link
-                href="/contact"
-                className="inline-flex items-center gap-2 rounded-full bg-bone px-6 py-3.5 text-xs font-semibold uppercase tracking-[0.14em] text-ink transition-all duration-200 hover:bg-amber active:scale-[0.98] active:translate-y-[1px]"
+        {/* Precedents */}
+        <section className="wrap py-24 md:py-36">
+          <SectionIntro
+            kicker="It has been done before"
+            title="The playbook is proven."
+            accent="Technology makes it scale."
+            body="Every time agriculture has moved from vulnerability to resilience, the mechanism has been an assured buyer running branded processing."
+          />
+          <ul className="mt-14 border-t border-line md:mt-20">
+            {PRECEDENTS.map((p, i) => (
+              <Reveal
+                as="li"
+                key={p.name}
+                delay={i * 0.05}
+                className={cn(
+                  "grid gap-4 border-b border-line py-9 md:grid-cols-12 md:gap-8",
+                  p.ours && "bg-forest-tint/50 md:-mx-6 md:px-6",
+                )}
               >
-                Request Strategic Briefing →
-              </Link>
-            </div>
+                <div className="md:col-span-3">
+                  <p className="text-[24px] tracking-[-0.03em] text-ink">{p.name}</p>
+                  <p className="mt-1 text-[13px] text-mute">{p.origin}</p>
+                  <p className="num mt-3 text-[14px] text-forest">{p.scale}</p>
+                </div>
+                <p className="text-[15.5px] leading-[1.65] text-ink-soft md:col-span-4 md:col-start-5">
+                  {p.how}
+                </p>
+                <p className="text-[15.5px] leading-[1.65] text-ink md:col-span-4">
+                  <span className="serif-i mr-1 text-[1.15em] text-sand">{p.ours ? "Our plan:" : "Lesson:"}</span>{" "}
+                  {p.lesson}
+                </p>
+              </Reveal>
+            ))}
+          </ul>
+        </section>
+
+        {/* Four layers */}
+        <section className="bg-forest-deep text-paper">
+          <div className="wrap py-24 md:py-36">
+            <SectionIntro
+              tone="dark"
+              kicker="How Innaya is built"
+              title="Four layers."
+              accent="One closed loop."
+              body="From harvest glut to branded pantry staple, without the warehouse rot in between."
+            />
+            <ol className="mt-16 grid gap-x-10 md:mt-24 md:grid-cols-2">
+              {LAYERS.map((l, i) => (
+                <Reveal as="li" key={l.title} delay={(i % 2) * 0.08} className="border-t border-paper/20 pb-14 pt-7">
+                  <p className="num text-[13px] text-sand-soft">/{String(i + 1).padStart(2, "0")}</p>
+                  <h3 className="mt-6 text-[26px] font-normal tracking-[-0.03em]">{l.title}</h3>
+                  <p className="serif-i mt-1 text-[20px] text-sand-soft">{l.subtitle}</p>
+                  <p className="mt-5 max-w-[52ch] text-[15.5px] leading-[1.7] text-paper/70">{l.body}</p>
+                </Reveal>
+              ))}
+            </ol>
           </div>
         </section>
+
+        <section className="wrap py-24 md:py-36">
+          <ScrubText
+            text="Milk found its buyer in 1946. Millets and pulses are still waiting. We intend to be that buyer for South India."
+            emphasis={["buyer"]}
+            accentClassName="serif-i text-sand"
+            className="max-w-[24ch] text-[clamp(1.9rem,1.2rem+2.8vw,3.75rem)] font-normal leading-[1.1] tracking-[-0.04em] text-ink"
+          />
+        </section>
+
+        <WorkWithUs title="Want the full data room?" accent="Ask the founders." />
       </main>
       <Footer />
     </>

@@ -1,138 +1,165 @@
 import type { Metadata } from "next";
-import Image from "next/image";
-import Link from "next/link";
 import Nav from "@/components/Nav";
 import Footer from "@/components/Footer";
-import PageHero from "@/components/PageHero";
-import AILayer from "@/components/AILayer";
-import { SITE } from "@/data/site";
+import PageHeader from "@/components/ui/PageHeader";
+import ButtonLink from "@/components/ui/ButtonLink";
+import Reveal from "@/components/ui/Reveal";
+import SectionIntro from "@/components/ui/SectionIntro";
+import WorkWithUs from "@/components/ui/WorkWithUs";
+import { INTEL_MODULES, SITE, type IntelModule } from "@/data/site";
+import { cn } from "@/lib/cn";
 
 export const metadata: Metadata = {
-  title: "Innaya Intelligence — AI Operating System for Food Supply Chains",
+  title: "Innaya Intelligence",
   description:
-    "Division 01 of Innaya Nutrifoods. Vernacular telephony, mandi price aggregation, intake quality computer vision, and cold-chain telemetry.",
+    "Software for physical food supply chains: vernacular voice agents, mandi price discovery, intake grading by camera, cold-chain telemetry and batch traceability.",
   alternates: { canonical: `${SITE.url}/platforms` },
   openGraph: {
-    title: "Innaya Intelligence — Food Supply Chain OS",
-    description:
-      "Enterprise AI software suite powering procurement, quality verification, and temperature-controlled logistics.",
+    title: "Innaya Intelligence · Innaya Nutri Foods",
+    description: "Software that keeps the food chain honest, from farmgate call to batch record.",
     url: `${SITE.url}/platforms`,
     type: "website",
   },
 };
 
+const STATUS_STYLE: Record<IntelModule["status"], string> = {
+  "Deployed in PAN8": "bg-forest text-paper",
+  "Active Pilot": "bg-sand-soft/60 text-ink",
+  "Core Platform": "border border-line-strong text-ink-soft",
+};
+
+interface Principle {
+  title: string;
+  body: string;
+}
+
+const PRINCIPLES: Principle[] = [
+  {
+    title: "Phone calls, not apps",
+    body: "Drivers and suppliers talk to consent-aware voice agents in Tamil, Malayalam, Hindi or English. Nobody has to install anything.",
+  },
+  {
+    title: "People sign off",
+    body: "Models transcribe calls, extract quotes and flag delays. Every purchase order and grade settlement still needs a human approval.",
+  },
+  {
+    title: "Evidence on every lot",
+    body: "Each transaction carries timestamped weighments, photos and batch IDs, building a record both sides can trust.",
+  },
+];
+
+interface Spec {
+  title: string;
+  engine: string;
+  body: string;
+}
+
+const STACK: Spec[] = [
+  {
+    title: "Multilingual telephony",
+    engine: "Amazon Bedrock, Twilio SIP",
+    body: "Voice agents log arrival times and weighments with drivers and mandi suppliers.",
+  },
+  {
+    title: "Procurement workflows",
+    engine: "AWS Step Functions",
+    body: "Multi-step flows for quotes, freight confirmation and intake checklists, with human sign-off gates.",
+  },
+  {
+    title: "Cold-chain telemetry",
+    engine: "AWS IoT Core, Timestream",
+    body: "GPS and temperature logged every three minutes, with automatic alerts and rerouting.",
+  },
+  {
+    title: "Batch provenance",
+    engine: "Amazon Aurora Serverless",
+    body: "Lot records linking mandi receipts, lab assays and factory intake certificates.",
+  },
+];
+
 export default function PlatformsPage() {
   return (
     <>
       <Nav />
-      <main className="overflow-x-clip">
-        <PageHero
-          eyebrow="Division 01 · Software & Platforms"
-          title="An Operating System for Agricultural Supply Chains"
-          blurb={
-            <>
-              Food procurement across India has historically suffered from unrecorded
-              deductions, subjective quality rejections, and chaotic telephony. Innaya
-              Intelligence replaces manual friction with vernacular voice coordination,
-              digital lot records, and continuous cold-chain telemetry.
-            </>
-          }
+      <main id="main" className="overflow-x-clip">
+        <PageHeader
+          crumbs={[{ label: "Platforms" }]}
+          kicker="Innaya Intelligence"
+          title="Fewer phone calls."
+          accent="Fewer arguments at the gate."
+          lede="Indian food procurement still runs on unrecorded deductions, subjective grading and endless calls. We build software that replaces each of them with a record."
+          actions={<ButtonLink href="/contact?topic=Partnership">Request a pilot</ButtonLink>}
+          image={{ src: "/innaya-infrastructure.jpg", alt: "Refrigerated trucks at a modern pack-house", position: "50% 55%" }}
         />
 
-        {/* Architectural Image */}
-        <div className="mx-auto w-full max-w-[1360px] px-5 pt-8 md:px-12">
-          <div className="relative aspect-[21/9] w-full overflow-hidden rounded-3xl border border-line bg-ink">
-            <Image
-              src="/innaya-infrastructure.jpg"
-              alt="Innaya Software & Cold-Chain Logistics Infrastructure"
-              fill
-              priority
-              sizes="(max-width: 1360px) 100vw, 1360px"
-              className="object-cover"
+        {/* Principles */}
+        <section className="wrap py-24 md:py-32">
+          <ul className="grid gap-10 md:grid-cols-3 md:gap-8">
+            {PRINCIPLES.map((p, i) => (
+              <Reveal as="li" key={p.title} delay={i * 0.06} className="border-t border-line pt-6">
+                <p className="text-[13px] text-sand">/{String(i + 1).padStart(2, "0")}</p>
+                <h2 className="mt-5 text-[22px] font-normal tracking-[-0.025em] text-ink">{p.title}</h2>
+                <p className="mt-3 max-w-[40ch] text-[15.5px] leading-[1.65] text-ink-soft">{p.body}</p>
+              </Reveal>
+            ))}
+          </ul>
+        </section>
+
+        {/* Modules */}
+        <section className="bg-paper-deep">
+          <div className="wrap py-24 md:py-36">
+            <SectionIntro
+              kicker="The suite"
+              title="Seven modules."
+              accent="One record of the harvest."
+              body="Each module stands alone. Together they follow a lot from the first call to the farmer to the batch code on a PAN8 pouch."
             />
-          </div>
-        </div>
-
-        {/* The Full Intelligence Matrix */}
-        <div className="mt-8">
-          <AILayer />
-        </div>
-
-        {/* Enterprise Cloud Architecture */}
-        <section className="border-t border-line bg-bone py-20 sm:py-28">
-          <div className="mx-auto w-full max-w-[1360px] px-5 sm:px-8 md:px-12">
-            <div className="grid gap-10 lg:grid-cols-12 lg:gap-16">
-              <div className="lg:col-span-5">
-                <span className="font-mono text-[10px] uppercase tracking-[0.24em] text-mute">
-                  Cloud Infrastructure
-                </span>
-                <h2 className="mt-4 font-serif text-3xl sm:text-4xl font-normal leading-[1.15] tracking-tight text-ink">
-                  Built on AWS for Enterprise Reliability
-                </h2>
-                <p className="mt-5 text-[15px] sm:text-[16px] leading-[1.65] text-ink-soft">
-                  Agricultural logistics operate 24/7 across remote mandi hubs. Our platform
-                  leverages Amazon Bedrock for low-latency vernacular telephony, Step Functions
-                  for multi-party procurement state machines, and Aurora PostgreSQL for immutable
-                  batch lineages.
-                </p>
-
-                <div className="mt-8">
-                  <Link
-                    href="/contact"
-                    className="inline-flex items-center gap-2 rounded-full bg-ink px-6 py-3.5 text-sm font-semibold text-bone transition-all duration-200 hover:bg-leaf-deep active:scale-[0.98] active:translate-y-[1px]"
-                  >
-                    Request Enterprise Pilot →
-                  </Link>
-                </div>
-              </div>
-
-              <div className="grid gap-4 sm:grid-cols-2 lg:col-span-7">
-                <TechSpec
-                  title="Multilingual Telephony"
-                  engine="Amazon Bedrock + Twilio SIP"
-                  desc="Voice agents engage truck drivers and mandi suppliers in Tamil, Malayalam, Hindi, and English to log live arrival ETAs and volume weighments."
-                />
-                <TechSpec
-                  title="Procurement State Machines"
-                  engine="AWS Step Functions"
-                  desc="Automated multi-step workflows coordinate RFQ quotes, freight confirmation, and intake checklists with human sign-off gates."
-                />
-                <TechSpec
-                  title="Cold-Chain Telemetry"
-                  engine="AWS IoT Core + Timestream"
-                  desc="Continuous GPS and sensor logging every 180 seconds. Instant anomaly detection triggers automated dynamic re-routing."
-                />
-                <TechSpec
-                  title="Immutable Batch Provenance"
-                  engine="Amazon Aurora Serverless"
-                  desc="Digital lot records linking grower mandi receipts, lab quality assays, and factory intake certificates."
-                />
-              </div>
-            </div>
+            <ul className="mt-14 border-t border-line-strong md:mt-20">
+              {INTEL_MODULES.map((m) => (
+                <li key={m.id} className="grid gap-4 border-b border-line py-8 md:grid-cols-12 md:gap-8">
+                  <div className="md:col-span-3">
+                    <h3 className="text-[22px] font-normal tracking-[-0.025em] text-ink">{m.name}</h3>
+                    <p className="serif-i mt-1 text-[18px] text-sand">{m.tagline}</p>
+                  </div>
+                  <p className="text-[15.5px] leading-[1.65] text-ink-soft md:col-span-5">{m.body}</p>
+                  <p className="text-[14px] leading-[1.7] text-mute md:col-span-2">
+                    {m.capabilities.join(", ")}
+                  </p>
+                  <div className="md:col-span-2 md:text-right">
+                    <span className={cn("inline-block rounded-full px-3 py-1 text-[12px]", STATUS_STYLE[m.status])}>
+                      {m.status}
+                    </span>
+                  </div>
+                </li>
+              ))}
+            </ul>
           </div>
         </section>
+
+        {/* Architecture */}
+        <section className="wrap py-24 md:py-36">
+          <SectionIntro
+            kicker="Under the hood"
+            title="Built on AWS."
+            accent="Running when the mandi does."
+            body="Agricultural logistics never close. The platform runs on managed AWS services chosen for uptime in remote hubs and an auditable trail."
+          />
+          <dl className="mt-14 grid gap-x-10 md:mt-20 md:grid-cols-2">
+            {STACK.map((s) => (
+              <div key={s.title} className="border-t border-line py-8">
+                <dt className="flex flex-wrap items-baseline justify-between gap-3">
+                  <span className="text-[20px] tracking-[-0.02em] text-ink">{s.title}</span>
+                  <span className="text-[13px] text-forest">{s.engine}</span>
+                </dt>
+                <dd className="mt-3 max-w-[52ch] text-[15.5px] leading-[1.65] text-ink-soft">{s.body}</dd>
+              </div>
+            ))}
+          </dl>
+        </section>
+
+        <WorkWithUs title="Run a pilot with us." accent="Start with one corridor." />
       </main>
       <Footer />
     </>
-  );
-}
-
-function TechSpec({
-  title,
-  engine,
-  desc,
-}: {
-  title: string;
-  engine: string;
-  desc: string;
-}) {
-  return (
-    <div className="rounded-2xl border border-line bg-bone-deep/50 p-6">
-      <span className="font-mono text-[10px] uppercase tracking-[0.18em] text-leaf-deep">
-        {engine}
-      </span>
-      <h3 className="mt-2 font-sans text-lg font-bold text-ink">{title}</h3>
-      <p className="mt-2 text-sm leading-[1.6] text-ink-soft">{desc}</p>
-    </div>
   );
 }

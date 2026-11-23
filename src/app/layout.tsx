@@ -1,24 +1,18 @@
 import type { Metadata, Viewport } from "next";
-import { Plus_Jakarta_Sans, Cormorant_Garamond, JetBrains_Mono } from "next/font/google";
+import { Plus_Jakarta_Sans, Cormorant_Garamond } from "next/font/google";
 import "./globals.css";
 
-const sans = Plus_Jakarta_Sans({
-  variable: "--font-sans",
+const jakarta = Plus_Jakarta_Sans({
+  variable: "--font-jakarta",
   subsets: ["latin"],
   display: "swap",
 });
 
-const serif = Cormorant_Garamond({
-  variable: "--font-serif",
+const cormorant = Cormorant_Garamond({
+  variable: "--font-cormorant",
   subsets: ["latin"],
-  weight: ["400", "600"],
-  style: ["normal", "italic"],
-  display: "swap",
-});
-
-const mono = JetBrains_Mono({
-  variable: "--font-mono",
-  subsets: ["latin"],
+  weight: ["400", "500"],
+  style: ["italic"],
   display: "swap",
 });
 
@@ -28,8 +22,8 @@ export const viewport: Viewport = {
   width: "device-width",
   initialScale: 1,
   themeColor: [
-    { media: "(prefers-color-scheme: light)", color: "#f5f0e6" },
-    { media: "(prefers-color-scheme: dark)", color: "#1f1a14" },
+    { media: "(prefers-color-scheme: light)", color: "#f6f3ec" },
+    { media: "(prefers-color-scheme: dark)", color: "#1b231e" },
   ],
   colorScheme: "light",
 };
@@ -105,9 +99,17 @@ export default function RootLayout({
   return (
     <html
       lang="en-IN"
-      className={`${sans.variable} ${serif.variable} ${mono.variable} antialiased`}
+      className={`${jakarta.variable} ${cormorant.variable} antialiased`}
     >
-      <body className="bg-bone text-ink min-h-screen">{children}</body>
+      <body className="grain min-h-[100dvh] bg-paper text-ink">
+        <a
+          href="#main"
+          className="sr-only focus:not-sr-only focus:fixed focus:left-4 focus:top-4 focus:z-[70] focus:bg-ink focus:px-4 focus:py-2 focus:text-paper"
+        >
+          Skip to content
+        </a>
+        {children}
+      </body>
     </html>
   );
 }

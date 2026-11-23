@@ -2,229 +2,196 @@
 
 import { useEffect, useState } from "react";
 import Link from "next/link";
-import { AnimatePresence, motion, useScroll, useMotionValueEvent } from "motion/react";
+import { usePathname } from "next/navigation";
+import { AnimatePresence, motion, useMotionValueEvent, useScroll } from "motion/react";
 import { cn } from "@/lib/cn";
 import { LogoLockup } from "./Logo";
+import Arrow from "./ui/Arrow";
 
-const links = [
-  { href: "/#divisions", label: "Divisions" },
-  { href: "/thesis", label: "Thesis" },
-  { href: "/platforms", label: "Platforms" },
-  { href: "/brands/pan8", label: "PAN8 (Brand)" },
-  { href: "/operations", label: "Operations" },
-  { href: "/about", label: "Company" },
-  { href: "/contact", label: "Contact" },
+interface NavLink {
+  href: string;
+  label: string;
+  note: string;
+}
+
+const LINKS: NavLink[] = [
+  { href: "/thesis", label: "Thesis", note: "Why India needs an assured buyer" },
+  { href: "/operations", label: "Operations", note: "Sourcing corridors and processing" },
+  { href: "/platforms", label: "Platforms", note: "Innaya Intelligence software" },
+  { href: "/brands/pan8", label: "PAN8", note: "Our consumer nutrition brand" },
+  { href: "/about", label: "Company", note: "Founders, story, governance" },
+  { href: "/careers", label: "Careers", note: "Open roles in Kerala" },
 ];
 
-const EASE = [0.16, 1, 0.3, 1] as const;
+const SCROLL_THRESHOLD = 32;
+
+function isActive(pathname: string, href: string): boolean {
+  if (href === "/brands/pan8") {
+    return pathname.startsWith("/brands") || pathname.startsWith("/products");
+  }
+  return pathname === href || pathname.startsWith(`${href}/`);
+}
 
 export default function Nav() {
+  const pathname = usePathname();
   const [scrolled, setScrolled] = useState(false);
   const [open, setOpen] = useState(false);
   const { scrollY } = useScroll();
 
-  useMotionValueEvent(scrollY, "change", (latest) => {
-    setScrolled(latest > 24);
-  });
+  useMotionValueEvent(scrollY, "change", (y) => setScrolled(y > SCROLL_THRESHOLD));
 
   useEffect(() => {
     document.documentElement.style.overflow = open ? "hidden" : "";
+    const onKey = (e: KeyboardEvent) => e.key === "Escape" && setOpen(false);
+    window.addEventListener("keydown", onKey);
     return () => {
       document.documentElement.style.overflow = "";
+      window.removeEventListener("keydown", onKey);
     };
   }, [open]);
 
-  useEffect(() => {
-    function onKey(e: KeyboardEvent) {
-      if (e.key === "Escape") setOpen(false);
-    }
-    if (open) window.addEventListener("keydown", onKey);
-    return () => window.removeEventListener("keydown", onKey);
-  }, [open]);
+  // Home opens on a dark photograph: nav sits on it in light type until scrolled.
+  const overlay = pathname === "/" && !scrolled && !open;
 
   return (
     <>
-      <motion.header
-        initial={{ y: -40, opacity: 0 }}
-        animate={{ y: 0, opacity: 1 }}
-        transition={{ duration: 0.8, ease: EASE }}
+      <header
         className={cn(
-          "fixed inset-x-0 top-0 z-50 transition-[backdrop-filter,background,border] duration-500",
-          scrolled || open
-            ? "border-b border-line/60 bg-bone/85 backdrop-blur-xl shadow-[0_12px_36px_-12px_rgba(26,22,20,0.06),inset_0_-1px_0_rgba(255,255,255,0.4)]"
-            : "border-b border-transparent bg-transparent",
+          "fixed inset-x-0 top-0 z-50 transition-[background-color,border-color,color] duration-300",
+          overlay
+            ? "border-b border-paper/15 bg-transparent text-paper"
+            : "border-b border-line/80 bg-paper/90 text-ink backdrop-blur-md",
         )}
       >
-        <div className="mx-auto flex max-w-[1400px] items-center justify-between px-5 py-4 md:px-10">
-          <Link
-            href="/"
-            title="Innaya Nutri Foods — home"
-            onClick={() => setOpen(false)}
-            className="group flex items-center"
-          >
-            <LogoLockup />
-            <span className="sr-only">— home</span>
+        <div className="wrap flex h-16 items-center justify-between gap-6 md:h-[72px]">
+          <Link href="/" aria-label="Innaya Nutri Foods, home" onClick={() => setOpen(false)} className="shrink-0">
+            <LogoLockup tone={overlay ? "paper" : "ink"} />
           </Link>
 
-          <nav className="hidden items-center gap-1 lg:flex">
-            {links.map((l) => (
-              <Link
-                key={l.href}
-                href={l.href}
-                className="group relative rounded-full px-4 py-2 text-[13px] tracking-tight text-ink-soft transition-colors hover:text-ink active:scale-[0.98]"
-              >
-                <span className="relative z-10">{l.label}</span>
-                <span className="absolute inset-0 -z-0 rounded-full bg-ink/0 transition-colors duration-300 group-hover:bg-ink/[0.05]" />
-              </Link>
-            ))}
+          <nav aria-label="Primary" className="hidden lg:block">
+            <ul className="flex items-center gap-1">
+              {LINKS.map((l) => {
+                const active = isActive(pathname, l.href);
+                return (
+                  <li key={l.href}>
+                    <Link
+                      href={l.href}
+                      aria-current={active ? "page" : undefined}
+                      className={cn(
+                        "relative inline-flex h-11 items-center px-3.5 text-[14px] tracking-[-0.01em] transition-opacity",
+                        active ? "opacity-100" : "opacity-70 hover:opacity-100",
+                      )}
+                    >
+                      {l.label}
+                      {active && (
+                        <motion.span
+                          layoutId="nav-active"
+                          className="absolute inset-x-3.5 bottom-2.5 h-px bg-current"
+                          transition={{ type: "spring", stiffness: 380, damping: 32 }}
+                        />
+                      )}
+                    </Link>
+                  </li>
+                );
+              })}
+            </ul>
           </nav>
 
           <div className="flex items-center gap-2">
             <Link
               href="/contact"
-              className="hidden md:inline-flex group items-center gap-2 rounded-full border border-ink/20 bg-ink px-5 py-2.5 text-[13px] font-medium text-bone shadow-[0_4px_14px_rgba(26,22,20,0.12),inset_0_1px_0_rgba(255,255,255,0.15)] transition-all hover:bg-leaf-deep hover:border-leaf-deep active:scale-[0.98] active:translate-y-[1px]"
+              className={cn(
+                "group hidden h-10 items-center gap-2.5 rounded-full border pl-5 pr-4 text-[13.5px] font-medium transition-colors sm:inline-flex",
+                overlay
+                  ? "border-paper/40 text-paper hover:bg-paper hover:text-ink"
+                  : "border-ink/20 text-ink hover:border-forest-deep hover:bg-forest-deep hover:text-paper",
+              )}
             >
-              <span className="relative h-1.5 w-1.5 rounded-full bg-leaf">
-                <span className="absolute inset-0 animate-ping rounded-full bg-leaf opacity-75" />
-              </span>
-              Get in touch
-              <ArrowIcon />
+              Let&apos;s talk
+              <Arrow direction="up-right" className="transition-transform group-hover:-translate-y-0.5" />
             </Link>
-            <MenuButton open={open} onClick={() => setOpen((o) => !o)} />
+            <button
+              type="button"
+              onClick={() => setOpen((o) => !o)}
+              aria-expanded={open}
+              aria-controls="mobile-menu"
+              aria-label={open ? "Close menu" : "Open menu"}
+              className="relative grid h-11 w-11 place-items-center lg:hidden"
+            >
+              <span className="relative block h-3 w-6">
+                <span
+                  className={cn(
+                    "absolute left-0 top-0 h-[1.5px] w-6 bg-current transition-transform duration-300",
+                    open && "translate-y-[5px] rotate-45",
+                  )}
+                />
+                <span
+                  className={cn(
+                    "absolute bottom-0 left-0 h-[1.5px] w-6 bg-current transition-transform duration-300",
+                    open && "-translate-y-[5px] -rotate-45",
+                  )}
+                />
+              </span>
+            </button>
           </div>
         </div>
-      </motion.header>
+      </header>
 
       <AnimatePresence>
         {open && (
           <motion.div
-            key="mobile-sheet"
+            id="mobile-menu"
+            role="dialog"
+            aria-modal="true"
+            aria-label="Site menu"
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
-            transition={{ duration: 0.25 }}
-            className="fixed inset-0 z-40 bg-bone/[0.97] backdrop-blur-2xl lg:hidden"
-            role="dialog"
-            aria-modal="true"
-            aria-label="Mobile navigation"
+            transition={{ duration: 0.2 }}
+            className="fixed inset-0 z-40 overflow-y-auto bg-paper pt-16 lg:hidden"
           >
-            <div className="flex h-full flex-col px-5 pb-8 pt-24">
-              <nav className="flex flex-1 flex-col">
-                {links.map((l, i) => (
-                  <motion.div
+            <nav aria-label="Mobile" className="wrap flex min-h-full flex-col pb-10">
+              <ul className="border-t border-line">
+                {LINKS.map((l, i) => (
+                  <motion.li
                     key={l.href}
-                    initial={{ opacity: 0, y: 16 }}
+                    initial={{ opacity: 0, y: 12 }}
                     animate={{ opacity: 1, y: 0 }}
-                    exit={{ opacity: 0, y: 8 }}
-                    transition={{ delay: 0.06 + i * 0.05, duration: 0.5, ease: EASE }}
+                    transition={{ delay: 0.04 * i, type: "spring", stiffness: 260, damping: 28 }}
+                    className="border-b border-line"
                   >
                     <Link
                       href={l.href}
+                      aria-current={isActive(pathname, l.href) ? "page" : undefined}
                       onClick={() => setOpen(false)}
-                      className="group flex items-baseline justify-between border-b border-line/60 py-5 active:bg-ink/[0.03]"
+                      className="flex items-center justify-between gap-4 py-5"
                     >
-                      <span className="font-serif text-[2.25rem] leading-none tracking-tight text-ink transition-transform group-hover:translate-x-1">
-                        {l.label}
+                      <span>
+                        <span className="block text-[30px] font-normal leading-none tracking-[-0.035em]">
+                          {l.label}
+                        </span>
+                        <span className="mt-2 block text-[14px] text-mute">{l.note}</span>
                       </span>
-                      <span className="font-mono text-[11px] uppercase tracking-[0.2em] text-mute">
-                        0{i + 1}
-                      </span>
+                      <Arrow className="text-mute" />
                     </Link>
-                  </motion.div>
+                  </motion.li>
                 ))}
-              </nav>
-
-              <motion.div
-                initial={{ opacity: 0, y: 16 }}
-                animate={{ opacity: 1, y: 0 }}
-                exit={{ opacity: 0 }}
-                transition={{ delay: 0.06 + links.length * 0.05, duration: 0.5, ease: EASE }}
-                className="mt-8 flex flex-col gap-4"
+              </ul>
+              <Link
+                href="/contact"
+                onClick={() => setOpen(false)}
+                className="mt-8 inline-flex h-12 items-center justify-center gap-2 rounded-full bg-forest-deep text-[15px] font-medium text-paper"
               >
-                <Link
-                  href="/contact"
-                  onClick={() => setOpen(false)}
-                  className="inline-flex w-full items-center justify-center gap-2 rounded-full bg-ink px-6 py-4 text-[14px] font-medium text-bone transition-colors active:bg-ink-soft"
-                >
-                  <span className="relative h-1.5 w-1.5 rounded-full bg-leaf">
-                    <span className="absolute inset-0 animate-ping rounded-full bg-leaf opacity-75" />
-                  </span>
-                  Get in touch
-                  <ArrowIcon />
-                </Link>
-                <p className="text-center font-mono text-[10px] uppercase tracking-[0.22em] text-mute">
-                  Kerala · India
-                </p>
-              </motion.div>
-            </div>
+                Contact the founders
+                <Arrow />
+              </Link>
+              <p className="mt-auto pt-10 text-[13px] text-mute">
+                Kakkanad, Kerala. Operating across South India.
+              </p>
+            </nav>
           </motion.div>
         )}
       </AnimatePresence>
     </>
-  );
-}
-
-interface MenuButtonProps {
-  open: boolean;
-  onClick: () => void;
-}
-
-function MenuButton({ open, onClick }: MenuButtonProps) {
-  return (
-    <button
-      type="button"
-      aria-label={open ? "Close menu" : "Open menu"}
-      aria-expanded={open}
-      aria-controls="mobile-sheet"
-      onClick={onClick}
-      className={cn(
-        "relative grid h-11 w-11 place-items-center rounded-full border transition-colors lg:hidden",
-        open
-          ? "border-ink bg-ink text-bone"
-          : "border-line bg-bone/70 text-ink backdrop-blur hover:border-ink/40",
-      )}
-    >
-      <span className="relative block h-3.5 w-5">
-        <motion.span
-          aria-hidden="true"
-          animate={open ? { y: 7, rotate: 45 } : { y: 0, rotate: 0 }}
-          transition={{ duration: 0.35, ease: EASE }}
-          className="absolute left-0 top-0 block h-[1.75px] w-5 rounded-full bg-current"
-        />
-        <motion.span
-          aria-hidden="true"
-          animate={open ? { opacity: 0 } : { opacity: 1 }}
-          transition={{ duration: 0.2 }}
-          className="absolute left-0 top-1.5 block h-[1.75px] w-5 rounded-full bg-current"
-        />
-        <motion.span
-          aria-hidden="true"
-          animate={open ? { y: -7, rotate: -45 } : { y: 0, rotate: 0 }}
-          transition={{ duration: 0.35, ease: EASE }}
-          className="absolute bottom-0 left-0 block h-[1.75px] w-5 rounded-full bg-current"
-        />
-      </span>
-    </button>
-  );
-}
-
-function ArrowIcon() {
-  return (
-    <svg
-      width="14"
-      height="14"
-      viewBox="0 0 14 14"
-      className="-mr-0.5 transition-transform group-hover:translate-x-0.5"
-      aria-hidden="true"
-    >
-      <path
-        d="M3 7h8m-3-3 3 3-3 3"
-        stroke="currentColor"
-        strokeWidth="1.4"
-        strokeLinecap="round"
-        strokeLinejoin="round"
-        fill="none"
-      />
-    </svg>
   );
 }

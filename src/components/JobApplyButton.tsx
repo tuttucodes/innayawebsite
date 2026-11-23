@@ -44,13 +44,13 @@ export default function JobApplyButton({
       onClick={handleApply}
       className={
         className ||
-        "group inline-flex items-center gap-2 rounded-full bg-ink px-6 py-3 text-sm font-medium text-bone transition-colors hover:bg-leaf-deep"
+        "group inline-flex min-h-12 items-center gap-3 rounded-full bg-forest-deep pl-6 pr-5 text-[14px] font-medium text-paper transition-colors hover:bg-forest active:scale-[0.98]"
       }
     >
       {children ?? (
         <>
-          Apply
-          <span className="transition-transform group-hover:translate-x-1">→</span>
+          Apply for this role
+          <span aria-hidden="true" className="transition-transform group-hover:translate-x-0.5">&rarr;</span>
         </>
       )}
     </button>

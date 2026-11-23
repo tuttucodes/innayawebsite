@@ -8,17 +8,12 @@ interface LogoMarkProps {
   priority?: boolean;
 }
 
-export function LogoMark({
-  className,
-  tone = "leaf",
-  size = 40,
-  priority = false,
-}: LogoMarkProps) {
+export function LogoMark({ className, tone = "leaf", size = 40, priority = false }: LogoMarkProps) {
   const src = tone === "bone" ? "/innaya-logo-bone.png" : "/innaya-logo.png";
   return (
     <Image
       src={src}
-      alt="Innaya Nutri Foods"
+      alt=""
       width={size}
       height={size}
       className={cn("h-auto w-auto", className)}
@@ -29,36 +24,21 @@ export function LogoMark({
 
 interface LogoLockupProps {
   className?: string;
-  tone?: "ink" | "bone";
+  tone?: "ink" | "paper";
 }
 
 export function LogoLockup({ className, tone = "ink" }: LogoLockupProps) {
-  const text = tone === "ink" ? "text-ink" : "text-bone";
-  const sub = tone === "ink" ? "text-mute" : "text-bone/55";
-  const markTone = tone === "bone" ? "bone" : "leaf";
   return (
-    <span className={cn("flex items-center gap-3", className)}>
-      <span className="block h-9 w-9 shrink-0 sm:h-10 sm:w-10">
+    <span className={cn("flex items-center gap-2.5", className)}>
+      <span className="block h-8 w-8 shrink-0">
         <LogoMark
-          tone={markTone}
-          size={40}
+          tone={tone === "paper" ? "bone" : "leaf"}
+          size={32}
           className="!h-full !w-full"
           priority
         />
       </span>
-      <span className={cn("flex flex-col gap-0.5 leading-none", text)}>
-        <span className="font-sans font-bold text-[16px] tracking-tight sm:text-[18px]">
-          Innaya
-        </span>
-        <span
-          className={cn(
-            "font-mono text-[9px] uppercase tracking-[0.2em]",
-            sub,
-          )}
-        >
-          Nutri Foods
-        </span>
-      </span>
+      <span className="text-[17px] font-semibold tracking-[-0.03em]">Innaya</span>
     </span>
   );
 }

@@ -1,151 +1,139 @@
 import Link from "next/link";
 import { SITE } from "@/data/site";
-import { LogoMark } from "./Logo";
+import { LogoLockup } from "./Logo";
+import Arrow from "./ui/Arrow";
+
+interface FooterLink {
+  href: string;
+  label: string;
+  external?: boolean;
+}
+
+interface FooterColumn {
+  title: string;
+  links: FooterLink[];
+}
+
+const COLUMNS: FooterColumn[] = [
+  {
+    title: "Company",
+    links: [
+      { href: "/about", label: "About Innaya" },
+      { href: "/thesis", label: "The assured buyer thesis" },
+      { href: "/sustainability", label: "Sustainability" },
+      { href: "/careers", label: "Careers" },
+      { href: "/contact", label: "Contact" },
+    ],
+  },
+  {
+    title: "What we do",
+    links: [
+      { href: "/operations", label: "Sourcing & processing" },
+      { href: "/platforms", label: "Innaya Intelligence" },
+      { href: "/brands/pan8", label: "PAN8" },
+      { href: "/products", label: "PAN8 range" },
+    ],
+  },
+  {
+    title: "Elsewhere",
+    links: [
+      { href: SITE.social.pan8, label: "pan8.in", external: true },
+      { href: SITE.social.linkedin, label: "LinkedIn", external: true },
+      { href: "https://kernelandoak.com", label: "Kernel & Oak", external: true },
+    ],
+  },
+];
 
 export default function Footer() {
   const year = new Date().getFullYear();
+
   return (
-    <footer className="relative max-w-full overflow-hidden bg-ink text-bone">
-      <div className="mx-auto max-w-[1360px] px-5 pb-10 pt-20 sm:px-8 md:px-12 md:pt-28">
-        <div className="grid gap-12 lg:grid-cols-12">
-          {/* Brand Column */}
-          <div className="lg:col-span-5">
-            <div className="mb-6 flex items-center gap-3.5">
-              <span className="block h-10 w-10">
-                <LogoMark tone="bone" />
-              </span>
-              <div className="flex flex-col leading-none">
-                <span className="font-sans text-xl font-bold tracking-tight text-bone">
-                  Innaya
-                </span>
-                <span className="mt-1 font-mono text-[9px] uppercase tracking-[0.22em] text-bone/60">
-                  Nutrifoods Private Limited
-                </span>
-              </div>
-            </div>
-
-            <h2 className="mt-6 font-serif text-3xl sm:text-4xl lg:text-5xl font-normal leading-[1.12] text-bone">
-              Rethinking Indian food, from farmgate to pantry.
-            </h2>
-
-            <p className="mt-5 max-w-md text-[15px] leading-[1.65] text-bone/70">
-              Integrated agricultural technology and consumer food operations. Headquartered
-              in Kakkanad, Kerala. Operating across South India.
+    <footer className="bg-forest-night text-paper">
+      <div className="wrap pb-10 pt-20 md:pt-28">
+        <div className="grid gap-14 md:grid-cols-12">
+          <div className="md:col-span-5">
+            <LogoLockup tone="paper" />
+            <p className="mt-8 max-w-[22ch] text-[clamp(1.6rem,1.2rem+1vw,2.1rem)] font-normal leading-[1.15] tracking-[-0.03em]">
+              From farmgate to pantry.{" "}
+              <span className="serif-i text-[1.08em] text-sand-soft">Built in Kerala.</span>
             </p>
-
-            <div className="mt-8 flex items-center gap-3">
-              <a
-                href={SITE.social.linkedin}
-                target="_blank"
-                rel="noopener noreferrer"
-                aria-label="Innaya Nutri Foods on LinkedIn"
-                className="group inline-flex items-center gap-2 rounded-full border border-bone/20 bg-bone/[0.05] px-4 py-2 text-[13px] tracking-tight text-bone/85 transition-all hover:border-amber hover:bg-bone/[0.1] hover:text-amber"
-              >
-                <LinkedinIcon />
-                LinkedIn
-                <span className="opacity-50 transition-opacity group-hover:opacity-100">↗</span>
-              </a>
-              <a
-                href={SITE.social.pan8}
-                target="_blank"
-                rel="noopener noreferrer"
-                title="PAN8 — A Nutri Co."
-                className="group inline-flex items-center gap-2 rounded-full border border-bone/20 bg-bone/[0.05] px-4 py-2 text-[13px] tracking-tight text-bone/85 transition-all hover:border-amber hover:bg-bone/[0.1] hover:text-amber"
-              >
-                <span className="font-sans font-medium">pan8.in</span>
-                <span className="opacity-50 transition-opacity group-hover:opacity-100">↗</span>
-              </a>
-            </div>
+            <a
+              href={`mailto:${SITE.contactEmail}`}
+              className="group mt-10 inline-flex items-center gap-2 border-b border-paper/25 pb-1.5 text-[15px] transition-colors hover:border-paper"
+            >
+              {SITE.contactEmail}
+              <Arrow direction="up-right" className="transition-transform group-hover:-translate-y-0.5" />
+            </a>
           </div>
 
-          {/* Directory Columns */}
-          <div className="grid grid-cols-2 gap-8 sm:grid-cols-3 lg:col-span-7">
-            <Col title="The Group">
-              <Link href="/">Overview</Link>
-              <Link href="/thesis">Assured Buyer Thesis</Link>
-              <Link href="/operations">Supply Operations</Link>
-              <Link href="/about">Corporate Profile</Link>
-              <Link href="/sustainability">Sustainability &amp; Water</Link>
-              <Link href="/careers">Careers (Hiring)</Link>
-              <Link href="/contact">Executive Contact</Link>
-            </Col>
-            <Col title="Platforms & Software">
-              <Link href="/platforms">Innaya Intelligence Suite</Link>
-              <Link href="/platforms">Innaya Voice &amp; Source</Link>
-              <Link href="/platforms">Innaya FirstMile</Link>
-              <Link href="/platforms">Cold-Chain Telemetry</Link>
-              <Link href="/platforms">AWS Cloud Architecture</Link>
-            </Col>
-            <Col title="Consumer Brands">
-              <Link href="/brands/pan8">PAN8 Brand Overview</Link>
-              <Link href="/products">All 13 Millet SKUs</Link>
-              <Link href="/brands/pan8#products">Pancakes &amp; Dosas</Link>
-              <Link href="/brands/pan8#products">Upma &amp; Protein Bars</Link>
-              <a href={SITE.social.pan8} target="_blank" rel="noopener noreferrer">
-                Storefront (Beta) ↗
-              </a>
-            </Col>
-          </div>
+          <nav aria-label="Footer" className="grid grid-cols-2 gap-10 sm:grid-cols-3 md:col-span-7">
+            {COLUMNS.map((col) => (
+              <div key={col.title}>
+                <h2 className="text-[13px] text-paper/50">{col.title}</h2>
+                <ul className="mt-5 space-y-3">
+                  {col.links.map((l) => (
+                    <li key={l.label}>
+                      {l.external ? (
+                        <a
+                          href={l.href}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="inline-flex items-center gap-1.5 text-[15px] text-paper/85 transition-colors hover:text-sand-soft"
+                        >
+                          {l.label}
+                          <Arrow direction="up-right" className="h-3 w-3 opacity-60" />
+                        </a>
+                      ) : (
+                        <Link
+                          href={l.href}
+                          className="text-[15px] text-paper/85 transition-colors hover:text-sand-soft"
+                        >
+                          {l.label}
+                        </Link>
+                      )}
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            ))}
+          </nav>
         </div>
 
-        {/* Corporate bottom row with CIN, licenses & legal routes */}
-        <div className="mt-16 flex flex-col gap-4 border-t border-bone/15 pt-6 font-mono text-[10px] uppercase tracking-[0.16em] text-bone/60 sm:flex-row sm:items-center sm:justify-between">
-          <div className="flex flex-wrap items-center gap-x-3 gap-y-1">
-            <span>© {year} {SITE.legal}</span>
-            <span>·</span>
-            <span>CIN: {SITE.cin}</span>
-            <span>·</span>
-            <span>DPIIT Recognized · FSSAI Central Licensed</span>
-          </div>
-          <div className="flex flex-wrap items-center gap-3 text-bone/50">
-            <Link href="/privacy" className="hover:text-bone transition-colors">
+        <div className="mt-20 grid gap-6 border-t border-paper/15 pt-8 text-[13px] text-paper/50 md:grid-cols-12">
+          <address className="not-italic leading-relaxed md:col-span-5">
+            {SITE.legal}
+            <br />
+            F223, DLF New Town Heights, Kakkanad, Ernakulam, Kerala 682037
+          </address>
+          <p className="leading-relaxed md:col-span-4">
+            CIN {SITE.cin}
+            <br />
+            DPIIT recognised · FSSAI central licence
+          </p>
+          <div className="flex flex-wrap items-start gap-x-5 gap-y-2 md:col-span-3 md:justify-end">
+            <Link href="/privacy" className="hover:text-paper">
               Privacy
             </Link>
-            <span>·</span>
-            <Link href="/terms" className="hover:text-bone transition-colors">
+            <Link href="/terms" className="hover:text-paper">
               Terms
             </Link>
-            <span>·</span>
-            <span>{SITE.hq}</span>
+            <span>&copy; {year}</span>
           </div>
         </div>
-      </div>
 
-      <div
-        aria-hidden="true"
-        className="pointer-events-none select-none overflow-hidden px-5 pb-4 md:px-12"
-      >
-        <span className="block font-sans font-bold text-[clamp(3.5rem,1rem+16vw,16rem)] leading-[0.8] tracking-[-0.05em] text-bone/[0.08]">
-          INNAYA
-        </span>
+        <p className="mt-10 text-[13px] text-paper/40">
+          A{" "}
+          <a
+            href="https://kernelandoak.com"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="underline decoration-paper/20 underline-offset-4 hover:text-paper/70"
+          >
+            Kernel &amp; Oak
+          </a>{" "}
+          group company.
+        </p>
       </div>
     </footer>
-  );
-}
-
-function Col({ title, children }: { title: string; children: React.ReactNode }) {
-  return (
-    <div>
-      <span className="block font-mono text-[10px] uppercase tracking-[0.22em] text-bone/50">
-        {title}
-      </span>
-      <div className="mt-4 flex flex-col gap-2.5 text-[14px] text-bone/85 [&_a]:transition-colors [&_a:hover]:text-amber">
-        {children}
-      </div>
-    </div>
-  );
-}
-
-function LinkedinIcon() {
-  return (
-    <svg
-      width="14"
-      height="14"
-      viewBox="0 0 24 24"
-      fill="currentColor"
-      aria-hidden="true"
-    >
-      <path d="M20.45 20.45h-3.55v-5.57c0-1.33-.02-3.04-1.85-3.04-1.85 0-2.13 1.45-2.13 2.94v5.67H9.36V9h3.41v1.56h.05c.47-.9 1.63-1.85 3.36-1.85 3.6 0 4.27 2.37 4.27 5.45v6.29zM5.34 7.43a2.06 2.06 0 1 1 0-4.13 2.06 2.06 0 0 1 0 4.13zm1.78 13.02H3.56V9h3.56v11.45zM22.22 0H1.77C.79 0 0 .77 0 1.72v20.55C0 23.23.79 24 1.77 24h20.45c.98 0 1.78-.77 1.78-1.72V1.72C24 .77 23.2 0 22.22 0z" />
-    </svg>
   );
 }

@@ -2,183 +2,134 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import Nav from "@/components/Nav";
 import Footer from "@/components/Footer";
-import PageHero from "@/components/PageHero";
-import JobApplyButton from "@/components/JobApplyButton";
 import JobsSchema from "@/components/JobsSchema";
+import PageHeader from "@/components/ui/PageHeader";
+import Arrow from "@/components/ui/Arrow";
+import Headline from "@/components/ui/Headline";
+import Reveal from "@/components/ui/Reveal";
+import SectionIntro from "@/components/ui/SectionIntro";
 import { JOBS } from "@/data/careers";
 import { SITE } from "@/data/site";
 
 export const metadata: Metadata = {
-  title: "Careers — join the team building India's AI-first nutrition company",
+  title: "Careers",
   description:
-    "Open roles at Innaya Nutri Foods (PAN8). We're hiring across tech, brand, ops, design and growth. Based in Kerala. Apply via email.",
+    "Open roles at Innaya Nutri Foods and PAN8 in Kerala: tech, brand, operations, design and growth. Send us your work, not your CV.",
   alternates: { canonical: `${SITE.url}/careers` },
   openGraph: {
     title: "Careers at Innaya Nutri Foods",
-    description:
-      "Build the AI operating layer underneath India's millet-first nutrition company. Open roles in tech, brand, ops, design and growth.",
+    description: "Build India's assured buyer for millets and pulses, from Kerala.",
     url: `${SITE.url}/careers`,
     type: "website",
   },
 };
 
-const TEAMS = [
-  "Founder's Office",
-  "Tech & Product",
-  "Sales & Marketing",
-  "Design & Social",
-  "Operations & Logistics",
-] as const;
+interface Reason {
+  title: string;
+  body: string;
+}
+
+const REASONS: Reason[] = [
+  { title: "Ground floor", body: "Year one of a venture-track food company. What you decide this quarter shapes next year." },
+  { title: "Ownership", body: "Eligible roles carry ESOPs. Real upside for the people who build it." },
+  { title: "Real-world software", body: "Code that changes what a truck driver or a grader does tomorrow morning." },
+  { title: "Kerala", body: "Based in Kakkanad. Hybrid for operating roles, remote-friendly for engineering." },
+];
 
 export default function CareersPage() {
   return (
     <>
       <JobsSchema />
       <Nav />
-      <main className="overflow-x-clip">
-        <PageHero
-          eyebrow="Careers"
-          title="Build the Company Shaping Tomorrow's Nutrition"
-          blurb={
-            <>
-              We&apos;re a focused team in Kerala building an integrated food
-              technology company. Tech, brand, operations, design, and growth — all under
-              one roof. Every application is reviewed directly by the leadership team.
-            </>
-          }
+      <main id="main" className="overflow-x-clip">
+        <PageHeader
+          crumbs={[{ label: "Careers" }]}
+          kicker="Careers"
+          title="Build the buyer India's farmers need."
+          accent="From Kerala."
+          lede="A small team covering food, brand, operations and software under one roof. Every application is read by the founders."
+          facts={[
+            { value: String(JOBS.length), label: "Open roles" },
+            { value: String(new Set(JOBS.map((j) => j.team)).size), label: "Teams hiring" },
+            { value: "Kochi", label: "Headquarters" },
+            { value: "ESOP", label: "On eligible roles" },
+          ]}
         />
 
-        <section className="mx-auto w-full max-w-[1400px] px-5 py-20 md:px-10 md:py-28">
-          <div className="grid gap-px overflow-hidden rounded-3xl border border-line/70 bg-line/80 shadow-[0_16px_36px_-12px_rgba(26,22,20,0.05)] md:grid-cols-4">
-            <Why
-              k="Ground floor"
-              v="Year-one of a venture-track FMCG company. Decisions you make this quarter live in next year's strategy."
-            />
-            <Why
-              k="ESOP track"
-              v="Eligible roles get equity. Real upside, real ownership."
-            />
-            <Why
-              k="Tech-forward"
-              v="Modern operations, real-time telemetry, and computer vision. Build software that directly touches physical supply."
-            />
-            <Why
-              k="In Kerala"
-              v="Headquartered in Kakkanad, Kochi. Hybrid for operating roles, remote-flexible for engineering."
-            />
-          </div>
-        </section>
-
-        <section className="mx-auto w-full max-w-[1400px] px-5 pb-24 md:px-10 md:pb-32">
-          <div className="flex flex-wrap items-end justify-between gap-6 border-t border-line pt-8">
-            <h2 className="font-serif text-[clamp(2rem,1rem+3.5vw,4rem)] leading-[0.96] tracking-[-0.02em]">
-              Open roles · {JOBS.length}
-            </h2>
-            <p className="max-w-md text-sm text-ink-soft">
-              Don&apos;t see a fit? Email{" "}
-              <a
-                href={`mailto:${SITE.hrEmail}`}
-                className="underline decoration-line underline-offset-4 hover:decoration-ink"
-              >
-                {SITE.hrEmail}
-              </a>{" "}
-              with what you&apos;d like to build.
-            </p>
-          </div>
-
-          <div className="mt-10 space-y-px overflow-hidden rounded-3xl border border-line bg-line">
-            {JOBS.map((job, i) => (
-              <article
-                key={job.slug}
-                id={job.slug}
-                className="group relative grid gap-4 bg-bone p-6 transition-colors hover:bg-bone-deep md:grid-cols-12 md:items-start md:gap-8 md:p-8"
-              >
-                <div className="flex items-center gap-3 md:col-span-1">
-                  <span className="font-mono text-[10px] uppercase tracking-[0.22em] text-mute">
-                    {String(i + 1).padStart(2, "0")}
-                  </span>
-                </div>
-
-                <div className="md:col-span-7">
-                  <Link
-                    href={`/careers/${job.slug}`}
-                    className="block font-serif text-[clamp(1.4rem,1rem+0.8vw,2rem)] tracking-tight text-ink hover:text-leaf-deep"
-                  >
-                    {job.title}
-                  </Link>
-                  <p className="mt-2 max-w-2xl text-sm leading-[1.55] text-ink-soft">
-                    {job.about}
-                  </p>
-                  <ul className="mt-4 flex flex-wrap gap-2">
-                    {[job.team, job.location, job.type, job.experience].map((m) => (
-                      <li
-                        key={m}
-                        className="rounded-full border border-line bg-bone px-3 py-1 font-mono text-[10px] uppercase tracking-[0.18em] text-mute"
-                      >
-                        {m}
-                      </li>
-                    ))}
-                  </ul>
-                </div>
-
-                <div className="flex items-center justify-between gap-3 md:col-span-4 md:justify-end">
-                  <Link
-                    href={`/careers/${job.slug}`}
-                    className="text-sm text-ink-soft underline-offset-4 hover:text-ink hover:underline"
-                  >
-                    Read role →
-                  </Link>
-                  <JobApplyButton job={job} />
-                </div>
-              </article>
+        <section className="wrap py-24 md:py-32">
+          <ul className="grid gap-10 sm:grid-cols-2 lg:grid-cols-4 lg:gap-8">
+            {REASONS.map((r, i) => (
+              <Reveal as="li" key={r.title} delay={i * 0.05} className="border-t border-line pt-6">
+                <h2 className="text-[20px] font-normal tracking-[-0.02em] text-ink">{r.title}</h2>
+                <p className="mt-3 text-[15px] leading-[1.65] text-ink-soft">{r.body}</p>
+              </Reveal>
             ))}
+          </ul>
+        </section>
+
+        <section className="bg-paper-deep">
+          <div className="wrap py-24 md:py-32">
+            <SectionIntro
+              kicker="Open roles"
+              title="Where you'd fit."
+              body={
+                <>
+                  Don&apos;t see your role? Write to{" "}
+                  <a href={`mailto:${SITE.hrEmail}`} className="text-ink underline decoration-line-strong underline-offset-4 hover:decoration-ink">
+                    {SITE.hrEmail}
+                  </a>{" "}
+                  with what you&apos;d like to build.
+                </>
+              }
+            />
+            <ul className="mt-14 border-t border-line-strong md:mt-20">
+              {JOBS.map((job) => (
+                <li key={job.slug} id={job.slug}>
+                  <Link
+                    href={`/careers/${job.slug}`}
+                    className="group grid gap-3 border-b border-line py-7 transition-colors hover:bg-paper/60 md:grid-cols-12 md:items-center md:gap-8 md:px-4"
+                  >
+                    <span className="text-[clamp(1.2rem,1rem+0.6vw,1.6rem)] tracking-[-0.025em] text-ink md:col-span-5">
+                      {job.title}
+                    </span>
+                    <span className="text-[14px] text-ink-soft md:col-span-2">{job.team}</span>
+                    <span className="text-[14px] text-ink-soft md:col-span-2">{job.location}</span>
+                    <span className="text-[14px] text-mute md:col-span-2">
+                      {job.type} · {job.experience}
+                    </span>
+                    <span className="hidden justify-end md:col-span-1 md:flex">
+                      <span className="grid h-9 w-9 place-items-center rounded-full border border-ink/15 transition-colors group-hover:border-forest-deep group-hover:bg-forest-deep group-hover:text-paper">
+                        <Arrow />
+                      </span>
+                    </span>
+                  </Link>
+                </li>
+              ))}
+            </ul>
           </div>
         </section>
 
-        <section className="border-y border-line bg-bone-deep/40">
-          <div className="mx-auto grid w-full max-w-[1400px] gap-px overflow-hidden px-5 py-20 md:grid-cols-5 md:px-10">
-            {TEAMS.map((t) => {
-              const count = JOBS.filter((j) => j.team === t).length;
-              return (
-                <div key={t} className="bg-bone-deep/40 p-6 first:pl-0">
-                  <span className="block font-mono text-[10px] uppercase tracking-[0.22em] text-mute">
-                    {t}
-                  </span>
-                  <span className="mt-2 block font-serif text-3xl tracking-tight">
-                    {count} {count === 1 ? "role" : "roles"}
-                  </span>
-                </div>
-              );
-            })}
-          </div>
-        </section>
-
-        <section className="mx-auto w-full max-w-[1400px] px-5 py-24 md:px-10 md:py-32">
-          <div className="grid gap-10 rounded-3xl bg-ink p-10 text-bone md:grid-cols-2 md:gap-16 md:p-16">
-            <div>
-              <span className="font-mono text-[10px] uppercase tracking-[0.22em] text-bone/60">
-                A note from the founders
-              </span>
-              <h2 className="mt-4 font-serif text-[clamp(2rem,1rem+3vw,3.6rem)] leading-[0.98] tracking-[-0.02em]">
-                Send us your work, not your CV.
-              </h2>
+        <section className="bg-forest-deep text-paper">
+          <div className="wrap grid gap-12 py-24 md:grid-cols-12 md:py-36">
+            <div className="md:col-span-7">
+              <p className="kicker mb-7 text-paper/70">A note from the founders</p>
+              <Headline size="xl" tone="dark" accent="Not your CV.">
+                Send us your work.
+              </Headline>
             </div>
-            <div className="flex flex-col gap-6 text-[15px] leading-[1.65] text-bone/80">
+            <div className="space-y-5 text-[16px] leading-[1.7] text-paper/70 md:col-span-4 md:col-start-9 md:self-end">
               <p>
-                Show us the thing you shipped, the post you wrote, the deck you owned,
-                the campaign you ran. We read every email.
+                The thing you shipped, the essay you wrote, the campaign you ran. Show us what you
+                made and why. We read every email.
               </p>
               <p>
-                Send to{" "}
                 <a
-                  href={`mailto:${SITE.hrEmail}?subject=${encodeURIComponent(
-                    "I'd like to work at Innaya",
-                  )}`}
-                  className="text-amber underline decoration-amber/40 underline-offset-4 hover:decoration-amber"
+                  href={`mailto:${SITE.hrEmail}?subject=${encodeURIComponent("I'd like to work at Innaya")}`}
+                  className="text-paper underline decoration-paper/30 underline-offset-4 hover:decoration-paper"
                 >
                   {SITE.hrEmail}
-                </a>{" "}
-                with the role title in your subject line.
+                </a>
+                , with the role in the subject line.
               </p>
             </div>
           </div>
@@ -186,16 +137,5 @@ export default function CareersPage() {
       </main>
       <Footer />
     </>
-  );
-}
-
-function Why({ k, v }: { k: string; v: string }) {
-  return (
-    <div className="bg-bone p-7">
-      <span className="block font-mono text-[10px] uppercase tracking-[0.22em] text-mute">
-        {k}
-      </span>
-      <p className="mt-3 text-[15px] leading-[1.55] text-ink">{v}</p>
-    </div>
   );
 }
