@@ -65,7 +65,7 @@ export default function Hero() {
           >
             <div className="relative aspect-[16/11] w-full overflow-hidden bg-bone-deep">
               <Image
-                src="/images/pan8-pancake.jpg"
+                src="/images/products/pancake-choco-chip.jpg"
                 alt="PAN8 Clean Nutrition Pancake"
                 fill
                 priority

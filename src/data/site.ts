@@ -173,29 +173,164 @@ export interface Pan8Product {
   category: "Pancake Mix" | "Dosa Mix" | "Upma Mix" | "Plant Protein Bar";
   weight: string;
   keyBenefit: string;
+  image: string;
+  mrp?: string;
+  shelfLife?: string;
+  servings?: string;
+  protein?: string;
 }
 
 export const PAN8_PRODUCTS: Pan8Product[] = [
   // Pancake Mixes
-  { name: "Choco-Chip Vanilla Pancake", category: "Pancake Mix", weight: "250g", keyBenefit: "Cocoa + sorghum blend" },
-  { name: "Banana & Dates Pancake", category: "Pancake Mix", weight: "250g", keyBenefit: "Naturally sweetened" },
-  { name: "Blueberry Pancake", category: "Pancake Mix", weight: "250g", keyBenefit: "Antioxidant-rich breakfast" },
+  {
+    name: "Choco-Chip Vanilla Pancake",
+    category: "Pancake Mix",
+    weight: "250g",
+    keyBenefit: "Kid-friendly cocoa + sorghum blend · Zero maida",
+    image: "/images/products/pancake-choco-chip.jpg",
+    mrp: "₹230",
+    shelfLife: "9 Months",
+    servings: "8–10 Pancakes",
+    protein: "15g Protein / 100g",
+  },
+  {
+    name: "Banana & Dates Pancake",
+    category: "Pancake Mix",
+    weight: "250g",
+    keyBenefit: "Naturally sweetened with real dates · 9g fiber",
+    image: "/images/products/pancake-banana-dates.jpg",
+    mrp: "₹240",
+    shelfLife: "10 Months",
+    servings: "8–10 Pancakes",
+    protein: "18g Protein / 100g",
+  },
+  {
+    name: "Blueberry Pancake",
+    category: "Pancake Mix",
+    weight: "250g",
+    keyBenefit: "Antioxidant-rich whole berries · Heritage grains",
+    image: "/images/products/pancake-banana-dates.jpg",
+    mrp: "₹240",
+    shelfLife: "10 Months",
+    servings: "8–10 Pancakes",
+    protein: "16g Protein / 100g",
+  },
 
   // Dosa Mixes
-  { name: "Multi-Millet Dosa", category: "Dosa Mix", weight: "250g", keyBenefit: "5 heritage millets" },
-  { name: "Ragi Dosa", category: "Dosa Mix", weight: "250g", keyBenefit: "Iron & calcium rich" },
-  { name: "Millet-Spinach Dosa", category: "Dosa Mix", weight: "250g", keyBenefit: "Baked-in daily greens" },
-  { name: "Millet-Moong Dosa", category: "Dosa Mix", weight: "250g", keyBenefit: "High protein staple" },
-  { name: "Millet-Moringa Dosa", category: "Dosa Mix", weight: "250g", keyBenefit: "Superfood breakfast" },
+  {
+    name: "Multi-Millet Dosa",
+    category: "Dosa Mix",
+    weight: "250g",
+    keyBenefit: "5 heritage millets (ragi, foxtail, kodo) · Zero rice filler",
+    image: "/images/products/dosa-multi-millet.jpg",
+    mrp: "₹230",
+    shelfLife: "10 Months",
+    servings: "Approx. 8 Dosas",
+    protein: "21g Protein / 100g",
+  },
+  {
+    name: "Ragi Dosa",
+    category: "Dosa Mix",
+    weight: "250g",
+    keyBenefit: "High calcium & bioavailable iron · Heart-smart",
+    image: "/images/products/dosa-ragi.jpg",
+    mrp: "₹220",
+    shelfLife: "10 Months",
+    servings: "Approx. 8 Dosas",
+    protein: "24g Protein / 100g",
+  },
+  {
+    name: "Millet-Spinach Dosa",
+    category: "Dosa Mix",
+    weight: "250g",
+    keyBenefit: "Baked-in daily greens · Savory nutrient-dense start",
+    image: "/images/products/dosa-spinach.jpg",
+    mrp: "₹250",
+    shelfLife: "10 Months",
+    servings: "Approx. 8 Dosas",
+    protein: "21g Protein / 100g",
+  },
+  {
+    name: "Millet-Moong Dosa",
+    category: "Dosa Mix",
+    weight: "250g",
+    keyBenefit: "Golden moong & millet powerhouse · High satiety",
+    image: "/images/products/dosa-moong.jpg",
+    mrp: "₹235",
+    shelfLife: "10 Months",
+    servings: "Approx. 8 Dosas",
+    protein: "21g Protein / 100g",
+  },
+  {
+    name: "Millet-Moringa Dosa",
+    category: "Dosa Mix",
+    weight: "250g",
+    keyBenefit: "Superfood moringa leaf infusion · Immunity booster",
+    image: "/images/products/dosa-moringa.jpg",
+    mrp: "₹230",
+    shelfLife: "10 Months",
+    servings: "Approx. 8 Dosas",
+    protein: "21g Protein / 100g",
+  },
 
   // Upma Mixes
-  { name: "Millet Upma", category: "Upma Mix", weight: "250g", keyBenefit: "Traditional format, low GI" },
-  { name: "Vermicelli Upma", category: "Upma Mix", weight: "250g", keyBenefit: "Quick-cook morning bowl" },
+  {
+    name: "Millet Upma",
+    category: "Upma Mix",
+    weight: "250g",
+    keyBenefit: "Comforting heritage millet breakfast · Low GI",
+    image: "/images/products/upma-millet.jpg",
+    mrp: "₹220",
+    shelfLife: "8 Months",
+    servings: "Serves 2–3 People",
+    protein: "24g Protein / 100g",
+  },
+  {
+    name: "Vermicelli Upma",
+    category: "Upma Mix",
+    weight: "250g",
+    keyBenefit: "Whole grain roasted vermicelli twist · Quick-cook",
+    image: "/images/products/upma-vermicelli.jpg",
+    mrp: "₹230",
+    shelfLife: "8 Months",
+    servings: "Serves 2–3 People",
+    protein: "24g Protein / 100g",
+  },
 
   // Protein Bars
-  { name: "Coffee Almond Bar", category: "Plant Protein Bar", weight: "50g", keyBenefit: "Clean caffeine & protein" },
-  { name: "Blueberry Bar", category: "Plant Protein Bar", weight: "50g", keyBenefit: "Whole fruit on-the-go" },
-  { name: "Dry Fruits Bar", category: "Plant Protein Bar", weight: "50g", keyBenefit: "Nut & seed nutrient density" },
+  {
+    name: "Coffee Almond Bar",
+    category: "Plant Protein Bar",
+    weight: "50g",
+    keyBenefit: "South Indian filter coffee + California almonds",
+    image: "/images/pan8-bar.jpg",
+    mrp: "₹120",
+    shelfLife: "6 Months",
+    servings: "1 Bar (50g)",
+    protein: "20g Protein / 100g",
+  },
+  {
+    name: "Blueberry Bar",
+    category: "Plant Protein Bar",
+    weight: "50g",
+    keyBenefit: "Whole dried wild blueberries + pea protein crisps",
+    image: "/images/pan8-bar.jpg",
+    mrp: "₹120",
+    shelfLife: "6 Months",
+    servings: "1 Bar (50g)",
+    protein: "18g Protein / 100g",
+  },
+  {
+    name: "Dry Fruits Bar",
+    category: "Plant Protein Bar",
+    weight: "50g",
+    keyBenefit: "Cold-pressed cashews, almonds, chia & pumpkin seeds",
+    image: "/images/pan8-bar.jpg",
+    mrp: "₹130",
+    shelfLife: "6 Months",
+    servings: "1 Bar (50g)",
+    protein: "22g Protein / 100g",
+  },
 ];
 
 export interface Product {
@@ -203,6 +338,11 @@ export interface Product {
   category: "Pancake" | "Dosa" | "Upma" | "Bar";
   size: string;
   highlight: string;
+  image: string;
+  mrp?: string;
+  shelfLife?: string;
+  servings?: string;
+  protein?: string;
 }
 
 /* Backward compatibility alias if needed */
@@ -217,6 +357,11 @@ export const PRODUCTS: Product[] = PAN8_PRODUCTS.map((p) => {
     category: cat,
     size: p.weight,
     highlight: p.keyBenefit,
+    image: p.image,
+    mrp: p.mrp,
+    shelfLife: p.shelfLife,
+    servings: p.servings,
+    protein: p.protein,
   };
 });
 

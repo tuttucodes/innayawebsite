@@ -47,8 +47,8 @@ export default function Home() {
               <div className="group rounded-3xl border border-line/70 bg-bone/90 backdrop-blur-md overflow-hidden shadow-[0_16px_32px_-12px_rgba(26,22,20,0.06),inset_0_1px_0_rgba(255,255,255,0.8)] hover:shadow-[0_24px_48px_-12px_rgba(26,22,20,0.12),inset_0_1px_0_rgba(255,255,255,0.9)] hover:-translate-y-1.5 transition-all duration-300">
                 <div className="relative aspect-[4/3] w-full overflow-hidden bg-bone-deep">
                   <Image
-                    src="/images/pan8-dosa.jpg"
-                    alt="PAN8 Crispy Millet Dosa"
+                    src="/images/products/dosa-multi-millet.jpg"
+                    alt="PAN8 Crispy Multi-Millet Dosa"
                     fill
                     sizes="(max-width: 768px) 100vw, 33vw"
                     className="object-cover transition-transform duration-700 ease-out group-hover:scale-105"
@@ -57,7 +57,7 @@ export default function Home() {
                     Dosa Mix · 250g
                   </div>
                   <div className="absolute bottom-3 right-3 rounded-full bg-leaf/90 backdrop-blur-md text-bone font-semibold px-3 py-1 text-xs shadow-xs border border-white/20">
-                    18g Protein
+                    21g Protein
                   </div>
                 </div>
                 <div className="p-6">
@@ -76,7 +76,7 @@ export default function Home() {
               <div className="group rounded-3xl border border-line/70 bg-bone/90 backdrop-blur-md overflow-hidden shadow-[0_16px_32px_-12px_rgba(26,22,20,0.06),inset_0_1px_0_rgba(255,255,255,0.8)] hover:shadow-[0_24px_48px_-12px_rgba(26,22,20,0.12),inset_0_1px_0_rgba(255,255,255,0.9)] hover:-translate-y-1.5 transition-all duration-300">
                 <div className="relative aspect-[4/3] w-full overflow-hidden bg-bone-deep">
                   <Image
-                    src="/images/pan8-pancake.jpg"
+                    src="/images/products/pancake-choco-chip.jpg"
                     alt="PAN8 Fluffy Millet Pancakes"
                     fill
                     sizes="(max-width: 768px) 100vw, 33vw"

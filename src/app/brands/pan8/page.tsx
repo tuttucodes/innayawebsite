@@ -111,15 +111,15 @@ export default function Pan8BrandPage() {
 
             <div className="mt-10 grid gap-8 md:grid-cols-3">
               <FlagshipCard
-                image="/images/pan8-dosa.jpg"
+                image="/images/products/dosa-multi-millet.jpg"
                 title="Multi-Millet Protein Dosa Mix"
                 category="Dosa Mix · 250g"
-                protein="18g Protein / 100g"
+                protein="21g Protein / 100g"
                 highlights={["5 Heritage Millets", "Zero Rice Filler", "Low GI", "Crispy Texture"]}
                 desc="A crisp, golden South Indian staple re-engineered from ragi, foxtail, kodo, and yellow pea isolate. Naturally fermented flavor with zero artificial binders."
               />
               <FlagshipCard
-                image="/images/pan8-pancake.jpg"
+                image="/images/products/pancake-choco-chip.jpg"
                 title="Choco-Chip Vanilla Pancake Mix"
                 category="Pancake Mix · 250g"
                 protein="15g Protein / 100g"
@@ -141,24 +141,124 @@ export default function Pan8BrandPage() {
         {/* The Complete 13 SKU Shelf */}
         <Products />
 
-        {/* The Brand Philosophy */}
-        <section className="border-t border-line bg-bone-deep/40 py-20 sm:py-28">
-          <div className="mx-auto grid w-full max-w-[1360px] gap-10 px-5 sm:px-8 md:grid-cols-2 md:gap-16 md:px-12">
-            <div>
-              <span className="font-mono text-xs uppercase tracking-[0.16em] text-mute">
-                The Brand Promise
-              </span>
-              <h2 className="mt-4 font-serif text-3xl sm:text-4xl lg:text-[2.6rem] font-normal leading-[1.15] text-ink">
-                Familiar Indian formats. Clean nutritional science.
-              </h2>
+        {/* Modern Trade & Merchandising Support (Real Retail Presence) */}
+        <section className="border-t border-line bg-bone-deep/30 py-20 sm:py-28">
+          <div className="mx-auto w-full max-w-[1360px] px-5 sm:px-8 md:px-12">
+            <div className="grid gap-12 lg:grid-cols-12 lg:gap-16 items-center">
+              <div className="lg:col-span-6">
+                <div className="relative aspect-[4/5] sm:aspect-[3/3.5] w-full overflow-hidden rounded-3xl border border-line/70 bg-bone shadow-[0_20px_40px_-15px_rgba(26,22,20,0.08),inset_0_1px_0_rgba(255,255,255,0.7)]">
+                  <Image
+                    src="/images/products/retail-supermarket-shelf.jpg"
+                    alt="PAN8 Merchandised on Supermarket Shelves"
+                    fill
+                    sizes="(max-width: 1024px) 100vw, 50vw"
+                    className="object-cover"
+                  />
+                  <div className="absolute top-4 left-4 rounded-full bg-ink/75 backdrop-blur-md px-3 py-1 font-mono text-[10px] uppercase tracking-[0.14em] text-bone border border-white/10">
+                    Retail Shelf · Modern Trade
+                  </div>
+                </div>
+              </div>
+
+              <div className="lg:col-span-6 space-y-6">
+                <div>
+                  <span className="font-mono text-xs uppercase tracking-[0.16em] text-mute">
+                    Merchandising &amp; Retail Support
+                  </span>
+                  <h2 className="mt-3 font-serif text-3xl sm:text-4xl lg:text-[2.6rem] font-normal leading-[1.15] text-ink">
+                    Designed for the shelf, and for modern trade velocity.
+                  </h2>
+                </div>
+
+                <p className="text-base leading-[1.7] text-ink-soft">
+                  PAN8 is engineered specifically for fast-moving retail distribution. Premium matte standup pouches with high-contrast nutrient labeling command shopper attention on competitive supermarket shelves and dark store corridors.
+                </p>
+
+                <div className="space-y-4 pt-2">
+                  <div className="rounded-2xl border border-line/70 bg-bone/90 p-5 shadow-xs">
+                    <h4 className="font-serif text-lg font-normal text-ink">
+                      Packaging That Sells
+                    </h4>
+                    <p className="mt-1 text-xs leading-[1.65] text-ink-soft">
+                      100% recyclable, tamper-evident zipper pouches with clear front-of-pack macro callouts (15–24g plant protein, 0 maida, gluten-free, no artificial preservatives).
+                    </p>
+                  </div>
+
+                  <div className="rounded-2xl border border-line/70 bg-bone/90 p-5 shadow-xs">
+                    <h4 className="font-serif text-lg font-normal text-ink">
+                      Retail &amp; Modern Trade Support
+                    </h4>
+                    <p className="mt-1 text-xs leading-[1.65] text-ink-soft">
+                      We support our supermarket and modern trade partners with in-store tasting kits, shelf talkers, digital geo-targeted recipe campaigns, and guaranteed replenishment logistics.
+                    </p>
+                  </div>
+                </div>
+
+                <div className="pt-2">
+                  <Link
+                    href="/contact"
+                    className="inline-flex items-center gap-2 rounded-full bg-ink px-6 py-3.5 text-xs font-semibold uppercase tracking-[0.12em] text-bone hover:bg-leaf-deep transition-colors active:scale-[0.98]"
+                  >
+                    <span>Request Retail Placement Kit</span>
+                    <span>→</span>
+                  </Link>
+                </div>
+              </div>
             </div>
-            <div className="space-y-4 text-base leading-[1.7] text-ink-soft">
-              <p>
-                Every PAN8 product starts with an honest question: <em>what does an Indian family already enjoy eating?</em> Rather than asking people to adopt unfamiliar Western protein powders or artificial bars, we reformulate the foods already rooted in our morning culture.
-              </p>
-              <p>
-                By replacing polished white rice and maida fillers with heritage millets (ragi, foxtail, kodo, little millet) and blending them with clean plant proteins, we turn everyday breakfasts into nutrient-dense powerhouses with zero lifestyle friction.
-              </p>
+          </div>
+        </section>
+
+        {/* The Brand Philosophy & Family Breakfast Lifestyle */}
+        <section className="border-t border-line bg-bone py-20 sm:py-28">
+          <div className="mx-auto w-full max-w-[1360px] px-5 sm:px-8 md:px-12">
+            <div className="grid gap-12 lg:grid-cols-12 lg:gap-16 items-center">
+              <div className="lg:col-span-6 space-y-6">
+                <span className="font-mono text-xs uppercase tracking-[0.16em] text-mute">
+                  The Brand Promise
+                </span>
+                <h2 className="font-serif text-3xl sm:text-4xl lg:text-[2.6rem] font-normal leading-[1.15] text-ink">
+                  Familiar Indian formats. Clean nutritional science.
+                </h2>
+                <div className="space-y-4 text-base leading-[1.7] text-ink-soft">
+                  <p>
+                    Every PAN8 product starts with an honest question: <em>what does an Indian family already enjoy eating?</em> Rather than asking people to adopt unfamiliar Western protein powders or synthetic bars, we reformulate the foods already rooted in our morning culture.
+                  </p>
+                  <p>
+                    By replacing polished white rice and maida fillers with heritage millets (ragi, foxtail, kodo, little millet) and blending them with clean plant proteins, we turn everyday breakfasts into nutrient-dense powerhouses with zero lifestyle friction.
+                  </p>
+                </div>
+
+                <div className="pt-4 border-t border-line/60 flex flex-wrap items-center gap-6">
+                  <div>
+                    <span className="font-mono text-[10px] uppercase tracking-[0.14em] text-mute">Direct Wholesale Line</span>
+                    <p className="font-sans font-semibold text-sm text-ink">{SITE.brandEmail}</p>
+                  </div>
+                  <div>
+                    <span className="font-mono text-[10px] uppercase tracking-[0.14em] text-mute">Sales Desk</span>
+                    <p className="font-mono text-sm text-ink font-medium">+91 90744 17293</p>
+                  </div>
+                </div>
+              </div>
+
+              <div className="lg:col-span-6">
+                <div className="relative aspect-[4/3] w-full overflow-hidden rounded-3xl border border-line/70 bg-bone-deep shadow-[0_20px_40px_-15px_rgba(26,22,20,0.08),inset_0_1px_0_rgba(255,255,255,0.7)]">
+                  <Image
+                    src="/images/products/family-breakfast-lifestyle.jpg"
+                    alt="Family having breakfast with PAN8 nutrition"
+                    fill
+                    sizes="(max-width: 1024px) 100vw, 50vw"
+                    className="object-cover"
+                  />
+                  <div className="absolute bottom-4 left-4 right-4 rounded-2xl bg-ink/75 backdrop-blur-md p-4 text-bone border border-white/10">
+                    <p className="font-serif text-lg font-normal">
+                      Nourishment, rooted in everyday tradition.
+                    </p>
+                    <p className="mt-1 text-xs text-bone/70">
+                      Healthy eating made effortless for busy families and professionals across India.
+                    </p>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
         </section>

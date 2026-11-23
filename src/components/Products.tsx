@@ -153,11 +153,11 @@ export default function Products() {
 }
 
 function ProductCard({ product }: { product: Product }) {
-  const imageSrc = CATEGORY_IMAGES[product.category] || "/images/pan8-bar.jpg";
-  const tag = CATEGORY_TAGS[product.category] || "Plant-Protein Dense · Zero Preservatives";
+  const imageSrc = product.image || CATEGORY_IMAGES[product.category] || "/images/pan8-bar.jpg";
+  const tag = product.protein || CATEGORY_TAGS[product.category] || "Plant-Protein Dense · Zero Preservatives";
 
   return (
-    <article className="group relative flex h-full flex-col overflow-hidden rounded-2xl border border-line bg-bone transition-all duration-300 hover:border-ink/40 hover:shadow-md">
+    <article className="group relative flex h-full flex-col overflow-hidden rounded-3xl border border-line/70 bg-bone/90 backdrop-blur-md shadow-[0_16px_36px_-12px_rgba(26,22,20,0.06),inset_0_1px_0_rgba(255,255,255,0.7)] transition-all duration-300 hover:border-ink/30 hover:-translate-y-1.5 hover:shadow-[0_24px_48px_-12px_rgba(26,22,20,0.12),inset_0_1px_0_rgba(255,255,255,0.9)]">
       {/* Real Food Image */}
       <div className="relative aspect-[4/3] w-full overflow-hidden bg-bone-deep">
         <Image
@@ -167,10 +167,15 @@ function ProductCard({ product }: { product: Product }) {
           sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 25vw"
           className="object-cover transition-transform duration-500 ease-out group-hover:scale-105"
         />
-        <div className="absolute top-3 left-3 rounded-full bg-ink/80 backdrop-blur px-2.5 py-0.5 font-mono text-[10px] uppercase tracking-[0.14em] text-bone">
+        <div className="absolute top-3 left-3 rounded-full bg-ink/75 backdrop-blur-md px-2.5 py-0.5 font-mono text-[10px] uppercase tracking-[0.14em] text-bone border border-white/10">
           {product.category}
         </div>
-        <div className="absolute bottom-3 right-3 rounded-full bg-bone/90 backdrop-blur px-2.5 py-0.5 font-mono text-[10px] text-ink font-semibold border border-line">
+        {product.mrp && (
+          <div className="absolute top-3 right-3 rounded-full bg-amber/95 backdrop-blur-md px-2.5 py-0.5 font-mono text-[10px] text-ink font-semibold border border-amber/30 shadow-xs">
+            MRP {product.mrp}
+          </div>
+        )}
+        <div className="absolute bottom-3 right-3 rounded-full bg-bone/90 backdrop-blur-md px-2.5 py-0.5 font-mono text-[10px] text-ink font-semibold border border-line shadow-xs">
           {product.size}
         </div>
       </div>
@@ -187,6 +192,14 @@ function ProductCard({ product }: { product: Product }) {
           <p className="mt-1.5 text-xs leading-[1.6] text-ink-soft">
             {product.highlight}
           </p>
+
+          {(product.servings || product.shelfLife) && (
+            <div className="mt-3 flex flex-wrap items-center gap-2 font-mono text-[10px] text-mute">
+              {product.servings && <span>{product.servings}</span>}
+              {product.servings && product.shelfLife && <span>·</span>}
+              {product.shelfLife && <span>{product.shelfLife} Shelf Life</span>}
+            </div>
+          )}
         </div>
 
         <div className="mt-4 pt-3 border-t border-line/60 flex items-center justify-between">
